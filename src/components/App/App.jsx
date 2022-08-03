@@ -15,7 +15,9 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
+
+import SearchPage from '../SearchPage/SearchPage';
+
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
@@ -60,13 +62,15 @@ function App() {
             <UserPage />
           </ProtectedRoute>
 
+          {/* ----------Route Start---------------- */}
           <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
+            // logged in shows SearchPage else shows LoginPage
             exact
-            path="/info"
+            path="/SearchPage"
           >
-            <InfoPage />
+            <SearchPage />
           </ProtectedRoute>
+           {/* ----------Route End---------------- */}
 
           <Route
             exact
