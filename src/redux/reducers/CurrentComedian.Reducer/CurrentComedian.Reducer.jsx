@@ -3,9 +3,9 @@
 // --- reducer to save allComedians state --- //
 
 const CurrentComediansReducer =(state = ['-default state-'],  action) => {
-    console.log('CurrentComediansReducer:', action.payload);
     switch (action.type) {
-        case 'SAVE_CURRENT_COMEDIAN':
+        case 'SAVE_CURRENT_COMEDIAN':  // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
+            console.log('CurrentComediansReducer:', action.payload);
             return action.payload;
         default:
             return state;
