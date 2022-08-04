@@ -46,7 +46,7 @@ function SearchPage() {
       </div>
       <button>Search Comedians</button>
       <div>
-        {/* <section className="listAllComedians">
+        <section className="listAllComedians">
           {listAllComedians.map(comedian => {
             return (
               <>
@@ -63,7 +63,7 @@ function SearchPage() {
               </div>
             </>);
           })}
-        </section> */}
+        </section>
       </div>
 
 
