@@ -1,43 +1,50 @@
+
+import './ComedianDetails.css'
+
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // -- Component to display just one comedians info -- //
 function ComedianDetails() {
 
-const dispatch = useDispatch();
-const currentComedian = useSelector(store => store.CurrentComediansReducerStore);
-const cCDestructured = currentComedian.comedianProp;
-// const currentComedian = useSelector(store => store.allComediansReducerStore);
-const [heading, setHeading] = useState('Functional Component');
+  const dispatch = useDispatch();
+  const currentComedian = useSelector(store => store.CurrentComediansReducerStore);
+  const CCD = currentComedian.comedianProp;  
+
+  
+  // -- "CCD" is a DECONSTRUCTED version of currentComedian
+  // const currentComedian = useSelector(store => store.allComediansReducerStore);
+  const [heading, setHeading] = useState('Functional Component');
 
 
 
-useEffect(() => {
-    // dispatch({ type: 'SAVE_CURRENT_COMEDIAN' });
+  useEffect(() => {
+    // dispatch({ type: 'GET_CURRENT_COMEDIAN' });
     // dispatch({ type: 'GET_ALL_COMEDIANS' });
   }, []);
 
 
-    console.log('currentComedian:', currentComedian);
-    console.log('currentComedian.comedianProp:', currentComedian.comedianProp);
-    console.log('cCDestructured:', cCDestructured);
-    return(
-        <div className="container">
-        <h2>PRINT ME ON DOM IF IN Comedian Details</h2>
-        <img className='icon'
-            src={cCDestructured.icon}
-            alt={cCDestructured.first_name}/>
-        <h3>Comedian is: {currentComedian.comedianProp.first_name}{cCDestructured.last_name}</h3>
-        <h3>Comedian is: {cCDestructured.genre}</h3>
-        <h3>Comedian is: {cCDestructured.instagram_link}</h3>
-        <h3>Comedian is: {cCDestructured.twitter_link}</h3>
-        <h3>Comedian is: {cCDestructured.website_link}</h3>
-        <h3>Comedian is: {cCDestructured.youtube_link}</h3>
-       
-     
-        </div>
-    )
+  console.log('currentComedian:', currentComedian);
+  console.log('currentComedian.comedianProp:', currentComedian.comedianProp);
+  console.log('CCD:', CCD);
+  return (
+    <div className="cdcontainer">
+      {/* <h2>Comedian Details</h2> */}
+      <h2>{currentComedian.comedianProp.first_name} {CCD.last_name}</h2>
+      <img className='icon'
+        src={CCD.icon}
+        alt={CCD.first_name} />
+        <br></br>
+       <a href={CCD.instagram_link} title="Instagram" target="_blank">Instagram</a>.
+      <a href={CCD.twitter_link} title="Twitter" target="_blank">Twitter</a>.
+      <a href={CCD.website_link} title="Website" target="_blank">Website</a>.
+      <a href={CCD.youtube_link} title="Youtube" target="_blank">Youtube</a>.
+      <h3>Genre: {CCD.genre}</h3>
+      <p>{CCD.description} </p>
+    </div>
+  )
 }
 
 export default ComedianDetails;

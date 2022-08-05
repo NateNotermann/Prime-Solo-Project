@@ -10,7 +10,7 @@ import './SearchPage.css'
 // -- react imports -- //
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 
 
@@ -27,10 +27,13 @@ function SearchPage() {
 
 
  const clickIcon =(comedianProp) => {
-  // console.log('prop:', comedianProp); // works - turning off cl
+  console.log('comedianProp is:', comedianProp); // works - turning off cl
   dispatch ({
-    type: 'SAVE_CURRENT_COMEDIAN',
+    // this is TELLING
+    type: 'SAVE_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
+    //Goes to -> CurrentComediansReducer
     payload: {comedianProp}
+    // payload: (params.comedianId)
   })
   // history.push(`/ComedianDetails/${comedianProp.first_name}${comedianProp.last_name}`)
   history.push(`/ComedianDetails`)
@@ -53,25 +56,36 @@ function SearchPage() {
 
 
       <div className="inputs">
+        <div>
         <input placeholder='First Name'></input>
+        <button>Search First Name</button>
+        </div>
+        <div>
         <input placeholder='Last Name'></input>
+        <button>Search Last Name</button>
+        </div>
+        <div>
         <input placeholder='Genre Name'></input>
+        <button>Search Genre Name</button>
+        </div>
+         <div>
         <input placeholder='City Name'></input>
+        <button>Search City</button>
+        </div>
 
       </div>
-      <button>Search Comedians</button>
+      {/* <button>Search Comedians </button> */}
       <div>
-    
+    <br></br>
         <section className="listAllComedians">
           {listAllComedians && listAllComedians.map(comedian => {
             return (
-              <div key={comedian.id} >
-                <h3>{comedian.first_name} {comedian.last_name}</h3>
+              <div key={comedian.id} onClick={(event) => clickIcon (comedian)}> 
                 <img className='icon'
                   src={comedian.icon}
                   alt={comedian.first_name}
-                onClick={(event) => clickIcon (comedian)} // sends (comedian) to 'clickIcon' function
                 />
+                <h3>{comedian.first_name} {comedian.last_name}</h3>
               </div>
             );
           })}
