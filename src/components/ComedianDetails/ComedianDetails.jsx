@@ -21,7 +21,7 @@ function ComedianDetails() {
 
 
   useEffect(() => {
-    // dispatch({ type: 'GET_CURRENT_COMEDIAN' });
+    dispatch({ type: 'GET_CURRENT_COMEDIAN' });
     // dispatch({ type: 'GET_ALL_COMEDIANS' });
   }, []);
 
@@ -32,7 +32,8 @@ function ComedianDetails() {
   return (
     <div className="cdcontainer">
       {/* <h2>Comedian Details</h2> */}
-      <h2>{currentComedian.comedianProp.first_name} {CCD.last_name}</h2>
+      
+      {/* <h2>{currentComedian.comedianProp.first_name} {CCD.last_name}</h2>
       <img className='icon'
         src={CCD.icon}
         alt={CCD.first_name} />
@@ -42,7 +43,7 @@ function ComedianDetails() {
       <a href={CCD.website_link} title="Website" target="_blank">Website</a>.
       <a href={CCD.youtube_link} title="Youtube" target="_blank">Youtube</a>.
       <h3>Genre: {CCD.genre}</h3>
-      <p>{CCD.description} </p>
+      <p>{CCD.description} </p> */}
     </div>
   )
 }

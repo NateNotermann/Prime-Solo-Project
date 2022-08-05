@@ -7,15 +7,16 @@ const router = express.Router();
  */
 // SAGAS ARE SERVER SIDE
 // -wht ever router.get('/:id', --> /:id is the 'action.payload from the SAGA
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
   // GET route code here
   // req.body going into a bigger object
   // req.params TARGET ONE SPECIFIC THING like id or namer or last_name
+  const id = req.params;
   const query = 
   `SELECT * from comedians
-  WHERE id = '1';`;
+  WHERE id = '$1';`;
 
-  pool.query(query)
+  pool.query(query[id])
   .then( result => {
     res.send(result.rows);
   })

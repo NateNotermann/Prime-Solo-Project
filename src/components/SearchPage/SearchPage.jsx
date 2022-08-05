@@ -15,7 +15,7 @@ import { useHistory, useParams } from 'react-router-dom';
 
 
 function SearchPage() {
-
+  const params = useParams();
   const history = useHistory();
   const dispatch = useDispatch();
   const listAllComedians = useSelector(store => store.allComediansReducerStore);
@@ -26,16 +26,17 @@ function SearchPage() {
   // {id: 3, first_name: 'Tom', last_name: 'Segura', icon: 'images/comedians/tom_segura_icon.jpg'}];
 
 
- const clickIcon =(comedianProp) => {
-  console.log('comedianProp is:', comedianProp); // works - turning off cl
+ const clickIcon =(comedianId) => {
+  console.log('comedianId is:', comedianId); // works - turning off cl
   dispatch ({
     // this is TELLING
     type: 'SAVE_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
     //Goes to -> CurrentComediansReducer
-    payload: {comedianProp}
-    // payload: (params.comedianId)
+    // payload: {comedianId}
+    payload: {comedianId}
+    
   })
-  // history.push(`/ComedianDetails/${comedianProp.first_name}${comedianProp.last_name}`)
+  // history.push(`/ComedianDetails/${comedianId.first_name}${comedianId.last_name}`)
   history.push(`/ComedianDetails`)
   // must match route with 'exact path="/ComedianDetails"' in App.jsx - 
  }
@@ -80,7 +81,7 @@ function SearchPage() {
         <section className="listAllComedians">
           {listAllComedians && listAllComedians.map(comedian => {
             return (
-              <div key={comedian.id} onClick={(event) => clickIcon (comedian)}> 
+              <div key={comedian.id} onClick={(event) => clickIcon (comedian.id)}> 
                 <img className='icon'
                   src={comedian.icon}
                   alt={comedian.first_name}
