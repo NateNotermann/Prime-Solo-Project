@@ -10,6 +10,7 @@ const passport = require('./strategies/user.strategy');
 // Route includes
 const userRouter = require('./routes/user.router');
 const allComedians = require('./routes/allComedians.router');
+const comedianDetailsRouter = require('./routes/comedianDetails.router.js');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -27,6 +28,9 @@ app.use('/api/user', userRouter);
 
 // get all comedians route
 app.use('/api/comedians', allComedians);
+
+// get comedian Details route
+app.use('/api/comedianDetails', comedianDetailsRouter);
 
 
 

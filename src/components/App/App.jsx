@@ -8,6 +8,7 @@ import {
 
 import { useDispatch, useSelector } from 'react-redux';
 
+// ----- Import all COMPONENTS here ----- // 
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
 
@@ -21,6 +22,8 @@ import SearchPage from '../SearchPage/SearchPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import ComedianDetails from '../ComedianDetails/ComedianDetails';
+
 
 import './App.css';
 
@@ -70,7 +73,17 @@ function App() {
           >
             <SearchPage />
           </ProtectedRoute>
-           {/* ----------Route End---------------- */}
+          {/* ----------Route End---------------- */}
+
+          {/* ----------Route Start---------------- */}
+          <ProtectedRoute
+            // logged in shows ComedianDetails else shows LoginPage
+            exact
+            path="/ComedianDetails" // MUST match history.push(`/ComedianDetails`)
+          >
+            <ComedianDetails />
+          </ProtectedRoute>
+          {/* ----------Route End---------------- */}
 
           <Route
             exact
