@@ -82,6 +82,7 @@ Grid
 
 body {
   background-image: url("/public/images/Landing_Background.gif");
+  
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: top 65px right 00px;
