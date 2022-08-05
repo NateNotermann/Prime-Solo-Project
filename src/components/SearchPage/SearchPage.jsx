@@ -12,6 +12,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, useParams } from 'react-router-dom';
 
+// useParams may not be necisary might be like a stretch goal getting from the router file
 
 
 function SearchPage() {
@@ -27,17 +28,17 @@ function SearchPage() {
 
 
  const clickIcon =(comedianId) => {
-  console.log('comedianId is:', comedianId); // works - turning off cl
+  // console.log('comedianId is:', comedianId); // works - turning off cl
   dispatch ({
     // this is TELLING
-    type: 'SAVE_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
+    type: 'GET_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
+    // type: 'SAVE_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
     //Goes to -> CurrentComediansReducer
     // payload: {comedianId}
-    payload: {comedianId}
-    
+    payload: comedianId
   })
   // history.push(`/ComedianDetails/${comedianId.first_name}${comedianId.last_name}`)
-  history.push(`/ComedianDetails`)
+  history.push(`/ComedianDetails/${comedianId}`)
   // must match route with 'exact path="/ComedianDetails"' in App.jsx - 
  }
 
@@ -48,7 +49,7 @@ function SearchPage() {
     dispatch({ type: 'GET_ALL_COMEDIANS' });
   }, []);
 
-
+;
 
   return (
     <div className="container">
@@ -81,7 +82,7 @@ function SearchPage() {
         <section className="listAllComedians">
           {listAllComedians && listAllComedians.map(comedian => {
             return (
-              <div key={comedian.id} onClick={(event) => clickIcon (comedian.id)}> 
+              <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
                 <img className='icon'
                   src={comedian.icon}
                   alt={comedian.first_name}

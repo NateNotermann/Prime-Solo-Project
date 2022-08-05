@@ -26,9 +26,9 @@ function ComedianDetails() {
   }, []);
 
 
-  console.log('currentComedian:', currentComedian);
-  console.log('currentComedian.comedianProp:', currentComedian.comedianProp);
-  console.log('CCD:', CCD);
+  // console.log('currentComedian:', currentComedian);
+  // console.log('currentComedian.comedianProp:', currentComedian.comedianProp);
+  // console.log('CCD:', CCD);
   return (
     <div className="cdcontainer">
       {/* <h2>Comedian Details</h2> */}
