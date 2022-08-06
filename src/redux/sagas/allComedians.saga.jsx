@@ -7,7 +7,7 @@ function* getAllComedians() {
     try {
         const comedians = yield axios.get('/api/comedians');
         yield put ({ type: 'SAVE_ALL_COMEDIANS', payload: comedians.data})
-        console.log('getallComedians SAGA from db via comedians const (allComedians.saga.JSX)', comedians.data);
+        // console.log('getallComedians SAGA from db via comedians const (allComedians.saga.JSX)', comedians.data);
     } catch {
         console.log( 'SAVE_ALL_COMEDIANS ERROR (allComedians.saga.JSX)');
     }
