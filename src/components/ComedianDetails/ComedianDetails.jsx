@@ -11,39 +11,40 @@ function ComedianDetails() {
 
   const dispatch = useDispatch();
   const currentComedian = useSelector(store => store.CurrentComediansReducerStore);
-  const CCD = currentComedian.comedianProp;  
+  // const currentComedian = currentComedian[0];  
 
   
-  // -- "CCD" is a DECONSTRUCTED version of currentComedian
+  // -- "currentComedian" is a DECONSTRUCTED version of currentComedian
   // const currentComedian = useSelector(store => store.allComediansReducerStore);
   const [heading, setHeading] = useState('Functional Component');
 
 
 
   useEffect(() => {
-    dispatch({ type: 'GET_CURRENT_COMEDIAN' });
+    // dispatch({ type: 'GET_CURRENT_COMEDIAN' });
     // dispatch({ type: 'GET_ALL_COMEDIANS' });
   }, []);
 
 
-  // console.log('currentComedian:', currentComedian);
-  // console.log('currentComedian.comedianProp:', currentComedian.comedianProp);
-  // console.log('CCD:', CCD);
+  console.log('currentComedian', currentComedian);
+  console.log('Comedian name is:', currentComedian.first_name, currentComedian.last_name);
+
+
   return (
     <div className="cdcontainer">
-      {/* <h2>Comedian Details</h2> */}
+      <h2>Comedian Details</h2>
       
-      {/* <h2>{currentComedian.comedianProp.first_name} {CCD.last_name}</h2>
+      <h2>{currentComedian.first_name} {currentComedian.last_name}</h2>
       <img className='icon'
-        src={CCD.icon}
-        alt={CCD.first_name} />
+        src={currentComedian.icon}
+        alt={currentComedian.first_name} />
         <br></br>
-       <a href={CCD.instagram_link} title="Instagram" target="_blank">Instagram</a>.
-      <a href={CCD.twitter_link} title="Twitter" target="_blank">Twitter</a>.
-      <a href={CCD.website_link} title="Website" target="_blank">Website</a>.
-      <a href={CCD.youtube_link} title="Youtube" target="_blank">Youtube</a>.
-      <h3>Genre: {CCD.genre}</h3>
-      <p>{CCD.description} </p> */}
+       <a href={currentComedian.instagram_link} title="Instagram" target="_blank">Instagram</a>.
+      <a href={currentComedian.twitter_link} title="Twitter" target="_blank">Twitter</a>.
+      <a href={currentComedian.website_link} title="Website" target="_blank">Website</a>.
+      <a href={currentComedian.youtube_link} title="Youtube" target="_blank">Youtube</a>.
+      <h3>Genre: {currentComedian.genre}</h3>
+      <p>{currentComedian.description} </p>
     </div>
   )
 }

@@ -79,7 +79,7 @@ function App() {
           <ProtectedRoute
             // logged in shows ComedianDetails else shows LoginPage
             exact
-            path="/ComedianDetails" // MUST match history.push(`/ComedianDetails`)
+            path="/ComedianDetails/:id" // MUST match history.push(`/ComedianDetails`)
           >
             <ComedianDetails />
           </ProtectedRoute>

@@ -13,8 +13,8 @@ function* getCurrentComedian(action) { // action is the comedianId from the sear
         // const comedian = yield axios.get(`/api/comedianDetails/${action.payload}`);
         const comedian = yield axios.get(`/api/comedianDetails/${action.payload}`);
         yield put ({ type: 'SAVE_CURRENT_COMEDIAN', payload: comedian.data})
-        console.log('getCurrentComedian saga', comedian.data);
-        console.log('getCurrentComedian action.payload', action.payload);
+        // console.log('getCurrentComedian saga', comedian.data);
+        // console.log('getCurrentComedian action.payload', action.payload);
     } catch {
         console.log( 'SAVE_ALL_COMEDIANS ERROR (allComedians.saga.JSX)');
     }
