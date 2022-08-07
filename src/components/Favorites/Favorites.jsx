@@ -15,10 +15,8 @@ function Favorites(props) {
   const dispatch = useDispatch();
 
   const Favorites = useSelector((store) => store.Favorites);
-  // console.log('Favorites const:', Favorites);
 
 
-  console.log('history', history);
 
   useEffect(() => {
     dispatch({ type: 'GET_FAVORITES' }); // TELL
