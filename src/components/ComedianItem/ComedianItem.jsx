@@ -31,6 +31,7 @@ function ComedianItem({ comedianProp }) {
     // function to add a favorite 
     const Favorite = (id) => {
         console.log('Favorited comedian!', comedianProp.id);
+        console.log('id!', id);
         dispatch({
           type: 'FAVORITE',
           payload: id
@@ -49,7 +50,7 @@ function ComedianItem({ comedianProp }) {
 
 
 
-    console.log('comedianProp', comedianProp);
+    // console.log('comedianProp', comedianProp);
     return (
         <div>
             <div onClick={() => clickIcon(comedianProp.id)}>

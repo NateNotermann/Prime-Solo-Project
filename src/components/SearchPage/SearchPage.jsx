@@ -28,15 +28,12 @@ function SearchPage() {
   // {id: 3, first_name: 'Tom', last_name: 'Segura', icon: 'images/comedians/tom_segura_icon.jpg'}];
 
 
-  function back() {
-    history.goBack();
-}
+
 
   useEffect(() => {
     dispatch({ type: 'GET_ALL_COMEDIANS' });
   }, []);
 
-;
 
   return (
     <div className="container">

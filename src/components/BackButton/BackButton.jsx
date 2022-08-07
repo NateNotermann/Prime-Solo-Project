@@ -8,6 +8,7 @@ function BackButton(){
 
     function back() {
         history.goBack();
+         // console.log('history', history);
     }
     
     return(

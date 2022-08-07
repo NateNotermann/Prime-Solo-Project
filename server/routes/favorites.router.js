@@ -27,16 +27,22 @@ router.get('/', (req, res) => {
 
 
 
-
-
-
-
-
 /** 
  * POST route template
  */
 router.post('/', (req, res) => {
   // POST route code here
+  const query = `INSERT INTO "favorites" ("user_id", "comedian_id" )
+VALUES 
+(1,2);`;
+  pool.query(query)
+    .then(result => {
+      res.send(result.rows);
+    })
+    .catch(error => {
+      console.log('ERROR in FAVORITES Router', error);
+      res.sendStatus(500);
+    })
 });
 
 module.exports = router;
