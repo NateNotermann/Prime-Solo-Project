@@ -32,7 +32,7 @@ function Nav() {
               Search
             </Link>
             
-            <Link className="navLink" to="/Favorites">
+            <Link className="navLink" to="/Favorites/">
               Favorites
             </Link>
 

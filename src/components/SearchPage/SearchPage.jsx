@@ -12,11 +12,12 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, useParams } from 'react-router-dom';
 
-// useParams may not be necisary might be like a stretch goal getting from the router file
+import ComedianItem from '../ComedianItem/ComedianItem.jsx';
+
+// useParams may not be necessary might be like a stretch goal getting from the router file
 
 
 function SearchPage() {
-  const params = useParams();
   const history = useHistory();
   const dispatch = useDispatch();
   const listAllComedians = useSelector(store => store.allComediansReducerStore);
@@ -27,20 +28,20 @@ function SearchPage() {
   // {id: 3, first_name: 'Tom', last_name: 'Segura', icon: 'images/comedians/tom_segura_icon.jpg'}];
 
 
- const clickIcon =(comedianId) => {
-  // console.log('comedianId is:', comedianId); // works - turning off cl
-  dispatch ({
-    // this is TELLING
-    type: 'GET_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
-    // type: 'SAVE_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
-    //Goes to -> CurrentComediansReducer
-    // payload: {comedianId}
-    payload: comedianId
-  })
-  // history.push(`/ComedianDetails/${comedianId.first_name}${comedianId.last_name}`)
-  history.push(`/ComedianDetails/${comedianId}`)
-  // must match route with 'exact path="/ComedianDetails"' in App.jsx - 
- }
+//  const clickIcon =(comedianId) => {
+//   // console.log('comedianId is:', comedianId); // works - turning off cl
+//   dispatch ({
+//     // this is TELLING
+//     type: 'GET_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
+//     // type: 'SAVE_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
+//     //Goes to -> CurrentComediansReducer
+//     // payload: {comedianId}
+//     payload: comedianId
+//   })
+//   // history.push(`/ComedianDetails/${comedianId.first_name}${comedianId.last_name}`)
+//   history.push(`/ComedianDetails/${comedianId}`)
+//   // must match route with 'exact path="/ComedianDetails"' in App.jsx - 
+//  }
 
 
   // console.log('tempListAllComedians', tempListAllComedians);
@@ -55,7 +56,7 @@ function SearchPage() {
     <div className="container">
       <p>Search Page</p>
 
-
+    
 
       <div className="inputs">
         <div>
@@ -74,26 +75,30 @@ function SearchPage() {
         <input placeholder='City Name'></input>
         <button>Search City</button>
         </div>
-
       </div>
+      
+  {/* <ComedianItem title='hello world' comedian={listAllComedians}/> */}
       {/* <button>Search Comedians </button> */}
-      <div>
     <br></br>
+      <div>
         <section className="listAllComedians">
           {listAllComedians && listAllComedians.map(comedian => {
             return (
-              <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
-                <img className='icon'
+              // <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
+              <div key={comedian.id}> 
+              <ComedianItem comedianProp={comedian}/>
+                {/* <img className='icon'
                   src={comedian.icon}
                   alt={comedian.first_name}
                 />
                 <h3>{comedian.first_name} {comedian.last_name}</h3>
+                <button onClick={() => Favorite (comedian.id)}>Favorite</button>
+                <button onClick={() => UnFavorite (comedian.id)}>UnFavorite</button> */}
               </div>
             );
           })}
 
         </section>
-      
       </div>
 
 

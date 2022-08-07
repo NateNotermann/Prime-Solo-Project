@@ -14,13 +14,13 @@ function ComedianDetails() {
   // const currentComedian = currentComedian[0];  
   const [heading, setHeading] = useState('Functional Component');
 
-  const Favorite = () => {
-    console.log('Favorited comedian!', currentComedian.id);
-  };
+  // const Favorite = () => {
+  //   console.log('Favorited comedian!', currentComedian.id);
+  // };
 
-  const UnFavorite = () => {
-    console.log('UnFavorited comedian', currentComedian.id);
-  };
+  // const UnFavorite = () => {
+  //   console.log('UnFavorited comedian', currentComedian.id);
+  // };
 
 
   useEffect(() => {
@@ -49,7 +49,7 @@ function ComedianDetails() {
       <a href={currentComedian.twitter_link} title="Twitter" target="_blank">Twitter</a>.
       <a href={currentComedian.website_link} title="Website" target="_blank">Website</a>.
       <a href={currentComedian.youtube_link} title="Youtube" target="_blank">Youtube</a>.
-      <h3>Genre: {currentComedian.genre}</h3>
+      <h5>Genre: {currentComedian.genre}</h5>
       <p>{currentComedian.description} </p>
     </div>
   )
