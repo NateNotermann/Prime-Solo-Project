@@ -24,6 +24,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import ComedianDetails from '../ComedianDetails/ComedianDetails';
 import Favorites from '../Favorites/Favorites';
+import BackButton from '../BackButton/BackButton';
 
 import './App.css';
 
@@ -142,6 +143,7 @@ function App() {
             <h1>404</h1>
           </Route>
         </Switch>
+        <BackButton />
         <Footer />
       </div>
     </Router>

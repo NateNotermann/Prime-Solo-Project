@@ -3,8 +3,10 @@ import './ComedianDetails.css'
 
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
+import ComedianItem from '../ComedianItem/ComedianItem.jsx';
 
 // -- Component to display just one comedians info -- //
 function ComedianDetails() {
@@ -36,16 +38,16 @@ function ComedianDetails() {
   return (
     <div className="cdcontainer">
       <h2>Comedian Details</h2>
-      
-      <h2>{currentComedian.first_name} {currentComedian.last_name} id: {currentComedian.id}</h2>
+      <ComedianItem comedianProp={currentComedian} />
+      {/* <h2>{currentComedian.first_name} {currentComedian.last_name} id: {currentComedian.id}</h2>
       <img className='icon'
         src={currentComedian.icon}
         alt={currentComedian.first_name} />
         <br></br>
         <button onClick={() => Favorite (currentComedian.id)}>Favorite</button>
         <button onClick={() => UnFavorite (currentComedian.id)}>UnFavorite</button>
-        <br></br>
-       <a href={currentComedian.instagram_link} title="Instagram" target="_blank">Instagram</a>.
+        <br></br> */}
+      <a href={currentComedian.instagram_link} title="Instagram" target="_blank">Instagram</a>.
       <a href={currentComedian.twitter_link} title="Twitter" target="_blank">Twitter</a>.
       <a href={currentComedian.website_link} title="Website" target="_blank">Website</a>.
       <a href={currentComedian.youtube_link} title="Youtube" target="_blank">Youtube</a>.

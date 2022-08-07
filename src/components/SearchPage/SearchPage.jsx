@@ -28,24 +28,10 @@ function SearchPage() {
   // {id: 3, first_name: 'Tom', last_name: 'Segura', icon: 'images/comedians/tom_segura_icon.jpg'}];
 
 
-//  const clickIcon =(comedianId) => {
-//   // console.log('comedianId is:', comedianId); // works - turning off cl
-//   dispatch ({
-//     // this is TELLING
-//     type: 'GET_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
-//     // type: 'SAVE_CURRENT_COMEDIAN', // DON`T CHANGE -  must be 'SAVE_CURRENT_COMEDIAN'
-//     //Goes to -> CurrentComediansReducer
-//     // payload: {comedianId}
-//     payload: comedianId
-//   })
-//   // history.push(`/ComedianDetails/${comedianId.first_name}${comedianId.last_name}`)
-//   history.push(`/ComedianDetails/${comedianId}`)
-//   // must match route with 'exact path="/ComedianDetails"' in App.jsx - 
-//  }
+  function back() {
+    history.goBack();
+}
 
-
-  // console.log('tempListAllComedians', tempListAllComedians);
-// tempListAllComedians
   useEffect(() => {
     dispatch({ type: 'GET_ALL_COMEDIANS' });
   }, []);
@@ -87,13 +73,7 @@ function SearchPage() {
               // <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
               <div key={comedian.id}> 
               <ComedianItem comedianProp={comedian}/>
-                {/* <img className='icon'
-                  src={comedian.icon}
-                  alt={comedian.first_name}
-                />
-                <h3>{comedian.first_name} {comedian.last_name}</h3>
-                <button onClick={() => Favorite (comedian.id)}>Favorite</button>
-                <button onClick={() => UnFavorite (comedian.id)}>UnFavorite</button> */}
+               
               </div>
             );
           })}
