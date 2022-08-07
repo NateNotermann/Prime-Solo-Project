@@ -64,6 +64,21 @@ SELECT * FROM "comedians"ORDER BY "comedians"."first_name";
 SELECT * from comedians 
 WHERE id = $1;
 
+-- GET All Favorites for 1 user--
+SELECT comedians.id, first_name, last_name, icon FROM comedians
+JOIN favorites ON
+favorites.comedian_id = comedians.id
+WHERE favorites.user_id = 1 
+ORDER BY favorites.id;
+
+--  optional filter -- 
+SELECT comedians.id, first_name, last_name, icon FROM comedians
+JOIN favorites ON
+favorites.comedian_id = comedians.id
+WHERE favorites.user_id = 1 
+GROUP BY comedians.id 
+ORDER BY id;
+
 
  -- CREATE - Favorite -- 
 INSERT INTO favorites (user_id, comedian_id)

@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
     res.send(result.rows);
   })
   .catch(error => {
-    console.log('ERROR in (allcomedians.router.js)');
+    console.log('ERROR in (allcomedians.router.js)', error);
     res.sendStatus(500)
   })
 });

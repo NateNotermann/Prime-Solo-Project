@@ -31,6 +31,7 @@ function Nav() {
             <Link className="navLink" to="/SearchPage">
               Search
             </Link>
+            
             <Link className="navLink" to="/Favorites">
               Favorites
             </Link>

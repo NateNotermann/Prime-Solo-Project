@@ -8,15 +8,15 @@ import { useHistory} from 'react-router-dom';
 function Favorites(props) {
   // Using hooks we're creating local state for a "heading" variable with
   // a default value of 'Functional Component'
-  const store = useSelector((store) => store.Favorites);
+  const Favorites = useSelector((store) => store.Favorites);
   const [heading, setHeading] = useState('Functional Component');
   const dispatch = useDispatch();
 
-
+  console.log('Favorites const:', Favorites);
 
 
   useEffect(() => {
-    // dispatch({ type: 'GET_FAVORITES' });
+    dispatch({ type: 'GET_FAVORITES' }); // TELL
 
   }, []);
 
@@ -25,6 +25,8 @@ function Favorites(props) {
     <div>
       {/* <h2>{heading}</h2> */}
       <h2>Favorites Page</h2>
+      <br></br>
+      {/* <h2>{Favorites[0].first_name}</h2> */}
 
     </div>
   );

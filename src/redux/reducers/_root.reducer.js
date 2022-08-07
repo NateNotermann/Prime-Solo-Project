@@ -4,6 +4,8 @@ import user from './user.reducer';
 import allComediansReducerStore from './allComedians.reducer'
 // import currentComedian from './CurrentComedian.Reducer/CurrentComedian.Reducer';
 import CurrentComediansReducerStore from './CurrentComedian.Reducer/CurrentComedian.Reducer';
+import Favorites from './Favorites.reducer';
+
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
 // This is imported in index.js as rootSaga
@@ -15,6 +17,7 @@ const rootReducer = combineReducers({
   user, // will have an id and username if someone is logged in
   allComediansReducerStore, // store list of all comedians
   CurrentComediansReducerStore,
+  Favorites,
 });
 
 export default rootReducer;
