@@ -11,6 +11,7 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 const allComedians = require('./routes/allComedians.router');
 const comedianDetailsRouter = require('./routes/comedianDetails.router.js');
+const favorites = require('./routes/favorites.router')
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -31,6 +32,9 @@ app.use('/api/comedians', allComedians);
 
 // get comedian Details route
 app.use('/api/comedianDetails', comedianDetailsRouter);
+
+// get Favorites route
+app.use('/api/Favorites', favorites);
 
 
 

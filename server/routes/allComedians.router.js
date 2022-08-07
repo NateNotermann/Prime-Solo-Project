@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
     res.send(result.rows);
   })
   .catch(error => {
-    console.log('ERROR in (allcomedians.router.js)');
+    console.log('ERROR in (all comedians.router.js)');
     res.sendStatus(500)
   })
 });

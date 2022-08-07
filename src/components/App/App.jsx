@@ -23,7 +23,8 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import ComedianDetails from '../ComedianDetails/ComedianDetails';
-
+import Favorites from '../Favorites/Favorites';
+import BackButton from '../BackButton/BackButton';
 
 import './App.css';
 
@@ -74,6 +75,16 @@ function App() {
             <SearchPage />
           </ProtectedRoute>
           {/* ----------Route End---------------- */}
+
+          {/* ----------Favorites Route Start---------------- */}
+          <ProtectedRoute
+            // logged in shows SearchPage else shows LoginPage
+            exact
+            path="/Favorites"
+          >
+            <Favorites />
+          </ProtectedRoute>
+          {/* ---------- FavoritesRoute End---------------- */}
 
           {/* ----------Route Start---------------- */}
           <ProtectedRoute
@@ -132,6 +143,7 @@ function App() {
             <h1>404</h1>
           </Route>
         </Switch>
+        <BackButton />
         <Footer />
       </div>
     </Router>

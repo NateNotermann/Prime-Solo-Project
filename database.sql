@@ -5,12 +5,12 @@
 -- Otherwise you will have errors!
 
 ------ ALL TABLES ------
+-- USERE TABLE --
 CREATE TABLE "user" (
     "id" SERIAL PRIMARY KEY,
     "username" VARCHAR (80) UNIQUE NOT NULL,
     "password" VARCHAR (1000) NOT NULL
 );
-
 
 -- COMEDIANS TABLE --
 CREATE TABLE "comedians" (
@@ -26,12 +26,11 @@ CREATE TABLE "comedians" (
 "city" VARCHAR (50) NOT NULL
 );
 
-
 -- FAVORITES TABLE -- 
 CREATE TABLE "favorites" (
 "id" SERIAL PRIMARY KEY,
 "user_id" INT REFERENCES "user" NOT NULL,
-"comedians_id" INT REFERENCES "comedians" NOT NULL
+"comedian_id" INT REFERENCES "comedians" NOT NULL
 );
 
 
@@ -41,12 +40,50 @@ CREATE TABLE "favorites" (
 INSERT INTO "comedians" ("first_name", "last_name", "icon", "genre", "instagram_link", "twitter_link","youtube_link", "website_link", "city" )
 VALUES
 ('Liz', 'Miele', 'images/comedians/liz_miele_icon.jpg',	'dark_humor', 'https://www.instagram.com/lizmiele/', 'https://www.youtube.com/user/LizMiele', 'https://twitter.com/lizmiele', 'https://lizmiele.com/', 'New York'),
-('Monica', 'Nevi', 'images/comedians/monica_nevi_icon.jpg',	'dark_humor', 'https://www.instagram.com/lizmiele/', 'https://www.youtube.com/user/LizMiele', 'https://twitter.com/lizmiele', 'https://lizmiele.com/', 'New York'),
-('Tom', 'Segura', 'images/comedians/tom_segura_icon.jpg',	'dark_humor', 'https://www.instagram.com/lizmiele/', 'https://www.youtube.com/user/LizMiele', 'https://twitter.com/lizmiele', 'https://lizmiele.com/', 'New York')
+('Monica', 'Nevi', 'images/comedians/monica_nevi_icon.jpg',	'positive', 'https://www.instagram.com/monicanevi/', 'https://www.youtube.com/user/MonicaNevi', 'https://twitter.com/monicanevi?lang=en', 'https://monicanevi.com/', 'Seatle'),
+('Tom', 'Segure', 'images/comedians/tom_segura_icon.jpg',	'naughty', 'https://www.instagram.com/seguratom/?hl=en', 'https://www.youtube.com/user/tomsegura', 'https://twitter.com/tomsegura?', 'https://tomsegura.com/', 'Austin')
 ;
 
+
 -- FAVORITES dummy data --
-INSERT INTO "favorites" ("user_id", "comedians_id" )
+INSERT INTO "favorites" ("user_id", "comedian_id" )
 VALUES 
 (1,1),
 (1,3);
+
+
+
+
+
+---- ALL QUERYS  -----
+
+-- GET All Comedians --
+SELECT * FROM "comedians"ORDER BY "comedians"."first_name";
+
+-- Comedian Details --
+SELECT * from comedians 
+WHERE id = $1;
+
+-- GET All Favorites for 1 user--
+SELECT comedians.id, first_name, last_name, icon FROM comedians
+JOIN favorites ON
+favorites.comedian_id = comedians.id
+WHERE favorites.user_id = 1 
+ORDER BY favorites.id;
+
+--  optional filter -- 
+SELECT comedians.id, first_name, last_name, icon FROM comedians
+JOIN favorites ON
+favorites.comedian_id = comedians.id
+WHERE favorites.user_id = 1 
+GROUP BY comedians.id 
+ORDER BY id;
+
+
+ -- CREATE - Favorite -- 
+INSERT INTO favorites (user_id, comedian_id)
+VALUES 
+($1,$2);
+
+ -- DELETE - Favorite -- 
+ DELETE 

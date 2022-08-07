@@ -3,8 +3,10 @@ import './ComedianDetails.css'
 
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
-import { useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
+import ComedianItem from '../ComedianItem/ComedianItem.jsx';
 
 // -- Component to display just one comedians info -- //
 function ComedianDetails() {
@@ -12,12 +14,15 @@ function ComedianDetails() {
   const dispatch = useDispatch();
   const currentComedian = useSelector(store => store.CurrentComediansReducerStore);
   // const currentComedian = currentComedian[0];  
-
-  
-  // -- "currentComedian" is a DECONSTRUCTED version of currentComedian
-  // const currentComedian = useSelector(store => store.allComediansReducerStore);
   const [heading, setHeading] = useState('Functional Component');
 
+  // const Favorite = () => {
+  //   console.log('Favorited comedian!', currentComedian.id);
+  // };
+
+  // const UnFavorite = () => {
+  //   console.log('UnFavorited comedian', currentComedian.id);
+  // };
 
 
   useEffect(() => {
@@ -33,17 +38,20 @@ function ComedianDetails() {
   return (
     <div className="cdcontainer">
       <h2>Comedian Details</h2>
-      
-      <h2>{currentComedian.first_name} {currentComedian.last_name}</h2>
+      <ComedianItem comedianProp={currentComedian} />
+      {/* <h2>{currentComedian.first_name} {currentComedian.last_name} id: {currentComedian.id}</h2>
       <img className='icon'
         src={currentComedian.icon}
         alt={currentComedian.first_name} />
         <br></br>
-       <a href={currentComedian.instagram_link} title="Instagram" target="_blank">Instagram</a>.
+        <button onClick={() => Favorite (currentComedian.id)}>Favorite</button>
+        <button onClick={() => UnFavorite (currentComedian.id)}>UnFavorite</button>
+        <br></br> */}
+      <a href={currentComedian.instagram_link} title="Instagram" target="_blank">Instagram</a>.
       <a href={currentComedian.twitter_link} title="Twitter" target="_blank">Twitter</a>.
       <a href={currentComedian.website_link} title="Website" target="_blank">Website</a>.
       <a href={currentComedian.youtube_link} title="Youtube" target="_blank">Youtube</a>.
-      <h3>Genre: {currentComedian.genre}</h3>
+      <h5>Genre: {currentComedian.genre}</h5>
       <p>{currentComedian.description} </p>
     </div>
   )
