@@ -12,12 +12,15 @@ function ComedianDetails() {
   const dispatch = useDispatch();
   const currentComedian = useSelector(store => store.CurrentComediansReducerStore);
   // const currentComedian = currentComedian[0];  
-
-  
-  // -- "currentComedian" is a DECONSTRUCTED version of currentComedian
-  // const currentComedian = useSelector(store => store.allComediansReducerStore);
   const [heading, setHeading] = useState('Functional Component');
 
+  const Favorite = () => {
+    console.log('Favorited comedian!', currentComedian.id);
+  };
+
+  const UnFavorite = () => {
+    console.log('UnFavorited comedian', currentComedian.id);
+  };
 
 
   useEffect(() => {
@@ -34,10 +37,13 @@ function ComedianDetails() {
     <div className="cdcontainer">
       <h2>Comedian Details</h2>
       
-      <h2>{currentComedian.first_name} {currentComedian.last_name}</h2>
+      <h2>{currentComedian.first_name} {currentComedian.last_name} id: {currentComedian.id}</h2>
       <img className='icon'
         src={currentComedian.icon}
         alt={currentComedian.first_name} />
+        <br></br>
+        <button onClick={() => Favorite (currentComedian.id)}>Favorite</button>
+        <button onClick={() => UnFavorite (currentComedian.id)}>UnFavorite</button>
         <br></br>
        <a href={currentComedian.instagram_link} title="Instagram" target="_blank">Instagram</a>.
       <a href={currentComedian.twitter_link} title="Twitter" target="_blank">Twitter</a>.

@@ -23,7 +23,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import ComedianDetails from '../ComedianDetails/ComedianDetails';
-
+import Favorites from '../Favorites/Favorites';
 
 import './App.css';
 
@@ -74,6 +74,16 @@ function App() {
             <SearchPage />
           </ProtectedRoute>
           {/* ----------Route End---------------- */}
+
+          {/* ----------Favorites Route Start---------------- */}
+          <ProtectedRoute
+            // logged in shows SearchPage else shows LoginPage
+            exact
+            path="/Favorites"
+          >
+            <Favorites />
+          </ProtectedRoute>
+          {/* ---------- FavoritesRoute End---------------- */}
 
           {/* ----------Route Start---------------- */}
           <ProtectedRoute
