@@ -30,19 +30,43 @@ router.get('/', (req, res) => {
 /** 
  * POST route template
  */
+
+// let favoriteComedian = req.body;
+// router.post('/', (req, res) => {
+  
+//   const query = `INSERT INTO "favorites" ("user_id", "comedian_id" )
+// VALUES 
+// (1,2);`;
+//   pool.query(query)
+//     .then(result => {
+//       res.send(result.rows);
+//     })
+//     .catch(error => {
+//       console.log('ERROR in FAVORITES Router', error);
+//       res.sendStatus(500);
+//     })
+// });
+
+
 router.post('/', (req, res) => {
-  // POST route code here
-  const query = `INSERT INTO "favorites" ("user_id", "comedian_id" )
-VALUES 
-(1,2);`;
-  pool.query(query)
-    .then(result => {
-      res.send(result.rows);
-    })
-    .catch(error => {
-      console.log('ERROR in FAVORITES Router', error);
-      res.sendStatus(500);
-    })
+	const { user_id, comedian_id } = req.body;
+  console.log('req.body', req.body);
+	const queryText = 
+  `INSERT INTO "favorites" ("user_id", "comedian_id" )
+  VALUES 
+  ($1, $2);`;
+  pool
+		.query(queryText, [ user_id, comedian_id ])
+		.then(() => {
+			res.sendStatus(200);
+		})
+		.catch((err) => {
+			console.log('ERROR IN POST FAVORITE', err);
+		});
 });
+
+
+
+
 
 module.exports = router;

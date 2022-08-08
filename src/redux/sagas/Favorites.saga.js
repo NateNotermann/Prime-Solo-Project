@@ -14,9 +14,10 @@ function* getFavoritesSaga(action) {
 
 }
 
-function* favorite(action) {
+function* addFavorite(action) {
     try {
-        const favorite = yield axios.post(`/api/Favorites`);
+        const favorite = yield axios.post(`/api/Favorites`, action.payload);
+        console.log('action.payload(SAGA)', action.payload);
         yield put ({ type: 'GET_FAVORITES', })
     } catch {
         console.log('ERROR - FAVORITE SAGA');
@@ -41,8 +42,8 @@ function* unfavorite(action) {
 
 function* FavoritesSaga() {
     yield takeEvery('GET_FAVORITES', getFavoritesSaga) // HEAR, then run 'getFavoritesSaga2'
-    yield takeEvery('FAVORITE', favorite) // HEAR, then run 'favorite'
-    // yield takeEvery('UNFAVORITE', unfavorite) // HEAR, then run 'unfavorite'
+    yield takeEvery('ADD_FAVORITE', addFavorite) // HEAR, then run 'favorite'
+    // yield takeEvery('DELETE_FAVORITE', unfavorite) // HEAR, then run 'unfavorite'
 
 }
 
