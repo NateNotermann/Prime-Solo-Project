@@ -14,20 +14,26 @@ function* getFavoritesSaga(action) {
 
 }
 
-function* addFavorite(action) {
+// ----- ADD FAVORITE ---- //
+function* addFavorite(action) { //action.payload is: { user_id: #, comedian_id: # }
     try {
-        const favorite = yield axios.post(`/api/Favorites`, action.payload);
-        console.log('action.payload(SAGA)', action.payload);
+        // console.log('action.payload', action.payload);
+        const favorite = yield axios.post(`/api/Favorites`, action.payload); 
+        // console.log('AXIOS ADD action.payload', action.payload);
         yield put ({ type: 'GET_FAVORITES', })
     } catch {
         console.log('ERROR - FAVORITE SAGA');
     }
 }
 
-function* unfavorite(action) {
+
+
+// ----- DELETE FAVORITE ---- //
+function* deleteFavorite(action) { //action.payload - should be just an INT.
     try {
-        const unfavorite = yield axios.get(`/api/Favorites`);
-        yield put ({ type: 'FAVORITES_REDUCER', payload: Favorites.data })
+        console.log('AXIOS DELETE action.payload:', action.payload); // should be just an INT.
+        yield axios.delete(`/api/Favorites/${action.payload}`); // example: `/api/Favorites/62`
+        yield put ({ type: 'GET_FAVORITES' })
     } catch {
         console.log('ERROR - FAVORITE SAGA');
     }
@@ -43,7 +49,7 @@ function* unfavorite(action) {
 function* FavoritesSaga() {
     yield takeEvery('GET_FAVORITES', getFavoritesSaga) // HEAR, then run 'getFavoritesSaga2'
     yield takeEvery('ADD_FAVORITE', addFavorite) // HEAR, then run 'favorite'
-    // yield takeEvery('DELETE_FAVORITE', unfavorite) // HEAR, then run 'unfavorite'
+    yield takeEvery('DELETE_FAVORITE', deleteFavorite) // HEAR, then run 'unfavorite'
 
 }
 

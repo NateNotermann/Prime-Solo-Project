@@ -60,7 +60,7 @@ VALUES
 -- GET All Comedians --
 SELECT * FROM "comedians"ORDER BY "comedians"."first_name";
 
--- Comedian Details --
+-- GET Comedian Details --
 SELECT * from comedians 
 WHERE id = $1;
 
@@ -71,7 +71,7 @@ favorites.comedian_id = comedians.id
 WHERE favorites.user_id = 1 
 ORDER BY favorites.id;
 
---  optional filter -- 
+--  optional GROUP BY Comedian_id -- 
 SELECT comedians.id, first_name, last_name, icon FROM comedians
 JOIN favorites ON
 favorites.comedian_id = comedians.id
@@ -86,4 +86,4 @@ VALUES
 ($1,$2);
 
  -- DELETE - Favorite -- 
- DELETE 
+DELETE FROM favorites WHERE user_id = $1 AND comedian_id = $1; 

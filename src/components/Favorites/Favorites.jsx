@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 
-import ComedianItem from '../ComedianItem/ComedianItem.jsx';
+import FavoriteItem from '../FavoriteItem/FavoriteItem';
 
 
 function Favorites(props) {
@@ -23,15 +23,15 @@ function Favorites(props) {
 
   }, []);
 
-
+console.log('favorites', Favorites);
   return (
     <div>
       <h2>{user.username}'s Favorites Page</h2>
       <br></br>
-      <section className="favoritesList">{Favorites.map(comedian => {
+      <section className="favoritesList">{Favorites.map(favorite => {
         return (
           <div className="comedian">
-            <ComedianItem comedianProp={comedian}  />
+            <FavoriteItem favoriteProp={favorite}  />
           </div>
 
         )

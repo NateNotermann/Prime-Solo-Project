@@ -44,13 +44,16 @@ function ComedianItem({ comedianProp }) {
       
 
   // function to remove a favorite 
-  const deleteFavorite = (id) => {
-    console.log('Delete Favorite comedian', comedianProp.id);
-    dispatch({
-      type: 'DELETE_FAVORITE',
-      payload: id
-    })
-  };
+  // const deleteFavorite = (comedian_id) => {
+  //   console.log('Delete Favorite:', comedian_id, 'user.id:', user_id);
+  //   dispatch({
+  //     type: 'DELETE_FAVORITE',
+  //     payload: {
+  //       user_id,    // shows as user_id: #
+  //       comedian_id // shows as comedian_id: #
+  //     } 
+  //   })
+  // };
 
 
 
@@ -64,8 +67,8 @@ function ComedianItem({ comedianProp }) {
                     src={comedianProp.icon}
                     alt={comedianProp.first_name} />
             </div>
-            <button onClick={() => addFavorite(comedianProp.id)}>addFavorite</button>
-            <button onClick={() => deleteFavorite(comedianProp.id)}>deleteFavorite</button>
+            <button onClick={() => addFavorite(comedianProp.id)}>Favorite</button>
+            {/* <button onClick={() => deleteFavorite(comedianProp.id)}>deleteFavorite</button> */}
         </div>
     )
 }
