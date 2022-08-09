@@ -5,6 +5,9 @@ const {
 const encryptLib = require('../modules/encryption');
 const pool = require('../modules/pool');
 const userStrategy = require('../strategies/user.strategy');
+const {
+  route
+} = require('./favorites.router');
 
 const router = express.Router();
 
@@ -45,6 +48,23 @@ router.post('/logout', (req, res) => {
   // Use passport's built-in method to log out the user
   req.logout();
   res.sendStatus(200);
+});
+
+router.put('/:id', (req, res) => {
+  const id = req.params.id;
+  const username = req.body.username;
+console.log('req.params.id', req.params.id);
+// console.log('req.params.id', req.params.id);
+  const sqlText = `UPDATE "user" SET username = $1 WHERE id = $2;`;
+  // pool.query(sqlText, [id, username])
+  pool.query(sqlText,[username, id])
+    .then((result) => {
+      res.sendStatus(200)
+    })
+    .catch((error) => {
+      console.log('ERROR in PUT ROUTER', error);
+      res.sendStatus(500)
+    });
 });
 
 module.exports = router;
