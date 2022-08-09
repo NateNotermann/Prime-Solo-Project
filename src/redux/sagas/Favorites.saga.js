@@ -5,8 +5,7 @@ import axios from 'axios';
 // ----- GET ALL FAVORITES ----- //
 function* getFavoritesSaga(action) {
     try {
-        // const Favorites = yield axios.get(`/api/Favorites/${action.payload}`);
-        
+        // console.log('GET FAV action.payload', action.payload);
         const Favorites = yield axios.get(`/api/Favorites/${action.payload}`);
         yield put ({ type: 'FAVORITES_REDUCER', payload: Favorites.data }) // TELL
     } catch {
@@ -21,7 +20,7 @@ function* addFavorite(action) { //action.payload is: { user_id: #, comedian_id: 
         // console.log('action.payload', action.payload);
         const favorite = yield axios.post(`/api/Favorites`, action.payload); 
         // console.log('AXIOS ADD action.payload', action.payload);
-        yield put ({ type: 'GET_FAVORITES', })
+        // yield put ({ type: 'GET_FAVORITES', })
     } catch {
         console.log('ERROR - FAVORITE SAGA');
     }

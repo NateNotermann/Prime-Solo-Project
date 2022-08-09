@@ -31,12 +31,12 @@ router.get('/:id', (req, res) => {
 
 
 /// --------- ALTERNATE SQL - GROUP BY comedian_id ------- //
-`SELECT comedians.id, first_name, last_name, icon FROM comedians
-  JOIN favorites ON
-  favorites.comedian_id = comedians.id
-  WHERE favorites.user_id = 1 
-  GROUP BY comedians.id 
-  ORDER BY id; `
+// `SELECT comedians.id, first_name, last_name, icon FROM comedians
+//   JOIN favorites ON
+//   favorites.comedian_id = comedians.id
+//   WHERE favorites.user_id = 1 
+//   GROUP BY comedians.id 
+//   ORDER BY id; `
 
 
 // ----- ADD FAVORITE ---- //
