@@ -19,7 +19,12 @@ function Favorites(props) {
 
 
   useEffect(() => {
-    dispatch({ type: 'GET_FAVORITES' }); // TELL
+    dispatch({ 
+      type: 'GET_FAVORITES',
+      payload: user.id,  
+  }); // TELL
+
+  console.log('user.id', user.id);
 
   }, []);
 

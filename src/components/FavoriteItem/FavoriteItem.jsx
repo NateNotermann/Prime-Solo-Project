@@ -7,7 +7,7 @@ import { useHistory, } from 'react-router-dom';
 // will be used any time we are .map()ing 
 
 function ComedianItem({ favoriteProp }) {
-    const user_id = useSelector(store => store.user.id);
+    const user = useSelector(store => store.user.id);
     const history = useHistory();
     const dispatch = useDispatch();
 
@@ -27,7 +27,7 @@ function ComedianItem({ favoriteProp }) {
 
     // ------ REMOVE FAVORITE ------ // 
   const deleteFavorite = (favoriteId) => {
-    console.log('Delete Favorite:', favoriteId, 'user.id:', user_id);
+    console.log('Delete Favorite:', favoriteId, 'user:', user);
     dispatch({
       type: 'DELETE_FAVORITE',
       payload: favoriteId,  // favoriteId is just and INT, it is pulled from favorites.id

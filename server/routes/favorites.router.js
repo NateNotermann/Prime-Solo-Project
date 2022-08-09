@@ -5,18 +5,20 @@ const router = express.Router();
 
 
 // ----- GET ALL FAVORITES ---- //
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
   // GET route code here
+  const id = req.params.id;
+  console.log('req.params.id', req.params.id);
   const query =
     `SELECT favorites.id, comedian_id, first_name, last_name, icon 
     FROM comedians
     JOIN favorites 
     ON favorites.comedian_id = comedians.id
-    WHERE favorites.user_id = 1 
+    WHERE favorites.user_id = $1 
     ORDER BY favorites.id;
     `;
 
-  pool.query(query)
+  pool.query(query, [id])
     .then(result => {
       res.send(result.rows);
     })
@@ -65,7 +67,7 @@ router.delete('/:id', (req, res) => {
     console.log('req.params.id', req.params.id);
 
   const queryText =
-    `DELETE FROM favorites WHERE user_id = 1 AND id = $1;`;
+    `DELETE FROM favorites WHERE id = $1;`; // DONT NEED TO SAY USER- JUST 'THIS ID'
     // `DELETE FROM favorites WHERE comedian_id = $1;`;
   pool.query(queryText, [id])
     .then(() => {

@@ -6,7 +6,8 @@ import axios from 'axios';
 function* getFavoritesSaga(action) {
     try {
         // const Favorites = yield axios.get(`/api/Favorites/${action.payload}`);
-        const Favorites = yield axios.get(`/api/Favorites`);
+        
+        const Favorites = yield axios.get(`/api/Favorites/${action.payload}`);
         yield put ({ type: 'FAVORITES_REDUCER', payload: Favorites.data }) // TELL
     } catch {
         console.log('ERROR - FAVORITES SAGA');
@@ -33,6 +34,7 @@ function* deleteFavorite(action) { //action.payload - should be just an INT.
     try {
         console.log('AXIOS DELETE action.payload:', action.payload); // should be just an INT.
         yield axios.delete(`/api/Favorites/${action.payload}`); // example: `/api/Favorites/62`
+        yield put ({ type: 'FETCH_USER', })
         yield put ({ type: 'GET_FAVORITES' })
     } catch {
         console.log('ERROR - FAVORITE SAGA');
