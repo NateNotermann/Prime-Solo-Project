@@ -28,15 +28,30 @@ function SearchPage() {
   let [lastName, setLastName] = useState('');
   let [genre, setGenre] = useState('');
   let [city, setCity] = useState('');
-
+  // let [className, setclassName] =useState('');
+  let [searchItem, setSearchItem] = useState('');
 
   
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   console.log('firstName local state', firstName);
+  //   dispatch({
+  //     type: 'START_SEARCH',
+  //     payload: firstName,
+  //   });
+  // }
+
   function handleSubmit(event) {
     event.preventDefault();
-    console.log('firstName local state', firstName);
+    console.log('SearchItem local state', searchItem);
+    console.log('event.target', event.target);
+    console.log('event.target.VALUE', event.target.value);
+    console.log('event.target.className', event.target.className);
     dispatch({
       type: 'START_SEARCH',
-      payload: firstName,
+      payload: {
+        className: event.target.className,
+        searchItem: searchItem}
     });
   }
 
@@ -55,43 +70,43 @@ function SearchPage() {
       <div className="searchForm">
 
 
-  <form className="firstName" onSubmit={handleSubmit}>
+  <form className="first_name" onSubmit={handleSubmit}>
     <label>Search First Name</label>
     <br></br>
         <input
         placeholder='First Name'
-        value={firstName}
-        onChange={(event) => setFirstName(event.target.value)}/> 
+        value={searchItem}
+        onChange={(event) => setSearchItem(event.target.value)}/> 
         <button type='submit'>Submit</button>
     </form>
 
-    <form className="lastName" onSubmit={handleSubmit}>
-    <label>Search First Name</label>
+    <form className="last_name" onSubmit={handleSubmit}>
+    <label>Search Last Name</label>
     <br></br>
         <input
         placeholder='Last Name'
-        value={lastName}
-        onChange={(event) => setLastName(event.target.value)}/> 
+        value={searchItem}
+        onChange={(event) => setSearchItem(event.target.value)}/> 
         <button type='submit'>Submit</button>
     </form>
 
     <form className="genre" onSubmit={handleSubmit}>
-    <label>Search First Name</label>
+    <label>Search Genre</label>
     <br></br>
         <input
         placeholder='Genre'
-        value={genre}
-        onChange={(event) => setGenre(event.target.value)}/> 
+        value={searchItem}
+        onChange={(event) => setSearchItem(event.target.value)}/> 
         <button type='submit'>Submit</button>
     </form>
 
     <form className="city" onSubmit={handleSubmit}>
-    <label>Search First Name</label>
+    <label>Search City</label>
     <br></br>
         <input
         placeholder='City'
-        value={city}
-        onChange={(event) => setCity(event.target.value)}/> 
+        value={searchItem}
+        onChange={(event) => setSearchItem(event.target.value)}/> 
         <button type='submit'>Submit</button>
     </form>
       </div>

@@ -64,7 +64,7 @@ SELECT * FROM "comedians" ORDER BY "comedians"."first_name";
 SELECT * from comedians 
 WHERE id = $1;
 
--- GET All Favorites for 1 user--
+-- GET All Favorites for $1 user--
 SELECT comedians.id, first_name, last_name, icon FROM comedians
 JOIN favorites ON
 favorites.comedian_id = comedians.id
@@ -90,7 +90,9 @@ DELETE FROM favorites WHERE user_id = $1 AND comedian_id = $1;
 
 
 -- UPDATE - Username -- 
-UPDATE "user" SET username = 'person1' WHERE id = $1;
+UPDATE "user" SET username = $1 WHERE id = $2;
 
--- UPDATE - Password -- 
---  UPDATE "user" SET password = 'person1' WHERE id = 1;
+-- SEARCH for a single item (first_name/last_name/genre/city/) -- 
+SELECT * FROM "comedians" 
+WHERE $1 = $2               -- fist_name = 'Tom', -- city = 'Austin'
+ORDER BY "comedians"."first_name";
