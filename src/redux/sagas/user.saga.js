@@ -24,8 +24,21 @@ function* fetchUser() {
   }
 }
 
+function* putUsername (action){
+  console.log('action.payload',action.payload );
+  try {
+    const response = yield axios.put(`/api/user/${action.payload.id}`, action.payload)
+    yield put({type: 'FETCH_USER', payload: response.data});
+
+  } catch (error) {
+    console.log('catch error', error );
+  }
+
+}
+
 function* userSaga() {
   yield takeLatest('FETCH_USER', fetchUser);
+  yield takeLatest('PUT_USERNAME', putUsername)
 }
 
 export default userSaga;

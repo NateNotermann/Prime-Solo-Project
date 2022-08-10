@@ -58,9 +58,9 @@ VALUES
 ---- ALL QUERYS  -----
 
 -- GET All Comedians --
-SELECT * FROM "comedians"ORDER BY "comedians"."first_name";
+SELECT * FROM "comedians" ORDER BY "comedians"."first_name";
 
--- Comedian Details --
+-- GET Comedian Details --
 SELECT * from comedians 
 WHERE id = $1;
 
@@ -68,14 +68,14 @@ WHERE id = $1;
 SELECT comedians.id, first_name, last_name, icon FROM comedians
 JOIN favorites ON
 favorites.comedian_id = comedians.id
-WHERE favorites.user_id = 1 
+WHERE favorites.user_id = $1 
 ORDER BY favorites.id;
 
---  optional filter -- 
+--  optional GROUP BY Comedian_id -- 
 SELECT comedians.id, first_name, last_name, icon FROM comedians
 JOIN favorites ON
 favorites.comedian_id = comedians.id
-WHERE favorites.user_id = 1 
+WHERE favorites.user_id = $1 
 GROUP BY comedians.id 
 ORDER BY id;
 
@@ -86,4 +86,11 @@ VALUES
 ($1,$2);
 
  -- DELETE - Favorite -- 
- DELETE 
+DELETE FROM favorites WHERE user_id = $1 AND comedian_id = $1; 
+
+
+-- UPDATE - Username -- 
+UPDATE "user" SET username = 'person1' WHERE id = $1;
+
+-- UPDATE - Password -- 
+--  UPDATE "user" SET password = 'person1' WHERE id = 1;

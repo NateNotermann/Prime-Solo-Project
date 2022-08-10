@@ -25,6 +25,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import ComedianDetails from '../ComedianDetails/ComedianDetails';
 import Favorites from '../Favorites/Favorites';
 import BackButton from '../BackButton/BackButton';
+import Settings from '../Settings/Settings';
 
 import './App.css';
 
@@ -66,7 +67,7 @@ function App() {
             <UserPage />
           </ProtectedRoute>
 
-          {/* ----------Route Start---------------- */}
+          {/* ---------- SearchPage Route Start---------------- */}
           <ProtectedRoute
             // logged in shows SearchPage else shows LoginPage
             exact
@@ -74,7 +75,7 @@ function App() {
           >
             <SearchPage />
           </ProtectedRoute>
-          {/* ----------Route End---------------- */}
+          {/* ---------- SearchPage Route End---------------- */}
 
           {/* ----------Favorites Route Start---------------- */}
           <ProtectedRoute
@@ -84,9 +85,19 @@ function App() {
           >
             <Favorites />
           </ProtectedRoute>
-          {/* ---------- FavoritesRoute End---------------- */}
+          {/* ---------- Favorites Route End---------------- */}
+          
+          {/* ----------Settings Route Start---------------- */}
+          <ProtectedRoute
+            // logged in shows SearchPage else shows LoginPage
+            exact
+            path="/Settings"
+          >
+            <Settings />
+          </ProtectedRoute>
+          {/* ---------- Settings Route End---------------- */}
 
-          {/* ----------Route Start---------------- */}
+          {/* ----------ComedianDetails Route Start---------------- */}
           <ProtectedRoute
             // logged in shows ComedianDetails else shows LoginPage
             exact
@@ -94,7 +105,7 @@ function App() {
           >
             <ComedianDetails />
           </ProtectedRoute>
-          {/* ----------Route End---------------- */}
+          {/* ---------- ComedianDetails Route End---------------- */}
 
           <Route
             exact

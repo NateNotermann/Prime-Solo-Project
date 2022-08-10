@@ -5,6 +5,7 @@ import allComediansReducerStore from './allComedians.reducer'
 // import currentComedian from './CurrentComedian.Reducer/CurrentComedian.Reducer';
 import CurrentComediansReducerStore from './CurrentComedian.Reducer/CurrentComedian.Reducer';
 import Favorites from './Favorites.reducer';
+import searchReducer from './Search.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -16,8 +17,9 @@ const rootReducer = combineReducers({
   errors, // contains registrationMessage and loginMessage
   user, // will have an id and username if someone is logged in
   allComediansReducerStore, // store list of all comedians
-  CurrentComediansReducerStore,
-  Favorites,
+  CurrentComediansReducerStore, // used for comedianDetails
+  Favorites,                    // for Favorites List
+  searchReducer,                // For Searching 
 });
 
 export default rootReducer;

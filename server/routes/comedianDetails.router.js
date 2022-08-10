@@ -12,7 +12,6 @@ router.get('/:id', (req, res) => {
   // req.body going into a bigger object
   // req.params TARGET ONE SPECIFIC THING like id or namer or last_name
   const id = req.params.id;   // need BOTH a const id = req.params.id; AND '/:id'
-  console.log(`what is id?`,id); 
   // const query = 
   // `SELECT * from comedians
   // WHERE id = $1;`;

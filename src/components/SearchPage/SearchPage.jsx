@@ -21,13 +21,24 @@ function SearchPage() {
   const history = useHistory();
   const dispatch = useDispatch();
   const listAllComedians = useSelector(store => store.allComediansReducerStore);
-  // -- hard coded data to keep moving forward while working on bug -- //
-  // const tempListAllComedians = [ 
-  // {id: 1, first_name: 'Liz', last_name: 'Miele', icon: 'images/comedians/liz_miele_icon.jpg'},
-  // {id: 2, first_name: 'Monica', last_name: 'Nevi', icon: 'images/comedians/monica_nevi_icon.jpg'}, 
-  // {id: 3, first_name: 'Tom', last_name: 'Segura', icon: 'images/comedians/tom_segura_icon.jpg'}];
+  
+  const search = useSelector(store => store.searchReducer);
+  
+  let [firstName, setFirstName] = useState('');
+  let [lastName, setLastName] = useState('');
+  let [genre, setGenre] = useState('');
+  let [city, setCity] = useState('');
 
 
+  
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log('firstName local state', firstName);
+    dispatch({
+      type: 'START_SEARCH',
+      payload: firstName,
+    });
+  }
 
 
   useEffect(() => {
@@ -37,54 +48,83 @@ function SearchPage() {
 
   return (
     <div className="container">
-      <p>Search Page</p>
-
+      <h2>Search Page</h2>
+      <br></br>
     
 
-      <div className="inputs">
-        <div>
-        <input placeholder='First Name'></input>
-        <button>Search First Name</button>
-        </div>
-        <div>
-        <input placeholder='Last Name'></input>
-        <button>Search Last Name</button>
-        </div>
-        <div>
-        <input placeholder='Genre Name'></input>
-        <button>Search Genre Name</button>
-        </div>
-         <div>
-        <input placeholder='City Name'></input>
-        <button>Search City</button>
-        </div>
-      </div>
-      
-  {/* <ComedianItem title='hello world' comedian={listAllComedians}/> */}
-      {/* <button>Search Comedians </button> */}
+      <div className="searchForm">
+
+
+  <form className="firstName" onSubmit={handleSubmit}>
+    <label>Search First Name</label>
     <br></br>
-      <div>
-        <section className="listAllComedians">
-          {listAllComedians && listAllComedians.map(comedian => {
-            return (
-              // <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
-              <div key={comedian.id}> 
-              <ComedianItem comedianProp={comedian}/>
-               
-              </div>
-            );
-          })}
+        <input
+        placeholder='First Name'
+        value={firstName}
+        onChange={(event) => setFirstName(event.target.value)}/> 
+        <button type='submit'>Submit</button>
+    </form>
 
-        </section>
+    <form className="lastName" onSubmit={handleSubmit}>
+    <label>Search First Name</label>
+    <br></br>
+        <input
+        placeholder='Last Name'
+        value={lastName}
+        onChange={(event) => setLastName(event.target.value)}/> 
+        <button type='submit'>Submit</button>
+    </form>
+
+    <form className="genre" onSubmit={handleSubmit}>
+    <label>Search First Name</label>
+    <br></br>
+        <input
+        placeholder='Genre'
+        value={genre}
+        onChange={(event) => setGenre(event.target.value)}/> 
+        <button type='submit'>Submit</button>
+    </form>
+
+    <form className="city" onSubmit={handleSubmit}>
+    <label>Search First Name</label>
+    <br></br>
+        <input
+        placeholder='City'
+        value={city}
+        onChange={(event) => setCity(event.target.value)}/> 
+        <button type='submit'>Submit</button>
+    </form>
       </div>
-
-
-
+  
+  <br></br>
+  <section className="listAllComedians">
+    {search && search.map(comedian => {
+      return (
+        // <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
+        <div key={comedian.id}> 
+        <ComedianItem comedianProp={comedian}/>
+        </div>
+      );
+    })}
+  </section>
       
     </div>
   );
 }
 
-
 export default SearchPage;
 
+{/* 
+  // -- MAP ALL COMEDIANS -- //
+  <div>
+  <section className="listAllComedians">
+    {listAllComedians && listAllComedians.map(comedian => {
+      return (
+        // <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
+        <div key={comedian.id}> 
+        <ComedianItem comedianProp={comedian}/>
+        </div>
+      );
+    })}
+  </section>
+</div> */}

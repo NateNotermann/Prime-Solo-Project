@@ -7,7 +7,7 @@ import { useHistory, } from 'react-router-dom';
 // will be used any time we are .map()ing 
 
 function ComedianItem({ comedianProp }) {
-    // const user = useSelector(store => store.user);
+    const user_id = useSelector(store => store.user.id);
     const history = useHistory();
     const dispatch = useDispatch();
 
@@ -29,24 +29,31 @@ function ComedianItem({ comedianProp }) {
     // ------ FAVORITE BUTTONS ------ // 
     
     // function to add a favorite 
-    const Favorite = (id) => {
-        console.log('Favorited comedian!', comedianProp.id);
-        console.log('id!', id);
+    const addFavorite = (comedian_id) => {
+
+        console.log('Add Favorite:', comedian_id, 'user.id:', user_id);
+        // console.log('id!', id);
         dispatch({
-          type: 'FAVORITE',
-          payload: id
+          type:   'ADD_FAVORITE',
+          payload: {
+                  user_id,    // shows as user_id: #
+                  comedian_id // shows as comedian_id: #
+          } 
         })
       };
       
 
   // function to remove a favorite 
-  const UnFavorite = (id) => {
-    console.log('UnFavorited comedian', comedianProp.id);
-    dispatch({
-      type: 'UNFAVORITE',
-      payload: id
-    })
-  };
+  // const deleteFavorite = (comedian_id) => {
+  //   console.log('Delete Favorite:', comedian_id, 'user.id:', user_id);
+  //   dispatch({
+  //     type: 'DELETE_FAVORITE',
+  //     payload: {
+  //       user_id,    // shows as user_id: #
+  //       comedian_id // shows as comedian_id: #
+  //     } 
+  //   })
+  // };
 
 
 
@@ -60,8 +67,8 @@ function ComedianItem({ comedianProp }) {
                     src={comedianProp.icon}
                     alt={comedianProp.first_name} />
             </div>
-            <button onClick={() => Favorite(comedianProp.id)}>Favorite</button>
-            <button onClick={() => UnFavorite(comedianProp.id)}>UnFavorite</button>
+            <button onClick={() => addFavorite(comedianProp.id)}>Favorite</button>
+            {/* <button onClick={() => deleteFavorite(comedianProp.id)}>deleteFavorite</button> */}
         </div>
     )
 }
