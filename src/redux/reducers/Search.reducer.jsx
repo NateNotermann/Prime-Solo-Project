@@ -1,7 +1,7 @@
 
 // --- reducer to save allComedians state --- //
 
-const searchReducer =(state = ['-default state-'],  action) => {
+const searchReducer =(state = [],  action) => {
     
     switch (action.type) {
         case 'SAVE_SEARCH':
