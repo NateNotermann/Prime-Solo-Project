@@ -5,7 +5,7 @@ import axios from 'axios';
 // ----- GET ALL FAVORITES ----- //
 function* getFavoritesSaga(action) {
     try {
-        // console.log('GET FAV action.payload', action.payload);
+        console.log('GET FAV action.payload', action.payload);
         const Favorites = yield axios.get(`/api/Favorites/${action.payload}`);
         yield put ({ type: 'FAVORITES_REDUCER', payload: Favorites.data }) // TELL
     } catch {

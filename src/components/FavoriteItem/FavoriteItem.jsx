@@ -11,7 +11,12 @@ function ComedianItem({ favoriteProp }) {
     const history = useHistory();
     const dispatch = useDispatch();
 
+
+    console.log('favoriteProp', favoriteProp);
+
+
     const clickIcon = (comedianId) => {
+  
         dispatch({
             // this is TELLING
             type: 'GET_CURRENT_COMEDIAN', // DON`T CHANGE - 
@@ -38,11 +43,13 @@ function ComedianItem({ favoriteProp }) {
 
     console.log('favoriteProp', favoriteProp);
     console.log('favoriteProp.id', favoriteProp.id);
+    console.log('favoriteProp.comedian_id', favoriteProp.comedian_id);
+
     return (
         <div key={favoriteProp.id}>
-            <div onClick={() => clickIcon(favoriteProp.id)}>
+            <div onClick={() => clickIcon(favoriteProp.comedian_id)}>
                 {/* <h3> comedian item </h3> */}
-                <h2>{favoriteProp.first_name} {favoriteProp.last_name}, id is: {favoriteProp.id}</h2>
+                <h2>{favoriteProp.first_name} {favoriteProp.last_name}, id is: {favoriteProp.comedian_id}</h2>
                 <img className='icon'
                     src={favoriteProp.icon}
                     alt={favoriteProp.first_name} />
