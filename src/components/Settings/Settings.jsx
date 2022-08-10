@@ -11,7 +11,7 @@ function Settings() {
     const dispatch = useDispatch();
   
     let [usernameLocal, setUserNameLocal] = useState('');
-    let [passwordLocal, setPasswordLocal] = useState('');
+  
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -22,8 +22,7 @@ function Settings() {
                 type: 'PUT_USERNAME', 
                 payload: {
                     username: usernameLocal, 
-                    id: user.id
-                }
+                    id: user.id} 
             });
  
         // axios.put(`/api/settings${action.payload}`)

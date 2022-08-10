@@ -12,6 +12,7 @@ const userRouter = require('./routes/user.router');
 const allComedians = require('./routes/allComedians.router');
 const comedianDetailsRouter = require('./routes/comedianDetails.router.js');
 const favorites = require('./routes/favorites.router')
+const search = require('./routes/Search.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -36,7 +37,8 @@ app.use('/api/comedianDetails', comedianDetailsRouter);
 // get Favorites route
 app.use('/api/Favorites', favorites);
 
-
+// get Search route
+app.use('/api/search', search);
 
 // Serve static files
 app.use(express.static('build'));
