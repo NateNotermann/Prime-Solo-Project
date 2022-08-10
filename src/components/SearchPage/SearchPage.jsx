@@ -41,18 +41,62 @@ function SearchPage() {
   //   });
   // }
 
+
   function handleSubmit(event) {
-    event.preventDefault();
+    // event.preventDefault();
+    
     console.log('SearchItem local state', searchItem);
     console.log('event.target', event.target);
     console.log('event.target.VALUE', event.target.value);
     console.log('event.target.className', event.target.className);
-    dispatch({
-      type: 'START_SEARCH',
-      payload: {
-        className: event.target.className,
-        searchItem: searchItem}
-    });
+    
+    
+
+
+    if (event.target.className === 'first_name') {
+      console.log('Searching firstName:', firstName );  
+      dispatch({
+        type: 'START_SEARCH',
+        payload: {
+          className: event.target.className,
+          searchItem: firstName}
+      });
+    } 
+    else if (event.target.className === 'last_name') {
+      console.log('Searching last_name:', lastName );  
+      dispatch({
+        type: 'START_SEARCH',
+        payload: {
+          className: event.target.className,
+          searchItem: lastName}
+      });
+    }
+    else if (event.target.className === 'genre') {
+      console.log('Searching genre:', genre );  
+      dispatch({
+        type: 'START_SEARCH',
+        payload: {
+          className: event.target.className,
+          searchItem: genre}
+      });
+    }
+    else if (event.target.className === 'city') {
+      console.log('Searching city:', city );  
+      dispatch({
+        type: 'START_SEARCH',
+        payload: {
+          className: event.target.className,
+          searchItem: city}
+      });
+    }
+
+    // dispatch({
+    //   type: 'START_SEARCH',
+    //   payload: {
+    //     className: event.target.className,
+    //     searchItem: searchItem}
+    // });
+    
   }
 
 
@@ -75,8 +119,8 @@ function SearchPage() {
     <br></br>
         <input
         placeholder='First Name'
-        value={searchItem}
-        onChange={(event) => setSearchItem(event.target.value)}/> 
+        value={firstName}
+        onChange={(event) => setFirstName(event.target.value)}/> 
         <button type='submit'>Submit</button>
     </form>
 
@@ -85,8 +129,8 @@ function SearchPage() {
     <br></br>
         <input
         placeholder='Last Name'
-        value={searchItem}
-        onChange={(event) => setSearchItem(event.target.value)}/> 
+        value={lastName}
+        onChange={(event) => setLastName(event.target.value)}/> 
         <button type='submit'>Submit</button>
     </form>
 
@@ -95,18 +139,18 @@ function SearchPage() {
     <br></br>
         <input
         placeholder='Genre'
-        value={searchItem}
-        onChange={(event) => setSearchItem(event.target.value)}/> 
+        value={genre}
+        onChange={(event) => setGenre(event.target.value)}/> 
         <button type='submit'>Submit</button>
     </form>
 
     <form className="city" onSubmit={handleSubmit}>
     <label>Search City</label>
     <br></br>
-        <input
+        <input 
         placeholder='City'
-        value={searchItem}
-        onChange={(event) => setSearchItem(event.target.value)}/> 
+        value={city}
+        onChange={(event) => setCity(event.target.value)}/> 
         <button type='submit'>Submit</button>
     </form>
       </div>
