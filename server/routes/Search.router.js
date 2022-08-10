@@ -6,18 +6,30 @@ const router = express.Router();
  * GET route template
  */
 // router.get('/:search', (req, res) => {
-router.get('/:search', (req, res) => {
-  const search = req.params.search;
+router.get('/:className/:searchItem', (req, res) => {
+  const column = req.params.className;
+  const searchItem = req.params.searchItem;
+  // const {
+  //   className, 
+  //   searchItem, 
+  // } = req.body;
+  console.log('req.params.className', req.params.className);
+  console.log('req.params.searchItem', req.params.searchItem);
+
   // temporary hard code 'Tom' to make sure route connects
   const query = 
-  ` SELECT * FROM "comedians" WHERE "first_name" = $1 ORDER BY "comedians"."first_name";`;
-  pool.query(query, [search])
+`SELECT * FROM "comedians" 
+ WHERE ${column} LIKE $1 
+ ORDER BY "comedians"."first_name";`;
+  // pool.query(query)
+  pool.query(query, [searchItem])
+  // pool.query(query, [column, searchItem])
 
   .then( result => {
     res.send(result.rows);
   })
   .catch(error => {
-    console.log('ERROR in (all comedians.router.js)');
+    console.log('ERROR Search Router', error);
     res.sendStatus(500)
   })
 });
