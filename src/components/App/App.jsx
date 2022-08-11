@@ -46,8 +46,14 @@ function App() {
 
   return (
     <Router>
-      <Grid className="MainDiv">
+      <Grid container xs={12} className="MainDiv"
+    //  alignItems="center"
+     direction="column">
+
+        <Grid item className="NavBarPink">
         <Nav />
+        </Grid>
+
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
@@ -175,7 +181,8 @@ function App() {
 
 
 
-        <Grid container
+        <Grid container 
+         className="BackButtonMain"
          id="BackButtonMain"
          alignItems="center"
          direction="column"
@@ -188,7 +195,8 @@ function App() {
 
 
 
-        <Grid id="GridFooter">
+        <Grid item 
+        id="GridFooter">
           <Footer />
         </Grid>
 

@@ -147,7 +147,7 @@ input {
 
 .MainDiv{
   border: solid;
-  border-color: rgb(0, 0, 0);
+  border-color: rgb(255, 58, 58);
 }
 
 #GridFooter{
@@ -155,3 +155,16 @@ input {
   border-color: rgb(87, 255, 49);
   border-radius: 13px;
 }
+
+
+/*------------------MAIN COMPONENTS------------*/
+.NavBarPink {
+  border: solid;
+  border-color: rgb(255, 49, 207);
+  border-radius: 13px;
+
+}
+
+
+
+/*------------------MAIN COMPONENTS------------*/
