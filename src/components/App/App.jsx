@@ -8,10 +8,15 @@ import {
 
 import { useDispatch, useSelector } from 'react-redux';
 
+
+// ------ MUI ELEMENTS ------ //
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
+
+
+
 // ----- Import all COMPONENTS here ----- // 
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
-
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import AboutPage from '../AboutPage/AboutPage';
@@ -26,6 +31,7 @@ import ComedianDetails from '../ComedianDetails/ComedianDetails';
 import Favorites from '../Favorites/Favorites';
 import BackButton from '../BackButton/BackButton';
 import Settings from '../Settings/Settings';
+import MUIElements from '../MUIElements/MUIElements';
 
 import './App.css';
 
@@ -40,11 +46,20 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <Grid className="MainDiv">
         <Nav />
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
+
+        <Route 
+        exact
+        path="/MUIElements">
+          <MUIElements />
+        </Route>
+
+
+
 
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route
@@ -54,6 +69,9 @@ function App() {
           >
             <AboutPage />
           </Route>
+
+
+
 
           {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
@@ -86,7 +104,7 @@ function App() {
             <Favorites />
           </ProtectedRoute>
           {/* ---------- Favorites Route End---------------- */}
-          
+
           {/* ----------Settings Route Start---------------- */}
           <ProtectedRoute
             // logged in shows SearchPage else shows LoginPage
@@ -134,7 +152,7 @@ function App() {
               <RegisterPage />
             }
           </Route>
-
+            
           <Route
             exact
             path="/home"
@@ -154,9 +172,27 @@ function App() {
             <h1>404</h1>
           </Route>
         </Switch>
-        <BackButton />
-        <Footer />
-      </div>
+
+
+
+        <Grid container
+         id="BackButtonMain"
+         alignItems="center"
+         direction="column"
+         >
+          <Grid item>
+            <BackButton />
+          </Grid>
+        </Grid>
+
+
+
+
+        <Grid id="GridFooter">
+          <Footer />
+        </Grid>
+
+      </Grid>
     </Router>
   );
 }

@@ -102,20 +102,56 @@ Form Treatment
   max-width: 100%;
   padding: 25px;
   margin: 0 auto 20px;
-  /* background-color: #efefef; */
+  background-color: #000c1156;
+  /* background-color: #0022305b; */
+  
   /* opacity: 0.6; */
+
+  /* -- Border -- */
   border-radius: 3px;
   box-shadow: 0 5px 5px rgb(0, 0, 0, 0.4);
+  border: solid;
+  border-color: rgb(0, 0, 0);
 }
 
 input {
   margin: 5px;
   margin-bottom: 10px;
+  
 }
 
 
 .login_box {
+  
   /* background-color: #efefef; */
   /* opacity: 0.3; */
 }
 
+.GridContainer {
+  border: solid;
+  border-color: rgb(0, 0, 0);
+}
+
+.GridItem {
+  border: solid;
+  border-color: rgb(0, 0, 0);
+}
+#BackButtonMain{
+  border: solid;
+  border-color: rgb(0, 0, 0);
+}
+#backButtonId {
+  border: solid;
+  border-color: rgb(0, 0, 0);
+}
+
+.MainDiv{
+  border: solid;
+  border-color: rgb(0, 0, 0);
+}
+
+#GridFooter{
+  border: solid;
+  border-color: rgb(87, 255, 49);
+  border-radius: 13px;
+}

@@ -24,6 +24,11 @@ function Nav() {
         {/* If a user is logged in, show these links */}
         {user.id && (
           <>
+            <Link className="MuiElements" to="/MUIElements">
+              MUI!
+            </Link>
+
+
             <Link className="navLink" to="/user">
               Home
             </Link>

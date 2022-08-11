@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+
+import { TextField } from '@mui/material';
+
 function RegisterForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -19,8 +22,9 @@ function RegisterForm() {
     });
   }; // end registerUser
 
-  return (
-    <form className="formPanel" onSubmit={registerUser}>
+  return (<>
+  
+      <form className="formPanel" onSubmit={registerUser}>
       <h2>Register User</h2>
       {errors.registrationMessage && (
         <h3 className="alert" role="alert">
@@ -52,9 +56,17 @@ function RegisterForm() {
         </label>
       </div>
       <div>
-        <input className="btn" type="submit" name="submit" value="Register" />
+        <input className="btn" 
+        type="submit" 
+        name="submit" 
+        value="Register" />
       </div>
     </form>
+    
+
+
+
+    </>
   );
 }
 
