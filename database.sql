@@ -96,3 +96,4 @@ UPDATE "user" SET username = $1 WHERE id = $2;
 SELECT * FROM "comedians" 
 WHERE $1 = $2               -- fist_name = 'Tom', -- city = 'Austin'
 ORDER BY "comedians"."first_name";
+

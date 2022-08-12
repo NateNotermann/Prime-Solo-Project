@@ -66,6 +66,7 @@ function ComedianItem({ comedianProp }) {
                 <img className='icon'
                     src={comedianProp.icon}
                     alt={comedianProp.first_name} />
+                    
             </div>
             <button onClick={() => addFavorite(comedianProp.id)}>Favorite</button>
             {/* <button onClick={() => deleteFavorite(comedianProp.id)}>deleteFavorite</button> */}

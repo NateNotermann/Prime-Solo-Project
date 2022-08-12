@@ -47,7 +47,7 @@ function SearchPage() {
 
 
   function handleSubmit(event) {
-    // event.preventDefault();
+    event.preventDefault();
     
     console.log('SearchItem local state', searchItem);
     console.log('event.target', event.target);

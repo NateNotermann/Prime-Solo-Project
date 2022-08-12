@@ -10,8 +10,9 @@ function Nav() {
 
   return (
     <div className="nav">
-      <Link to="/home">
+      <Link to="/home" classname='logoLink'>
         <h2 className="nav-title">Wik-hehe-pedia</h2>
+        {/* <div className="logo1"> </div> */}
       </Link>
       <div>
         {/* If no user is logged in, show these links */}
@@ -25,13 +26,13 @@ function Nav() {
         {/* If a user is logged in, show these links */}
         {user.id && (
           <>
-            {/* <Link className="MuiElements" to="/MUIElements">
+            <Link className="MuiElements" to="/MUIElements">
               MUI!
-            </Link> */}
+            </Link>
 
 
             <Link className="navLink" to="/user">
-              Home
+              Browse
             </Link>
 
             <Link className="navLink" to="/SearchPage">
@@ -47,7 +48,7 @@ function Nav() {
             </Link>
         
 
-            <LogOutButton className="navLink" />
+            <LogOutButton />
           </>
         )}
 

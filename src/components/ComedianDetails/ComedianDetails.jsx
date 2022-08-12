@@ -49,10 +49,10 @@ function ComedianDetails() {
         <button onClick={() => Favorite (currentComedian.id)}>Favorite</button>
         <button onClick={() => UnFavorite (currentComedian.id)}>UnFavorite</button>
         <br></br> */}
-      <a href={currentComedian.instagram_link} title="Instagram" target="_blank">Instagram</a>.
-      <a href={currentComedian.twitter_link} title="Twitter" target="_blank">Twitter</a>.
-      <a href={currentComedian.website_link} title="Website" target="_blank">Website</a>.
-      <a href={currentComedian.youtube_link} title="Youtube" target="_blank">Youtube</a>.
+      <a href={currentComedian.instagram_link} className="link" title="Instagram" target="_blank">Instagram</a>.
+      <a href={currentComedian.twitter_link} className="link" title="Twitter" target="_blank">Twitter</a>.
+      <a href={currentComedian.website_link} className="link" title="Website" target="_blank">Website</a>.
+      <a href={currentComedian.youtube_link} className="link" title="Youtube" target="_blank">Youtube</a>.
       <h5>Genre: {currentComedian.genre}</h5>
       <p className="description">{currentComedian.description} </p>
     </div>

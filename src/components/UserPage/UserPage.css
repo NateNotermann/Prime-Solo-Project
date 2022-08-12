@@ -2,3 +2,8 @@
 .moveDown{
     height: 9vh;
   } */
+
+
+  listAllComedians{ 
+      display: flex;
+  }

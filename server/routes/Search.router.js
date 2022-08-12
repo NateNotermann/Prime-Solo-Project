@@ -18,7 +18,7 @@ router.get('/:className/:searchItem', (req, res) => {
 
   const query =
     `SELECT * FROM "comedians" 
-     WHERE ${column} LIKE '%${searchItem}%' 
+     WHERE ${column} ILIKE '%${searchItem}%' 
      ORDER BY "comedians"."first_name";`;
 
 

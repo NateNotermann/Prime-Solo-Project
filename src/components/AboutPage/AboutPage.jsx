@@ -25,8 +25,9 @@ function AboutPage() {
         <p>
           Special thanks to family and friends who have not seen in months but have still been supportive.
           I'd also like to thank everyone from my cohort.
-          EXTRA SPECIAL Thanks to my instructor Mon and Dad Liz and Dane!
-          
+        </p>
+        <p>
+          EXTRA SPECIAL Thanks to my instructors Liz and Dane!
         </p>
         <br></br>
         <p> What's a developer's least favorite movie?  - A bug's life! </p>
