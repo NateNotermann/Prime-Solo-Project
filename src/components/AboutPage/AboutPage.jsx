@@ -5,13 +5,33 @@ import React from 'react';
 // It doesn't dispatch any redux actions or display any part of redux state
 // or even care what the redux state is'
 
+import './AboutPage.css';
+
 function AboutPage() {
   return (<>
   <div className="moveDown"></div>
     <div className="container">
       <div>
-        <p>This about page is for anyone to read!</p>
+        <p>Technologies Used:
+          HTML
+          Javascript
+          react/saga/redux
+          Node.js
+          Express
+          Postgres.SQL
+          Postman
+          Material UI
+        </p>
+        <p>
+          Special thanks to family and friends who have not seen in months but have still been supportive.
+          I'd also like to thank everyone from my cohort.
+          EXTRA SPECIAL Thanks to my instructor Mon and Dad Liz and Dane!
+          
+        </p>
+        <br></br>
         <p> What's a developer's least favorite movie?  - A bug's life! </p>
+        <br></br>
+        <div className="logo"></div>
       </div>
     </div>
     </>

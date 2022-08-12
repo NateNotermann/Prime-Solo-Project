@@ -8,8 +8,8 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
   
-  background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,52,121,1) 70%, rgba(0,116,139,1) 100%);
+  background: rgb(57,52,147);
+  background: linear-gradient(0deg, rgba(57,52,147,1) 0%, rgba(33,72,135,1) 22%, rgba(7,67,125,1) 46%, rgba(4,86,130,1) 73%, rgba(0,116,139,1) 100%);
 }
 
 img {
@@ -130,7 +130,7 @@ input {
   /* opacity: 0.3; */
 }
 
-.GridContainer {
+/* .GridContainer {
   border: solid;
   border-color: rgb(0, 0, 0);
 }
@@ -138,7 +138,8 @@ input {
 .GridItem {
   border: solid;
   border-color: rgb(0, 0, 0);
-}
+} */
+/* 
 #BackButtonMain{
   border: solid;
   border-color: rgb(0, 0, 0);
@@ -146,18 +147,18 @@ input {
 #backButtonId {
   border: solid;
   border-color: rgb(0, 0, 0);
-}
+} */
 
-.MainDiv{
+/* .MainDiv{
   border: solid;
   border-color: rgb(255, 58, 58);
-}
+} */
 
-#GridFooter{
+/* #GridFooter{
   border: solid;
   border-color: rgb(87, 255, 49);
   border-radius: 13px;
-}
+} */
 
 
 /*------------------MAIN COMPONENTS------------*/

@@ -1,0 +1,15 @@
+
+
+.logo {
+
+background-image: url("/public/images/Main/logo.gif");
+background-repeat: no-repeat;
+height: 50vh;
+background-size: 50%;
+
+}
+
+p{
+
+    color: white;
+}

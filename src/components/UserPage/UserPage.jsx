@@ -13,7 +13,8 @@ function UserPage() {
     <div className="moveDown"></div>
     <div className="container">
       <Typography>Welcome, {user.username}!</Typography>
-      <Typography>Your ID is: {user.id}</Typography>
+      <br></br>
+      {/* <Typography>Your ID is: {user.id}</Typography> */}
       <LogOutButton className="btn" />
     </div>
     </>

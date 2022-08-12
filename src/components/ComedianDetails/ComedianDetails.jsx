@@ -36,6 +36,8 @@ function ComedianDetails() {
 
 
   return (
+    <>
+    <div className="moveDown"></div>
     <div className="cdcontainer">
       <h2>Comedian Details</h2>
       <ComedianItem comedianProp={currentComedian} />
@@ -52,8 +54,9 @@ function ComedianDetails() {
       <a href={currentComedian.website_link} title="Website" target="_blank">Website</a>.
       <a href={currentComedian.youtube_link} title="Youtube" target="_blank">Youtube</a>.
       <h5>Genre: {currentComedian.genre}</h5>
-      <p>{currentComedian.description} </p>
+      <p className="description">{currentComedian.description} </p>
     </div>
+    </>
   )
 }
 

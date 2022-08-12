@@ -6,5 +6,13 @@
 } */
 
 .cdcontainer {
-    background-color: white;
+    /* background-color: white; */
 }
+
+.moveDown{
+    height: 9vh;
+  }
+
+  .description {
+    color: white;
+  }
