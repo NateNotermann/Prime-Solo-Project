@@ -18,9 +18,11 @@ function LandingPage() {
   };
 
   return (
-    <Box container>
-      <h2>{heading}</h2>
-
+    <Box container className="test">
+    <div> 
+      <h2 className="heading">{heading}</h2>
+      
+    </div>
       <Grid container 
       className="GridContainer"
         
@@ -28,7 +30,7 @@ function LandingPage() {
         justifyContent="center"
         alignItems="center">
           
-
+    
 
         <Grid item
           alignItems="center">

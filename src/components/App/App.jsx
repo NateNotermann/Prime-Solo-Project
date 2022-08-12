@@ -53,7 +53,11 @@ function App() {
         <Grid item className="NavBarPink">
         <Nav />
         </Grid>
+      {/* <Gird item className="pushEverythingDown">
+      </Gird> */}
 
+        {/* <div className="moveDown"></div> */}
+        
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
@@ -187,7 +191,7 @@ function App() {
          alignItems="center"
          direction="column"
          >
-          <Grid item>
+          <Grid item className="backButton">
             <BackButton />
           </Grid>
         </Grid>

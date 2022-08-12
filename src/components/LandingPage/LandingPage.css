@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------------
 Grid
 -------------------------------------------------------------------------------- */
-
+*{}
 .grid {
   display: flex;
   flex: 0 1 auto;
@@ -11,6 +11,7 @@ Grid
   /* defaults to 'flex-start' */
   justify-content: flex-start;
   align-items: flex-start;
+  
 }
 
 .grid-col {
@@ -22,6 +23,7 @@ Grid
 .grid-col_1 {
   flex-basis: 8.33333333%;
   max-width: 8.33333333%;
+  
 }
 
 .grid-col_2 {
@@ -81,9 +83,23 @@ Grid
 
 
 body {
-  background-image: url("/public/images/Landing_Background.gif");
   
-  background-repeat: no-repeat;
+  /* background-image: url("/public/images/Landing_Background.gif"); */
+  /* background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,52,121,1) 46%, rgba(0,212,255,1) 100%); */
+
   background-size: 100%;
   background-position: top 65px right 00px;
+}
+.test{
+background-image: url("/public/images/Landing_Background.gif");
+background-repeat: no-repeat;
+height: 100vh;
+background-size: 100%;
+
+
+}
+
+.heading{
+  margin-top: 10vh;
 }

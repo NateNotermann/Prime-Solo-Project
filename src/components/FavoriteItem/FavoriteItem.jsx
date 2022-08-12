@@ -45,7 +45,8 @@ function ComedianItem({ favoriteProp }) {
     console.log('favoriteProp.id', favoriteProp.id);
     console.log('favoriteProp.comedian_id', favoriteProp.comedian_id);
 
-    return (
+    return (<>
+    
         <div key={favoriteProp.id}>
             <div onClick={() => clickIcon(favoriteProp.comedian_id)}>
                 {/* <h3> comedian item </h3> */}
@@ -57,6 +58,7 @@ function ComedianItem({ favoriteProp }) {
             {/* <button onClick={() => addFavorite(favoriteProp.id)}>addFavorite</button> */}
             <button onClick={() => deleteFavorite(favoriteProp.id)}>Delete Favorite</button>
         </div>
+        </>
     )
 }
 

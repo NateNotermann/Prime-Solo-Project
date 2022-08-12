@@ -14,6 +14,10 @@ import { useHistory, useParams } from 'react-router-dom';
 
 import ComedianItem from '../ComedianItem/ComedianItem.jsx';
 
+// ------ MUI ELEMENTS ------ // in Alphabetical order ------ //
+import { Box, Button, Grid, Paper, TextField, Typography, } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+
 // useParams may not be necessary might be like a stretch goal getting from the router file
 
 
@@ -105,57 +109,85 @@ function SearchPage() {
   }, []);
 
 
-  return (
-    <div className="container">
+  return (<>
+      <div className="moveDown"></div>
+    <Grid container className="MainSearchContainer" xs={12}>
+      <Grid item className="GridItems" xs={12}>
       <h2>Search Page</h2>
+      </Grid>
       <br></br>
     
 
-      <div className="searchForm">
 
+      <Grid container className="searchForm"
+      //  direction="row"
+       justifyContent="center"
+       alignItems="center">
+
+    <Grid item className="GridItems" xs={1} sm={2} md={2} >
 
   <form className="first_name" onSubmit={handleSubmit}>
-    <label>Search First Name</label>
-    <br></br>
-        <input
+    <Typography align="center" wrap="nowrap">Search First Name</Typography>
+    {/* <br></br> */}
+    <TextField variant="outlined"
         placeholder='First Name'
+        margin="normal"
         value={firstName}
         onChange={(event) => setFirstName(event.target.value)}/> 
-        <button type='submit'>Submit</button>
+        <Button variant="outlined" type='submit' ><SearchIcon /></Button>
     </form>
+   
+    </Grid>
 
+    <Grid item className="GridItems" xs={1} sm={2} md={2}>
     <form className="last_name" onSubmit={handleSubmit}>
-    <label>Search Last Name</label>
-    <br></br>
-        <input
+    <Typography align="center" wrap="nowrap">Search Last Name</Typography>
+    {/* <br></br> */}
+    <Grid container >
+        <TextField variant="outlined"
         placeholder='Last Name'
+        margin="normal"
         value={lastName}
         onChange={(event) => setLastName(event.target.value)}/> 
-        <button type='submit'>Submit</button>
+        <Button variant="outlined" type='submit'><SearchIcon /></Button>
+      </Grid>
     </form>
+    </Grid>
 
-    <form className="genre" onSubmit={handleSubmit}>
-    <label>Search Genre</label>
-    <br></br>
-        <input
+    <Grid item className="GridItems" xs={1} sm={2} md={2}>
+    <form className="genre" onSubmit={handleSubmit} >
+      
+    <Typography align="center" wrap="nowrap">Search Genre Name</Typography>
+    {/* <br></br> */}
+        <TextField variant="outlined"
         placeholder='Genre'
+        margin="normal"
         value={genre}
         onChange={(event) => setGenre(event.target.value)}/> 
-        <button type='submit'>Submit</button>
+        <Button variant="outlined"
+        type='submit' ><SearchIcon /></Button>
     </form>
+    </Grid>
 
+    <Grid item className="GridItems" xs={1} sm={2} md={2}>
     <form className="city" onSubmit={handleSubmit}>
-    <label>Search City</label>
-    <br></br>
-        <input 
+    <Typography align="center" wrap="nowrap">Search City</Typography>
+    {/* <br></br> */}
+        <TextField variant="outlined" 
         placeholder='City'
+        margin="normal"
         value={city}
         onChange={(event) => setCity(event.target.value)}/> 
-        <button type='submit'>Submit</button>
+        <Button variant="outlined" type='submit'> <SearchIcon /></Button>
+        
     </form>
-      </div>
+    </Grid>
+
+
+      </Grid>
   
   <br></br>
+  <Grid container className="GridContainerMapper" xs={12} sm={12} md={12}>
   <section className="listAllComedians">
     {search && search.map(comedian => {
       return (
@@ -166,8 +198,17 @@ function SearchPage() {
       );
     })}
   </section>
+  </Grid>
+  <Box color="primary.dark">
+    <Typography>
+      teasdnmasndkasdas
+    </Typography>
+  </Box>
       
-    </div>
+
+
+    </Grid>
+    </>
   );
 }
 

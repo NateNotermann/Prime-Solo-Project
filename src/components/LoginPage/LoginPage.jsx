@@ -5,7 +5,8 @@ import { useHistory } from 'react-router-dom';
 function LoginPage() {
   const history = useHistory();
 
-  return (
+  return (<>
+  <div className="moveDown"></div>
     <div>
       <LoginForm />
 
@@ -21,6 +22,7 @@ function LoginPage() {
         </button>
       </center>
     </div>
+    </>
   );
 }
 

@@ -11,7 +11,8 @@ import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 function RegisterPage() {
   const history = useHistory();
 
-  return (
+  return (<>
+  <div className="moveDown"></div>
     <div>
       <RegisterForm />
 
@@ -27,6 +28,7 @@ function RegisterPage() {
         </button>
       </center>
     </div>
+    </>
   );
 }
 

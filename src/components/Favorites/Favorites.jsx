@@ -29,7 +29,8 @@ function Favorites(props) {
   }, []);
 
 console.log('favorites', Favorites);
-  return (
+  return (<>
+  <div className="moveDown"></div>
     <div>
       <h2>{user.username}'s Favorites Page</h2>
       <br></br>
@@ -44,6 +45,7 @@ console.log('favorites', Favorites);
       </section>
 
     </div>
+    </>
   );
 }
 
