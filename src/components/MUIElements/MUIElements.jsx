@@ -17,39 +17,40 @@ function MUIElements() {
     }, []);
 
     return (<>
-        <Box container className="MainMuiGreen" xs={12} md={12}>
+        <Box container className="MainMuiGreen">
 
 
 
 
             <Grid container className="inputsBlue"
-                justifyContent="flex-start"
+                // justifyContent="center"
+                justifyContent="space-evenly"
                 alignItems="center"
                 // direction="column"
             >
-                <Grid item>
+                
                 <TextField label="TextField" margin="normal" />
-                </Grid>
-
-                <TextField id="margin-normal" label="TextField" margin="normal" />
+             
+                 <TextField id="margin-normal" label="TextField" margin="normal" />
+                <TextField label='type in me'margin="normal" />
                 <TextField label='type in me'margin="normal" />
             </Grid>
 
             <Box container
                 alignItems="center"
-                direction="column"
+                direction="row"
                 className="testGridYellow">
                 <Grid item alignItems="center" direction="column"
-                    className="testGridItemWhite" xs={12} md={12}>
+                    className="testGridItemWhite" xs={3} md={3}>
                   <Button alignItems="center" direction="column" variant="contained">Register</Button>
                 </Grid>
-                <Grid item className="testGridItemWhite" xs={12} md={12}>
+                <Grid item className="testGridItemWhite" xs={3} md={3}>
                     <Button variant="contained">Register</Button>
                 </Grid>
-                <Grid item className="testGridItemWhite" xs={12} md={12}>
+                <Grid item className="testGridItemWhite" xs={3} md={3}>
                     <Button variant="contained">Register</Button>
                 </Grid>
-                <Grid item className="testGridItemWhite" xs={12} md={12}>
+                <Grid item className="testGridItemWhite" xs={3} md={3}>
                     <Button variant="contained">Register</Button>
                 </Grid>
                 
@@ -62,7 +63,8 @@ function MUIElements() {
 
 
             <Grid container
-                className="favoritesList">{listAllComedians.map(thing => {
+                className="favoritesList">
+                    {listAllComedians.map(thing => {
                     return (
                         <Grid item>
                             <Paper variant="elevation"

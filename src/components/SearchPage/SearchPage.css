@@ -30,3 +30,7 @@
 .moveDown{
   height: 9vh;
 }
+
+.title {
+    postion: center;
+}

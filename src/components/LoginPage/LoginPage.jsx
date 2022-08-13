@@ -2,6 +2,10 @@ import React from 'react';
 import LoginForm from '../LoginForm/LoginForm';
 import { useHistory } from 'react-router-dom';
 
+
+// ------ MUI ELEMENTS ------ // in Alphabetical order ------ //
+import { Box, Button, Grid, Paper, TextField, Typography, } from '@mui/material';
+
 function LoginPage() {
   const history = useHistory();
 
@@ -11,7 +15,9 @@ function LoginPage() {
       <LoginForm />
 
       <center>
-        <button
+
+        <Typography
+          color="white"
           type="button"
           className="btn btn_asLink"
           onClick={() => {
@@ -19,8 +25,11 @@ function LoginPage() {
           }}
         >
           Register
-        </button>
+        </Typography>
+
+
       </center>
+      <br></br>
     </div>
     </>
   );

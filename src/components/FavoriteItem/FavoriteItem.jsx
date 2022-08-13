@@ -50,7 +50,7 @@ function ComedianItem({ favoriteProp }) {
         <div key={favoriteProp.id}>
             <div onClick={() => clickIcon(favoriteProp.comedian_id)}>
                 {/* <h3> comedian item </h3> */}
-                <h2>{favoriteProp.first_name} {favoriteProp.last_name}, id is: {favoriteProp.comedian_id}</h2>
+                <h2>{favoriteProp.first_name} {favoriteProp.last_name}</h2>
                 <img className='icon'
                     src={favoriteProp.icon}
                     alt={favoriteProp.first_name} />

@@ -4,8 +4,8 @@ import { useHistory } from 'react-router-dom';
 import RegisterForm from '../RegisterForm/RegisterForm';
 
 
-// ------ MUI ELEMENTS ------ //
-import { Box, Button, Grid, TextField, Typography } from '@mui/material'; 
+// ------ MUI ELEMENTS ------ // in Alphabetical order ------ //
+import { Box, Button, Grid, Paper, TextField, Typography, } from '@mui/material';
 
 
 function RegisterPage() {
@@ -17,7 +17,8 @@ function RegisterPage() {
       <RegisterForm />
 
       <center>
-        <button
+        <Typography variant="contained"
+        
           type="button"
           className="btn btn_asLink"
           onClick={() => {
@@ -25,8 +26,9 @@ function RegisterPage() {
           }}
         >
           Login
-        </button>
+        </Typography>
       </center>
+      <br></br>
     </div>
     </>
   );

@@ -24,16 +24,19 @@ function Browse() {
 
 
   return (<>
+  <Box className="mainBox">
     <div className="moveDown"></div>
-    <h2>Browse All Comedians</h2>
+    <h2 className="h2test">Browse All Comedians</h2>
     <div className="container">
       <Typography>Welcome, {user.username}!</Typography>
       <br></br>
 
 
       
-      <Grid container className="GridContainerMapper" xs={6} sm={6} md={3}>
-  <section className="listAllComedians">
+      <Grid container className="GridContainerMapper" 
+      item align="center">
+        {/* <Typography> in first grid container</Typography> */}
+
     {listAllComedians && listAllComedians.map(comedian => {
       return (
         // <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
@@ -42,14 +45,16 @@ function Browse() {
         </div>
       );
     })}
-  </section>
+
   </Grid>
-      {/* <Typography>Your ID is: {user.id}</Typography> */}
-      {/* <LogOutButton className="btn" /> */}
     </div>
+    </Box>
     </>
   );
 }
+
+{/* <Typography>Your ID is: {user.id}</Typography> */}
+{/* <LogOutButton className="btn" /> */}
 
 // this allows us to use <App /> in index.js
 export default Browse;
