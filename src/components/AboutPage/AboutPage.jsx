@@ -9,10 +9,15 @@ import './AboutPage.css';
 
 function AboutPage() {
   return (<>
-  <div className="moveDown"></div>
-    <div className="container">
+    <div className="moveDown"></div>
+    <center className="container">
       <div>
-        <p>Technologies Used:
+        <h2 item align="center" >About Page</h2>
+        <p>Free Joke: What's a developer's least favorite movie?  - A bug's life! </p>
+        <p>
+          This app was created during a two week during Tier 3 of Prime Digital Academy's Full-Stack Software Engineer program. It was created by Nate Notermann.
+          Please feel free to visit move of his work at the links below, or by scanning the QR code below. 
+          The Technologies used are:
           HTML
           Javascript
           react/saga/redux
@@ -21,21 +26,34 @@ function AboutPage() {
           Postgres.SQL
           Postman
           Material UI
+          Photoshop
+          After Effects
+          Media Encoder
+          EZ Gif.Com
+          Apple Shortcuts(QR code)
         </p>
+
+       <a href='https://github.com/NateNotermann' className="link"
+          title="Github" target="_blank">Github <span> <a href='https://www.linkedin.com/in/nate-notermann/' className="link"
+          title="Linkedin" target="_blank">Linkedin</a> </span> </a>
+      
+        {/* <a href='https://www.linkedin.com/in/nate-notermann/' className="link"
+          title="Linkedin" target="_blank">Linkedin</a> */}
         <p>
-          Special thanks to family and friends who have not seen in months but have still been supportive.
+          Special thanks to family and friends.
           I'd also like to thank everyone from my cohort.
-        </p>
-        <p>
           EXTRA SPECIAL Thanks to my instructors Liz and Dane!
         </p>
-        <br></br>
-        <p> What's a developer's least favorite movie?  - A bug's life! </p>
-        <br></br>
-        <div className="logo"></div>
+
+          <div className="logo"></div>
+          <div className="githubQR"></div>
+        
       </div>
-    </div>
-    </>
+    </center>
+  </>
+
+
+
   );
 }
 

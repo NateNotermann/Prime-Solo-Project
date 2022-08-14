@@ -4,9 +4,9 @@
 
 background-image: url("/public/images/Main/logo.gif");
 background-repeat: no-repeat;
-height: 50vh;
-background-size: 50%;
-
+height: 20vh;
+background-size: 30%;
+background-position: center;
 margin-left: auto;
 margin-right: auto;
 
@@ -16,3 +16,16 @@ p{
 
     color: white;
 }
+
+.githubQR{
+    background-image: url("/public/images/Main/githubQR.PNG");
+background-repeat: no-repeat;
+height: 30vh;
+background-size: 15%;
+background-position: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+

@@ -10,7 +10,7 @@ router.get('/:id', (req, res) => {
   const id = req.params.id;
   console.log('req.params.id', req.params.id);
   const query =
-    `SELECT favorites.id, comedian_id, first_name, last_name, icon 
+    `SELECT favorites.id, comedian_id, first_name, last_name, icon, city 
     FROM comedians
     JOIN favorites 
     ON favorites.comedian_id = comedians.id

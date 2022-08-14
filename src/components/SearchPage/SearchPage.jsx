@@ -115,10 +115,13 @@ function SearchPage() {
 
   return (<>
     <div className="moveDown"></div>
+
     <Box className="mainBox">
+
       <Grid item className="title">
         <h2 item align="center" >Search Page</h2>
       </Grid>
+
 
       <Grid container className="MainSearchContainer"
         justifyContent="space-evenly"
@@ -139,13 +142,15 @@ function SearchPage() {
 
             <form className="first_name" onSubmit={handleSubmit}>
               <Typography align="center" wrap="nowrap">Search First Name</Typography>
-              {/* <br></br> */}
+              <br></br>
+              <Grid container >
               <TextField variant="outlined"
-                placeholder='First Name'
+                // placeholder='First Name'   
                 margin="auto"
                 value={firstName}
                 onChange={(event) => setFirstName(event.target.value)} />
               <Button variant="outlined" type='submit' ><SearchIcon /></Button>
+              </Grid>
             </form>
 
           </Grid>
@@ -153,13 +158,14 @@ function SearchPage() {
           <Grid item className="GridItems">
             <form className="last_name" onSubmit={handleSubmit}>
               <Typography align="center" wrap="nowrap">Search Last Name</Typography>
-              {/* <br></br> */}
+              <br></br>
               <Grid container >
                 <TextField variant="outlined"
                   // placeholder='Last Name'
                   margin="auto"
                   value={lastName}
-                  onChange={(event) => setLastName(event.target.value)} />
+                  onChange={(event) => setLastName(event.target.value)} 
+                  />
                 <Button variant="outlined" type='submit'><SearchIcon /></Button>
               </Grid>
             </form>
@@ -167,29 +173,31 @@ function SearchPage() {
 
           <Grid item className="GridItems" >
             <form className="genre" onSubmit={handleSubmit} >
-
               <Typography align="center" wrap="nowrap">Search Genre Name</Typography>
-              {/* <br></br> */}
+              <br></br>
+            <Grid container>
               <TextField variant="outlined"
-                placeholder='Genre'
+                // placeholder='Genre'
                 margin="auto"
                 value={genre}
                 onChange={(event) => setGenre(event.target.value)} />
               <Button variant="outlined" type='submit' ><SearchIcon /></Button>
+                </Grid>
             </form>
           </Grid>
 
           <Grid item className="GridItems">
             <form className="city" onSubmit={handleSubmit}>
               <Typography align="center" wrap="nowrap">Search City</Typography>
-              {/* <br></br> */}
+              <br></br>
+              <Grid container >
               <TextField variant="outlined"
-                placeholder='City'
+                // placeholder='City'
                 margin="auto"
                 value={city}
                 onChange={(event) => setCity(event.target.value)} />
               <Button variant="outlined" type='submit'><SearchIcon /></Button>
-
+              </Grid>
             </form>
           </Grid>
 
@@ -199,7 +207,14 @@ function SearchPage() {
         <br></br>
 
 
-        <Grid container className="GridContainerMapper" >
+        <Grid container className="GridContainerMapper"
+         direction="row"
+        //  justifyContent="space-evenly"
+         justifyContent="center"
+         alignItems="flex-start"
+         spacing={3}
+         rowSpacing={4}
+        >
 
           {search && search.map(comedian => {
             return (
@@ -220,9 +235,10 @@ function SearchPage() {
 
 
       </Grid>
-    </Box>
-  </>
 
+    </Box>
+    <br></br>
+  </>
   );
 }
 

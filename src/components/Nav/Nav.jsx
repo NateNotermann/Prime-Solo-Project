@@ -10,7 +10,7 @@ function Nav() {
 
   return (
     <div className="nav">
-      <Link to="/home" classname='logoLink'>
+      <Link to="/home" className='logoLink'>
         <h2 className="nav-title">Wik-hehe-pedia</h2>
         {/* <div className="logo1"> </div> */}
       </Link>
@@ -26,9 +26,9 @@ function Nav() {
         {/* If a user is logged in, show these links */}
         {user.id && (
           <>
-            <Link className="MuiElements" to="/MUIElements">
+            {/* <Link className="MuiElements" to="/MUIElements">
               MUI!
-            </Link>
+            </Link> */}
 
 
             <Link className="navLink" to="/user">

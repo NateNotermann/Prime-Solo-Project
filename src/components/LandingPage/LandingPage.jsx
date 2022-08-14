@@ -43,7 +43,7 @@ function LandingPage() {
           alignItems="center">
             
           <Typography color="white">Already a Member?</Typography>
-          
+          <br></br>
           <Button 
           variant="contained" 
           className="btn btn_sizeSm" 

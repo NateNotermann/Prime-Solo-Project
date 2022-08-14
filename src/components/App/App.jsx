@@ -46,7 +46,7 @@ function App() {
 
   return (
     <Router>
-      <Grid container xs={12} className="MainDiv"
+      <Grid container className="MainDiv"
     //  alignItems="center"
      direction="column">
 

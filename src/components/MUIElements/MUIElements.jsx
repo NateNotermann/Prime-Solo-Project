@@ -3,9 +3,28 @@ import { useDispatch, useSelector } from 'react-redux';
 
 
 // ------ MUI ELEMENTS ------ // in Alphabetical order ------ //
-import { Box, Button, Grid, Paper, TextField, Typography, } from '@mui/material';
+import { Box, Button, Grid, Link, Paper, TextField, Typography, Tooltip } from '@mui/material';
 import { positions } from '@mui/system';
 import '../MUIElements/MUIElements.css';
+import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse } from '@mui/material';
+
+import Avatar from '@mui/material/Avatar';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import InfoIcon from '@mui/icons-material/Info';
+import DeleteIcon from '@mui/icons-material/Delete';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import CoPresentIcon from '@mui/icons-material/CoPresent';
+import SearchIcon from '@mui/icons-material/Search';
+
+
 
 
 function MUIElements() {
@@ -26,45 +45,70 @@ function MUIElements() {
                 // justifyContent="center"
                 justifyContent="space-evenly"
                 alignItems="center"
-                // direction="column"
+            // direction="column"
             >
-                
-                <TextField label="TextField" margin="normal" />
-             
-                 <TextField id="margin-normal" label="TextField" margin="normal" />
-                <TextField label='type in me'margin="normal" />
-                <TextField label='type in me'margin="normal" />
+                <Grid container className="justInputs"
+                    //  justifyContent="center"
+                    justifyContent="space-evenly"
+                    direction="row"
+                    spacing={6}>
+                    <Grid item>
+                        <TextField label="TextField 1" margin="normal" />
+                    </Grid>
+                    <Grid item>
+                        <TextField label="TextField 2" margin="normal" />
+                    </Grid>
+                    <Grid item>
+                        <TextField label="TextField 3" margin="normal" />
+                    </Grid>
+                    <Grid item>
+                        <TextField label="TextField 4" margin="normal" />
+                    </Grid>
+                </Grid>
+
+
+                <Grid item>
+                    <Button
+                        label="button"
+                        variant="outlined"
+                        color="primary" >
+                        Hello
+                    </Button>
+                </Grid>
             </Grid>
 
-            <Box container
-                alignItems="center"
-                direction="row"
+            <Box
+                // alignItems="center"
+                // direction="row"
                 className="testGridYellow">
-                <Grid item alignItems="center" direction="column"
-                    className="testGridItemWhite" xs={3} md={3}>
-                  <Button alignItems="center" direction="column" variant="contained">Register</Button>
+                <Grid container
+                    direction="row"
+                    spacing={6}
+                    justifyContent="center"
+                // alignItems="center"
+                //   justifyContent="space-evenly"
+
+                >
+                    <Grid item>
+                        <Button variant="contained">Register</Button>
+                    </Grid>
+                    <Grid item>
+                        <Button variant="contained">Register</Button>
+                    </Grid>    <Grid item>
+                        <Button variant="contained">Register</Button>
+                    </Grid>    <Grid item>
+                        <Button variant="contained">Register</Button>
+                    </Grid>
+
                 </Grid>
-                <Grid item className="testGridItemWhite" xs={3} md={3}>
-                    <Button variant="contained">Register</Button>
-                </Grid>
-                <Grid item className="testGridItemWhite" xs={3} md={3}>
-                    <Button variant="contained">Register</Button>
-                </Grid>
-                <Grid item className="testGridItemWhite" xs={3} md={3}>
-                    <Button variant="contained">Register</Button>
-                </Grid>
-                
             </Box>
 
-            <Grid container>
 
-
-            </Grid>
 
 
             <Grid container
                 className="favoritesList">
-                    {listAllComedians.map(thing => {
+                {listAllComedians.map(thing => {
                     return (
                         <Grid item>
                             <Paper variant="elevation"

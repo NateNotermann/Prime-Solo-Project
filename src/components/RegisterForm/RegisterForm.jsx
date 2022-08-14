@@ -7,6 +7,7 @@ import { TextField } from '@mui/material';
 function RegisterForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const errors = useSelector((store) => store.errors);
   const dispatch = useDispatch();
 
@@ -18,6 +19,7 @@ function RegisterForm() {
       payload: {
         username: username,
         password: password,
+        name: name,
       },
     });
   }; // end registerUser
@@ -31,6 +33,18 @@ function RegisterForm() {
           {errors.registrationMessage}
         </h3>
       )}
+       <div>
+        <label htmlFor="name">
+          Your Name:
+          <input
+            type="name"
+            name="name"
+            value={name}
+            required
+            onChange={(event) => setName(event.target.value)}
+          />
+        </label>
+      </div>
       <div>
         <label htmlFor="username">
           Username:

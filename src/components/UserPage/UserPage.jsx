@@ -26,29 +26,41 @@ function Browse() {
   return (<>
   <Box className="mainBox">
     <div className="moveDown"></div>
+    <center>  
     <h2 className="h2test">Browse All Comedians</h2>
-    <div className="container">
-      <Typography>Welcome, {user.username}!</Typography>
+    </center>
+
+    <center>  
+          <Typography>Welcome, {user.name}!</Typography>
+      </center>
+
       <br></br>
 
 
       
       <Grid container className="GridContainerMapper" 
-      item align="center">
+         direction="row"
+        //  justifyContent="space-evenly"
+         justifyContent="space-evenly"
+         alignItems="flex-start"
+         spacing={3}
+         rowSpacing={4}
+      >
         {/* <Typography> in first grid container</Typography> */}
 
     {listAllComedians && listAllComedians.map(comedian => {
       return (
         // <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
-        <div key={comedian.id}> 
+        <Grid item key={comedian.id}> 
         <ComedianItem comedianProp={comedian}/>
-        </div>
+        </Grid>
       );
     })}
 
   </Grid>
-    </div>
+  
     </Box>
+    <br></br>
     </>
   );
 }
