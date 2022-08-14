@@ -64,6 +64,7 @@ function ComedianDetails() {
       <Box container>
 
         <div className="moveDown"></div>
+        
         <Grid container className="cdcontainer"
           justifyContent="space-evenly"
           alignItems="center"
@@ -157,10 +158,14 @@ function ComedianDetails() {
 
           <Typography item>Genre: {currentComedian.genre} </Typography>
           <Grid container className="links">
-            <Typography className="description">{currentComedian.description}</Typography>
+            <Typography 
+            sx={{ padding: 5 }}
+            className="description">{currentComedian.description}</Typography>
           </Grid>
 
         </Grid>
+
+        
       </Box>
     </>
   )

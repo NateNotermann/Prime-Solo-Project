@@ -23,7 +23,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import CoPresentIcon from '@mui/icons-material/CoPresent';
 import SearchIcon from '@mui/icons-material/Search';
-
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 
 
@@ -39,7 +39,19 @@ function MUIElements() {
         <Box container className="MainMuiGreen">
 
 
+<Paper     sx={{
+        position: 'relative',
+        backgroundColor: 'grey.800',
+        color: '#fff',
+        mb: 4,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundImage: `url("/public/images/Landing_Background.gif")`,
+      }}
+    >
 
+    </Paper>
 
             <Grid container className="inputsBlue"
                 // justifyContent="center"

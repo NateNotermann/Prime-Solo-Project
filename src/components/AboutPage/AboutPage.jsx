@@ -15,22 +15,22 @@ function AboutPage() {
         <h2 item align="center" >About Page</h2>
         <p>Free Joke: What's a developer's least favorite movie?  - A bug's life! </p>
         <p>
-          This app was created during a two week during Tier 3 of Prime Digital Academy's Full-Stack Software Engineer program. It was created by Nate Notermann.
+          This app was created within a two week sprint during Tier 3 of Prime Digital Academy's Full-Stack Software Engineering program. It was created by Nate Notermann.
           Please feel free to visit move of his work at the links below, or by scanning the QR code below. 
           The Technologies used are:
-          HTML
-          Javascript
-          react/saga/redux
-          Node.js
-          Express
-          Postgres.SQL
-          Postman
-          Material UI
-          Photoshop
-          After Effects
-          Media Encoder
-          EZ Gif.Com
-          Apple Shortcuts(QR code)
+          HTML,
+          Javascript,
+          react/saga/redux,
+          Node.js,
+          Express,
+          Postgres.SQL,
+          Postman,
+          Material UI,
+          PhotoShop,
+          After Effects,
+          Media Encoder,
+          EZ Gif.Com,
+          and Apple Shortcuts(QR code).
         </p>
 
        <a href='https://github.com/NateNotermann' className="link"
@@ -41,7 +41,7 @@ function AboutPage() {
           title="Linkedin" target="_blank">Linkedin</a> */}
         <p>
           Special thanks to family and friends.
-          I'd also like to thank everyone from my cohort.
+          I'd also like to all of the staff at prime Digital Academy and everyone in the Jemisin cohort.
           EXTRA SPECIAL Thanks to my instructors Liz and Dane!
         </p>
 

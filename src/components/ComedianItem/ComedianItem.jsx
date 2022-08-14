@@ -107,7 +107,7 @@ function ComedianItem({ comedianProp }) {
                     alt={comedianProp.name}
 
                 />
-
+                
                 <CardHeader
                     action={
                         <Tooltip title="Favorite">
@@ -126,7 +126,7 @@ function ComedianItem({ comedianProp }) {
                     gutterBottom
                     color='text.secondary'
                 >
-
+                    
                     {/* <Button aria-label="settings"
                         color='fifthBlack'>
                         {comedianProp.first_name} {comedianProp.last_name}

@@ -15,10 +15,27 @@ import { useHistory, useParams } from 'react-router-dom';
 import ComedianItem from '../ComedianItem/ComedianItem.jsx';
 
 // ------ MUI ELEMENTS ------ // in Alphabetical order ------ //
-import { Box, Button, Grid, Paper, TextField, Typography, } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
+import { Box, Button, Grid, Link, Paper, TextField, Typography, Tooltip } from '@mui/material';
+import { positions } from '@mui/system';
+import '../MUIElements/MUIElements.css';
+import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse } from '@mui/material';
 
-// useParams may not be necessary might be like a stretch goal getting from the router file
+import Avatar from '@mui/material/Avatar';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import { red } from '@mui/material/colors';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import InfoIcon from '@mui/icons-material/Info';
+import DeleteIcon from '@mui/icons-material/Delete';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import CoPresentIcon from '@mui/icons-material/CoPresent';
+import SearchIcon from '@mui/icons-material/Search';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 
 function SearchPage() {
