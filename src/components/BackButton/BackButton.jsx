@@ -1,3 +1,5 @@
+// ------ MUI ELEMENTS ------ // in Alphabetical order ------ //
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 
 
 import { useHistory } from 'react-router-dom';
@@ -12,10 +14,16 @@ function BackButton(){
     }
     
     return(
-        <div className="backbutton">
-            <br></br>
-        <button onClick={() => back('back')}>GO BACK</button>
-        </div>
+        <Grid container 
+        id="backButtonId" 
+        className="backbutton"
+        direction="column"
+        alignItems="center">
+        
+        <Button 
+        variant="contained" 
+        onClick={() => back('back')}>GO BACK</Button>
+        </Grid>
     )
 }
 

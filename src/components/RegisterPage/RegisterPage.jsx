@@ -3,15 +3,22 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import RegisterForm from '../RegisterForm/RegisterForm';
 
+
+// ------ MUI ELEMENTS ------ // in Alphabetical order ------ //
+import { Box, Button, Grid, Paper, TextField, Typography, } from '@mui/material';
+
+
 function RegisterPage() {
   const history = useHistory();
 
-  return (
+  return (<>
+  <div className="moveDown"></div>
     <div>
       <RegisterForm />
 
       <center>
-        <button
+        <Typography variant="contained"
+          color="white"
           type="button"
           className="btn btn_asLink"
           onClick={() => {
@@ -19,9 +26,11 @@ function RegisterPage() {
           }}
         >
           Login
-        </button>
+        </Typography>
       </center>
+      <br></br>
     </div>
+    </>
   );
 }
 

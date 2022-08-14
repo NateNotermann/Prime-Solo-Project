@@ -3,3 +3,34 @@
 .icon {
     width: 200px;
 }
+
+/* .MainSearchContainer {
+    border-color: rgb(84, 161, 67);
+    border: solid;
+    height: 350px;
+} */
+.GridItems {
+    /* border: solid; */
+    color: white;
+}
+
+/* .GridContainerMapper {
+    border: solid;
+} */
+
+.justInputs{
+    border-color: rgb(84, 161, 67);
+    border: solid;
+}
+/* .searchForm {
+    border-color: rgb(67, 161, 155);
+    border: solid;
+} */ */
+
+.moveDown{
+  height: 9vh;
+}
+
+/* .title {
+    position: center;
+} */

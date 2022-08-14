@@ -16,22 +16,23 @@ router.get('/:className/:searchItem', (req, res) => {
   console.log('req.params.className', req.params.className);
   console.log('req.params.searchItem', req.params.searchItem);
 
-  // temporary hard code 'Tom' to make sure route connects
-  const query = 
-`SELECT * FROM "comedians" 
- WHERE ${column} LIKE $1 
- ORDER BY "comedians"."first_name";`;
-  // pool.query(query)
-  pool.query(query, [searchItem])
-  // pool.query(query, [column, searchItem])
+  const query =
+    `SELECT * FROM "comedians" 
+     WHERE ${column} ILIKE '%${searchItem}%' 
+     ORDER BY "comedians"."first_name";`;
 
-  .then( result => {
-    res.send(result.rows);
-  })
-  .catch(error => {
-    console.log('ERROR Search Router', error);
-    res.sendStatus(500)
-  })
+
+  pool.query(query)
+    // pool.query(query, [searchItem])
+    // pool.query(query, [column, searchItem])
+
+    .then(result => {
+      res.send(result.rows);
+    })
+    .catch(error => {
+      console.log('ERROR Search Router', error);
+      res.sendStatus(500)
+    })
 });
 
 /**

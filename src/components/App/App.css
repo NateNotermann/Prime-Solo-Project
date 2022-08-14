@@ -7,6 +7,9 @@ body,
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
+  
+  background: rgb(57,52,147);
+  background: linear-gradient(0deg, rgba(57,52,147,1) 0%, rgba(33,72,135,1) 22%, rgba(7,67,125,1) 46%, rgba(4,86,130,1) 73%, rgba(0,116,139,1) 100%);
 }
 
 img {
@@ -102,20 +105,82 @@ Form Treatment
   max-width: 100%;
   padding: 25px;
   margin: 0 auto 20px;
-  /* background-color: #efefef; */
+  background-color: #000c1156;
+  /* background-color: #0022305b; */
+  
   /* opacity: 0.6; */
+
+  /* -- Border -- */
   border-radius: 3px;
   box-shadow: 0 5px 5px rgb(0, 0, 0, 0.4);
+  border: solid;
+  border-color: rgb(0, 0, 0);
 }
 
 input {
   margin: 5px;
   margin-bottom: 10px;
+  
 }
 
 
 .login_box {
+  
   /* background-color: #efefef; */
   /* opacity: 0.3; */
 }
 
+/* .GridContainer {
+  border: solid;
+  border-color: rgb(0, 0, 0);
+}
+
+.GridItem {
+  border: solid;
+  border-color: rgb(0, 0, 0);
+} */
+
+/* #BackButtonMain{
+  border: solid;
+  border-color: rgb(0, 0, 0);
+} */
+
+/* #backButtonId {
+  border: solid;
+  border-color: rgb(0, 0, 0);
+} */
+
+/* .MainDiv{
+  border: solid;
+  border-color: rgb(255, 58, 58);
+} */
+
+/* #GridFooter{
+  border: solid;
+  border-color: rgb(87, 255, 49);
+  border-radius: 13px;
+} */
+
+
+/*------------------MAIN COMPONENTS------------*/
+/* .NavBarPink {
+  border: solid;
+  border-color: rgb(255, 49, 207);
+  border-radius: 13px;
+
+} */
+
+h1, h2, h3, h4, h5 {
+  color: white;
+}
+
+.moveDown{
+  height: 9vh;
+}
+
+.userNameChange{
+  color: white; 
+}
+
+
+/*------------------MAIN COMPONENTS------------*/
