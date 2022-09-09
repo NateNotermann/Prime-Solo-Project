@@ -131,7 +131,7 @@ function ComedianDetails() {
             <Tooltip title='Comedians Website'>
               <Link color="inherit">
                 <IconButton aria-label="settings">
-                  <a href={currentComedian.youtube_link} className="link"
+                  <a href={currentComedian.website_link} className="link"
                     title="Google Maps" target="_blank">
                     <CoPresentIcon color="primary">
                     </CoPresentIcon>
