@@ -32,7 +32,7 @@ GROUP BY comedians.id
 ORDER BY id;
 
 
- -- CREATE - Favorite -- 
+ --- CREATE - Favorite --- 
 INSERT INTO favorites (user_id, comedian_id)
 VALUES 
 ($1,$2);
