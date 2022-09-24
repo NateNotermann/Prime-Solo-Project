@@ -7,7 +7,7 @@ VALUES
 (1,3);
 
 
----- ALL QUERYS  -----
+---- ALL QUERYS  ------
 
 -- GET All Comedians --
 SELECT * FROM "comedians" ORDER BY "comedians"."first_name";
