@@ -7,7 +7,7 @@ VALUES
 (1,3);
 
 
----- ALL QUERYS  -----
+---- ALL QUERYS  ------
 
 -- GET All Comedians --
 SELECT * FROM "comedians" ORDER BY "comedians"."first_name";
@@ -32,7 +32,7 @@ GROUP BY comedians.id
 ORDER BY id;
 
 
- -- CREATE - Favorite -- 
+ --- CREATE - Favorite --- 
 INSERT INTO favorites (user_id, comedian_id)
 VALUES 
 ($1,$2);
