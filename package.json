@@ -41,9 +41,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "css-minimizer-webpack-plugin": "^4.1.0",
-    "nodemon": "^2.0.4",
-    "optimize-css-assets-webpack-plugin": "^4.0.0"
+    "nodemon": "^2.0.4"
   },
   "browserslist": [
     ">0.2%",
