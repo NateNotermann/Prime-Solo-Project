@@ -16,7 +16,6 @@
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "cookie-session": "^2.0.0",
-    "css-minimizer-webpack-plugin": "^4.1.0",
     "dotenv": "^8.6.0",
     "express": "^4.17.1",
     "passport": "^0.6.0",
@@ -42,7 +41,9 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "css-minimizer-webpack-plugin": "^4.1.0",
+    "nodemon": "^2.0.4",
+    "optimize-css-assets-webpack-plugin": "^4.0.0"
   },
   "browserslist": [
     ">0.2%",
