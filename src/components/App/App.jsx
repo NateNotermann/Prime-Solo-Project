@@ -47,26 +47,26 @@ function App() {
   return (
     <Router>
       <Grid container className="MainDiv"
-    //  alignItems="center"
-     direction="column">
+        //  alignItems="center"
+        direction="column">
 
         <Grid item className="NavBarPink">
-        <Nav />
+          <Nav />
         </Grid>
-      {/* <Gird item className="pushEverythingDown">
+        {/* <Gird item className="pushEverythingDown">
       </Gird> */}
 
         {/* <div className="moveDown"></div> */}
-        
+
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
 
-        <Route 
-        exact
-        path="/MUIElements">
-          <MUIElements />
-        </Route>
+          <Route
+            exact
+            path="/MUIElements">
+            <MUIElements />
+          </Route>
 
 
 
@@ -80,6 +80,27 @@ function App() {
             <AboutPage />
           </Route>
 
+          <Route  // shows user at all times (logged in or not)
+            exact
+            path="/user"
+          >
+            <UserPage />
+          </Route>
+
+
+          <Route // shows SearchPage at all times (logged in or not)
+            exact
+            path="/SearchPage"
+          >
+            <SearchPage />
+          </Route>
+          <Route // shows SearchPage at all times (logged in or not)
+                exact
+                path="/ComedianDetails/:id" // MUST match history.push(`/ComedianDetails`)
+              >
+            <ComedianDetails />
+          </Route>
+
 
 
 
@@ -87,22 +108,22 @@ function App() {
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
             Even though it seems like they are different pages, the user is always on localhost:3000/user */}
-          <ProtectedRoute
+          {/* <ProtectedRoute
             // logged in shows UserPage else shows LoginPage
             exact
             path="/user"
           >
             <UserPage />
-          </ProtectedRoute>
+          </ProtectedRoute> */}
 
           {/* ---------- SearchPage Route Start---------------- */}
-          <ProtectedRoute
+          {/* <ProtectedRoute
             // logged in shows SearchPage else shows LoginPage
             exact
             path="/SearchPage"
           >
             <SearchPage />
-          </ProtectedRoute>
+          </ProtectedRoute> */}
           {/* ---------- SearchPage Route End---------------- */}
 
           {/* ----------Favorites Route Start---------------- */}
@@ -126,13 +147,13 @@ function App() {
           {/* ---------- Settings Route End---------------- */}
 
           {/* ----------ComedianDetails Route Start---------------- */}
-          <ProtectedRoute
+          {/* <ProtectedRoute
             // logged in shows ComedianDetails else shows LoginPage
             exact
             path="/ComedianDetails/:id" // MUST match history.push(`/ComedianDetails`)
           >
             <ComedianDetails />
-          </ProtectedRoute>
+          </ProtectedRoute> */}
           {/* ---------- ComedianDetails Route End---------------- */}
 
           <Route
@@ -162,7 +183,7 @@ function App() {
               <RegisterPage />
             }
           </Route>
-            
+
           <Route
             exact
             path="/home"
@@ -185,12 +206,12 @@ function App() {
 
 
 
-        <Grid container 
-         className="BackButtonMain"
-         id="BackButtonMain"
-         alignItems="center"
-         direction="column"
-         >
+        <Grid container
+          className="BackButtonMain"
+          id="BackButtonMain"
+          alignItems="center"
+          direction="column"
+        >
           <Grid item className="backButton">
             <BackButton />
           </Grid>
@@ -199,8 +220,8 @@ function App() {
 
 
 
-        <Grid item 
-        id="GridFooter">
+        <Grid item
+          id="GridFooter">
           <Footer />
         </Grid>
 

@@ -31,27 +31,32 @@ function Nav() {
             </Link> */}
 
 
-            <Link className="navLink" to="/user">
+            {/* <Link className="navLink" to="/user">
               Browse
-            </Link>
+            </Link> */}
 
-            <Link className="navLink" to="/SearchPage">
+            {/* <Link className="navLink" to="/SearchPage">
               Search
-            </Link>
-            
+            </Link> */}
+
             <Link className="navLink" to="/Favorites/">
               Favorites
             </Link>
- 
+
             <Link className="navLink" to="/Settings">
-            Settings
+              Settings
             </Link>
-        
+
 
             <LogOutButton />
           </>
         )}
-
+        <Link className="navLink" to="/user">
+          Browse
+        </Link>
+        <Link className="navLink" to="/SearchPage">
+          Search
+        </Link>
         <Link className="navLink" to="/about">
           About
         </Link>
