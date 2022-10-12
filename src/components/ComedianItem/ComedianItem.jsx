@@ -123,7 +123,7 @@ function ComedianItem({ comedianProp }) {
                 <Typography
                     className={"MuiTypography--heading"}
                     variant={"h6"}
-                    gutterBottom
+                    // gutterBottom
                     color='text.secondary'
                 >
                     

@@ -170,7 +170,7 @@ function SearchPage() {
                 margin="auto"
                 value={firstName}
                 onChange={(event) => setFirstName(event.target.value)} />
-              <Button variant="outlined" type='submit' ><SearchIcon /></Button>
+              <Button variant="contained" type='submit' ><SearchIcon /></Button>
               </Grid>
             </form>
 
@@ -187,7 +187,7 @@ function SearchPage() {
                   value={lastName}
                   onChange={(event) => setLastName(event.target.value)} 
                   />
-                <Button variant="outlined" type='submit'><SearchIcon /></Button>
+                <Button variant="contained" type='submit'><SearchIcon /></Button>
               </Grid>
             </form>
           </Grid>
@@ -202,7 +202,7 @@ function SearchPage() {
                 margin="auto"
                 value={genre}
                 onChange={(event) => setGenre(event.target.value)} />
-              <Button variant="outlined" type='submit' ><SearchIcon /></Button>
+              <Button variant="contained" type='submit' ><SearchIcon /></Button>
                 </Grid>
             </form>
           </Grid>
@@ -217,7 +217,7 @@ function SearchPage() {
                 margin="auto"
                 value={city}
                 onChange={(event) => setCity(event.target.value)} />
-              <Button variant="outlined" type='submit'><SearchIcon /></Button>
+              <Button variant="contained" type='submit'><SearchIcon /></Button>
               </Grid>
             </form>
           </Grid>
