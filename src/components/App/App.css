@@ -10,6 +10,7 @@ body {
   
   background: rgb(57,52,147);
   background: linear-gradient(0deg, rgba(57,52,147,1) 0%, rgba(33,72,135,1) 22%, rgba(7,67,125,1) 46%, rgba(4,86,130,1) 73%, rgba(0,116,139,1) 100%);
+  background-attachment: fixed;
 }
 
 img {
