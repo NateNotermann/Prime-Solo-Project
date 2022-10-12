@@ -34,3 +34,25 @@
 /* .title {
     position: center;
 } */
+
+.searchForm{
+    /* padding-top: 50px;
+    padding-right: 10px;
+    padding-bottom: 80px;
+    padding-left: 10px; */
+
+    color: white;
+    box-sizing: border-box;
+    width: 400px;
+    max-width: 100%;
+    padding: 25px;
+    margin: 0 auto 20px;
+    background-color: #0119231c;
+    /* background-color: #0022305b; */
+    /* opacity: 0.6; */
+    /* -- Border -- */
+    border-radius: 3px;
+    box-shadow: 0 5px 5px rgb(0, 0, 0, 0.4);
+    border: solid;
+    border-color: rgb(0, 0, 0);
+}

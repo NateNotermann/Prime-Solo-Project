@@ -76,7 +76,7 @@ function ComedianDetails() {
         <h2 item align="center" >Comedian Details</h2>
       </Grid>
           
-          <ComedianItem comedianProp={currentComedian} />
+          <ComedianItem comedianProp={currentComedian}  className="comedianItem"/>
           {/* <h2>{currentComedian.first_name} {currentComedian.last_name} id: {currentComedian.id}</h2>
       <img className='icon'
         src={currentComedian.icon}

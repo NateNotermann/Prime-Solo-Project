@@ -30,9 +30,9 @@ function Browse() {
     <h2 className="h2test">Browse All Comedians</h2>
     </center>
 
-    {/* <center>  
-          <Typography>Welcome, {user.name}!</Typography>
-      </center> */}
+    <center className="center">  
+          <Typography>Welcome, {user.name ? user.name : 'please Register or Login to view/edit your Favorites list :)' }</Typography>
+      </center>
 
       <br></br>
 

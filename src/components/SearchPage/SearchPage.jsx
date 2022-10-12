@@ -42,7 +42,7 @@ function SearchPage() {
   const history = useHistory();
   const dispatch = useDispatch();
   const listAllComedians = useSelector(store => store.allComediansReducerStore);
-
+  const user = useSelector((store) => store.user);
   const search = useSelector(store => store.searchReducer);
 
   let [firstName, setFirstName] = useState('');
@@ -139,6 +139,10 @@ function SearchPage() {
         <h2 item align="center" >Search Page</h2>
       </Grid>
 
+      <center>  
+          <Typography>Welcome, {user.name ? user.name : 'please Register or Login to view/edit your Favorites list :)' }</Typography>
+      </center>
+      <br></br>
 
       <Grid container className="MainSearchContainer"
         justifyContent="space-evenly"
