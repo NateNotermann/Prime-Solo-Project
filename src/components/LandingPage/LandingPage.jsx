@@ -10,7 +10,7 @@ import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 
 
 function LandingPage() {
-  const [heading, setHeading] = useState('Welcome');
+  const [heading, setHeading] = useState(' ');
   const history = useHistory();
 
   const onLogin = (event) => {
