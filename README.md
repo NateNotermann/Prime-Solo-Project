@@ -97,6 +97,11 @@ CREATE TABLE "favorites" (
 "comedian_id" INT REFERENCES "comedians" ON DELETE CASCADE NOT NULL
 );
 
+-- ADD Admin and USER 1 -- 
+INSERT INTO "user" ( "username", "password", "name", "access_level" ) VALUES 
+( 'admin', '$2a$10$cdwGyp.FbNfJczpdYd2s5O0aH5IGiCh0kvHCSmcCSKK25bRFuBLGa', 'Admin', 1),  --admin 1, password is: "admin"
+( 'user1', '$2a$10$kztK6AtXpJ2dNyegvTyOQeDfh./6TnL8.SrB6SNAzQaahG/BLdIdO', 'user1', 3); -- user 1, password is: "user1"
+
 ------ COMEDIAN DATA ------
 INSERT INTO "comedians" ("first_name", "last_name", "icon", "genre", "instagram_link", "twitter_link","youtube_link", "website_link", "city" )
 VALUES
