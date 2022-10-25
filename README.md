@@ -10,6 +10,9 @@ The goal was to build an application which utilizes the full stack C.R.U.D.(Crea
 
 To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-hehe-pedia.herokuapp.com/#/home)
 
+<br>
+
+
 ### Languages and Programs:
 <!-- HTML -->
 <a href="https://html.com/about/" target="_blank"> <img align="left" alt="HTML" height ="42px"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png"> </a>
@@ -34,12 +37,12 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 <!-- postreSQL -->
 <a href="https://www.postgresql.org/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1080px-Postgresql_elephant.svg.png?20080116191800" align="left" alt="postreSQL" height='42px'/> </a>
 
-
 <br>
 
 
+## Screen Shots
 
-## Screen Shot
+
 
 <br>
 
