@@ -57,7 +57,7 @@ Before you get started, make sure you have the following software installed on y
 
 
 
-## Create database and table
+## Create database and tables
 
 The below SQL queries will set up the **entire database**, including 3 tables and **all comedians data**.  
 All you need to do is copy & paste all of the code below into Postico, and click execute. The included database.sql file is identical for easy importing directly from postico.
@@ -215,7 +215,7 @@ This code is also heavily commented. We recommend reading through the comments, 
 
 ## Developer
 
-Nate Notermann - all work -x
+Nate Notermann - all work -
 
 <!-- heroku app App link-->
 <a href='https://wiki-hehe-pedia.herokuapp.com/#/home'><img alt="heroku" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/2560px-Heroku_logo.svg.png" height='18px'/></a> - Fully Deployed App - [Wiki-HeHe-pedia](https://wiki-hehe-pedia.herokuapp.com/#/home)
