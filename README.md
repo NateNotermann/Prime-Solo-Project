@@ -1,6 +1,9 @@
 
-# Prime Solo Project Starting Repo
-This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`).
+# Wiki-hehe-pedia 
+In wanted to create ful-stack application that combined allowed users to search index of comedians by first name, last name, keywords or location. I included links to each comedians social media sites like Instagram, Twitter, Youtube, and more. I also wanted user to be able to save their favorite comedians to a list for future reference.
+
+The goal was to build an application which utilizes the full stack in order to run database requests, render items to the dom, and create a responsive and immersive experience within the app.
+
 
 We **STRONGLY** recommend following these instructions carefully. It's a lot, and will take some time to set up, but your life will be much easier this way in the long run.
 
@@ -86,7 +89,7 @@ There are a few videos linked below that show a walkthrough the client and sever
 - [Client Walkthrough](https://vimeo.com/453297124)
 
 Directory Structure:
-
+`package.json`)
 - `src/` contains the React application
 - `public/` contains static assets for the client-side
 - `build/` after you build the project, contains the transpiled code from `src/` and `public/` that will be viewed on the production site
