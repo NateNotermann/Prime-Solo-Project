@@ -28,7 +28,9 @@ Before you get started, make sure you have the following software installed on y
 
 ## Create database and table
 
-Create a new database called `prime_app` and create a `user` table:
+Create a new database called `prime_app` and create a `user` table. If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
+
+ All  you need to do it copy & Paste all of the SQL query below into Postico, and click execute. The SQL query to add all comedian information is at the very bottom of the ReadMe to save space.
 
 ```SQL
 --------- START -- COPY --- AND -- PASTE -- HERE ----------
@@ -66,7 +68,7 @@ CREATE TABLE "favorites" (
 );
 ```
 
-If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
+
 
 ## Development Setup Instructions
 
@@ -79,7 +81,7 @@ If you would like to name your database something else, you will need to change 
 - Start postgres if not running already by using `brew services start postgresql`
 - Run `npm run server`
 - Run `npm run client`
-- Navigate to `localhost:3000`
+- If app doesn't automatically opening the browser, then Navigate to: `localhost:3000`
 
 
 
