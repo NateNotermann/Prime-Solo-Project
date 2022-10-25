@@ -13,6 +13,8 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 
 ## Screen Shot
 
+<br>
+
 ### Languages and Programs:
 <!-- HTML -->
 <a href="https://html.com/about/" target="_blank"> <img align="left" alt="HTML" height ="42px"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png"> </a>
@@ -53,7 +55,7 @@ Nate Notermann - all work -
 <!-- Email Link -->
 <a href = "mailto: nate.notermann@gmail.com"><img alt="linkedin" src="https://1000logos.net/wp-content/uploads/2018/05/Gmail-Logo-2013.png" height='18px'/></a> - Don't hesitate to reach out via -  <a href = "mailto: nate.notermann@gmail.com">email!</a>
 
- 
+<br> 
 
 ## Prerequisites
 
