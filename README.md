@@ -9,9 +9,7 @@ The goal was to build an application which utilizes the full stack C.R.U.D.(Crea
 
 
 To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-hehe-pedia.herokuapp.com/#/home)
-
 <br>
-
 
 ### Languages and Programs:
 <!-- HTML -->
