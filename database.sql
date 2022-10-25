@@ -1,9 +1,4 @@
 
--- USER is a reserved keyword with Postgres
--- You must use double quotes in every query that user is in:
--- ex. SELECT * FROM "user";
--- Otherwise you will have errors!
-
 ---------- START -- COPY --- AND -- PASTE -- HERE ----------
 
 ------ CREATE TABLES ------
@@ -77,7 +72,7 @@ VALUES
 -- ADD Admin and USER 1 -- 
 INSERT INTO "user" ( "username", "password", "name", "access_level" ) VALUES 
 ( 'admin', '$2a$10$OsPuAKcp4ip.sb2zZUM9vuJwhoRdGdJVcbIlWobbX4XbFPcg8Zjey', 'Admin', 1),  --Admin 1, password prime
-( 'person1', '$2a$10$OsPuAKcp4ip.sb2zZUM9vuJwhoRdGdJVcbIlWobbX4XbFPcg8Zjey', 'Nate', 3); -- user 1, password prime
+( 'person1', '$2a$10$OsPuAKcp4ip.sb2zZUM9vuJwhoRdGdJVcbIlWobbX4XbFPcg8Zjey', 'person1', 3); -- user 1, password prime
 
 ---------- STOP -- COPY --- AND -- PASTE -- HERE ----------
 

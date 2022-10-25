@@ -3,7 +3,7 @@
 
 <em>Duration: 2 Week Sprint</em>
 
-I wanted to create ful-stack application that allowed users to search an index of comedians by first name, last name, keywords or location. I included links to each comedians social media sites like Instagram, Twitter, Youtube, and more. I also wanted user to be able to save their favorite comedians to a list for future reference.
+I wanted to create ful-stack application that allowed users to search an index of comedians by first name, last name, keywords and location. I included links to each comedians social media sites like Instagram, Twitter, Youtube, and more. I also wanted user to be able to save their favorite comedians to a list for future reference.
 
 The goal was to build an application which utilizes the full stack C.R.U.D.(Create, Read, Update, Delete) in order to run database requests, render items to the dom, and create a responsive and immersive experience within the app. 
 
@@ -14,6 +14,78 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 ## Screen Shot
 
 <br>
+
+
+## Prerequisites
+
+Before you get started, make sure you have the following software installed on your computer:
+
+- [Node.js](https://nodejs.org/en/)
+- [PostrgeSQL](https://www.postgresql.org/)
+- [Nodemon](https://nodemon.io/)
+
+
+
+## Create database and table
+
+Create a new database called `prime_app` and create a `user` table:
+
+```SQL
+--------- START -- COPY --- AND -- PASTE -- HERE ----------
+
+------ CREATE TABLES ------
+-- CREATE USER TABLE --
+CREATE TABLE "user" (
+	"id" SERIAL PRIMARY KEY,
+	"username" varchar(25) NOT NULL UNIQUE,
+	"password" varchar(200) NOT NULL,
+	"name" varchar(25),
+	"access_level" int NOT NULL DEFAULT 3
+);
+
+-- CREATE COMEDIANS TABLE --
+CREATE TABLE "comedians" (
+"id" SERIAL PRIMARY KEY,
+"first_name" VARCHAR (50),
+"last_name" VARCHAR (50),
+"icon" VARCHAR (50),
+"genre" VARCHAR (50),
+"instagram_link" VARCHAR (255),
+"youtube_link" VARCHAR (255),
+"twitter_link" VARCHAR (255),
+"website_link" VARCHAR (255),
+"city" VARCHAR (50),
+"description" TEXT
+);
+
+-- CREATE FAVORITES TABLE --
+CREATE TABLE "favorites" (
+"id" SERIAL PRIMARY KEY,
+"user_id" INT REFERENCES "user" ON DELETE CASCADE NOT NULL,
+"comedian_id" INT REFERENCES "comedians" ON DELETE CASCADE NOT NULL
+);
+```
+
+If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
+
+## Development Setup Instructions
+
+- Run `npm install`
+- Create a `.env` file at the root of the project and paste this line into the file:
+  ```
+  SERVER_SESSION_SECRET=superDuperSecret
+  ```
+  While you're in your new `.env` file, take the time to replace `superDuperSecret` with some long random string like `25POUbVtx6RKVNWszd9ERB9Bb6` to keep your application secure. Here's a site that can help you: [https://passwordsgenerator.net/](https://passwordsgenerator.net/). If you don't do this step, create a secret with less than eight characters, or leave it as `superDuperSecret`, you will get a warning.
+- Start postgres if not running already by using `brew services start postgresql`
+- Run `npm run server`
+- Run `npm run client`
+- Navigate to `localhost:3000`
+
+
+
+
+<br>
+
 
 ### Languages and Programs:
 <!-- HTML -->
@@ -44,7 +116,7 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 
 ## Developer
 
-Nate Notermann - all work -
+Nate Notermann - all work -x
 
 <!-- heroku app App link-->
 <a href='https://wiki-hehe-pedia.herokuapp.com/#/home'><img alt="heroku" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/2560px-Heroku_logo.svg.png" height='18px'/></a> - Fully Deployed App - [Wiki-HeHe-pedia](https://wiki-hehe-pedia.herokuapp.com/#/home)
@@ -57,42 +129,6 @@ Nate Notermann - all work -
 
 <br> 
 
-## Prerequisites
-
-Before you get started, make sure you have the following software installed on your computer:
-
-- [Node.js](https://nodejs.org/en/)
-- [PostrgeSQL](https://www.postgresql.org/)
-- [Nodemon](https://nodemon.io/)
-
-
-
-## Create database and table
-
-Create a new database called `prime_app` and create a `user` table:
-
-```SQL
-CREATE TABLE "user" (
-    "id" SERIAL PRIMARY KEY,
-    "username" VARCHAR (80) UNIQUE NOT NULL,
-    "password" VARCHAR (1000) NOT NULL
-);
-```
-
-If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
-
-## Development Setup Instructions
-
-- Run `npm install`
-- Create a `.env` file at the root of the project and paste this line into the file:
-  ```
-  SERVER_SESSION_SECRET=superDuperSecret
-  ```
-  While you're in your new `.env` file, take the time to replace `superDuperSecret` with some long random string like `25POUbVtx6RKVNWszd9ERB9Bb6` to keep your application secure. Here's a site that can help you: [https://passwordsgenerator.net/](https://passwordsgenerator.net/). If you don't do this step, create a secret with less than eight characters, or leave it as `superDuperSecret`, you will get a warning.
-- Start postgres if not running already by using `brew services start postgresql`
-- Run `npm run server`
-- Run `npm run client`
-- Navigate to `localhost:3000`
 
 ## Debugging
 
