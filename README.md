@@ -215,7 +215,7 @@ This code is also heavily commented. We recommend reading through the comments, 
 
 ## Developer
 
-Nate Notermann - all work -
+**Nate Notermann - all work -**
 
 <!-- heroku app App link-->
 <a href='https://wiki-hehe-pedia.herokuapp.com/#/home'><img alt="heroku" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/2560px-Heroku_logo.svg.png" height='18px'/></a> - Fully Deployed App - [Wiki-HeHe-pedia](https://wiki-hehe-pedia.herokuapp.com/#/home)
