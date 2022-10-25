@@ -28,9 +28,7 @@ Before you get started, make sure you have the following software installed on y
 
 ## Create database and table
 
-Create a new database called `prime_app` and create a `user` table. If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
-
- All  you need to do it copy & Paste all of the SQL query below into Postico, and click execute. The SQL query to add all comedian information is at the very bottom of the ReadMe to save space.
+ All  you need to do it copy & paste all of the SQL query below into Postico, and click execute. The SQL query to add all comedian information is at the very bottom of the ReadMe to save space.
 
 ```SQL
 --------- START -- COPY --- AND -- PASTE -- HERE ----------
@@ -66,9 +64,46 @@ CREATE TABLE "favorites" (
 "user_id" INT REFERENCES "user" ON DELETE CASCADE NOT NULL,
 "comedian_id" INT REFERENCES "comedians" ON DELETE CASCADE NOT NULL
 );
+
+------ COMEDIAN DATA ------
+INSERT INTO "comedians" ("first_name", "last_name", "icon", "genre", "instagram_link", "twitter_link","youtube_link", "website_link", "city" )
+VALUES
+('Nate','Bargatze','images/Icons/IconsNate.jpg','Clean','https://www.instagram.com/natebargatze/','https://www.youtube.com/watch?v=pGUhBzSgOxw&ab_channel=NetflixIsAJoke','https://twitter.com/natebargatze?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor','https://natebargatze.com/','Nashville'),
+('Ronny','Chieng','images/Icons/icons_0000_rony2.jpg','Cool','https://www.instagram.com/ronnychieng/','https://www.youtube.com/user/LizMiele','https://twitter.com/lizmiele','https://lizmiele.com/','Los Angeles'),
+('Whitteny','Cummings','images/Icons/icons_0006_whitney_cummings.jpg','Adult','https://www.instagram.com/whitneycummings/','https://www.youtube.com/user/MonicaNevi','https://twitter.com/monicanevi?lang=en','https://monicanevi.com/','Los Angeles'),
+('Kaitlyn','DaleMore','images/Icons/iconDale.jpg','Dale','https://www.instagram.com/seguratom/?hl=en','https://www.instagram.com/seguratom/?hl=en','https://www.instagram.com/seguratom/?hl=en', 'https://www.instagram.com/seguratom/?hl=en','Minneapolis'),
+('Francesca','Fiorentini','images/Icons/IconsFrancesca.jpg','Political','https://www.instagram.com/franifio/?hl=en','https://www.youtube.com/c/franifio','https://twitter.com/franifio?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor','https://www.francescafiorentini.com/','Los Angeles'),
+('Jena','Friedman','images/Icons/IconsJena.jpg','Political','https://www.instagram.com/jenafriedman/','https://www.youtube.com/user/JenaFriedman2/featured','https://twitter.com/JenaFriedman','http://www.jenafriedman.com/','Los Angeles'),
+('Tiffany','Haddish','images/Icons/icons_0008_tiffany.jpg','Adult','https://www.instagram.com/tiffanyhaddish/','https://www.youtube.com/user/LizMiele','https://twitter.com/lizmiele','https://lizmiele.com/','Los Angeles'),
+('Hari','Kondabolu','images/Icons/IconsHari.jpg','Political','https://www.instagram.com/harikondabolu/','link','https://twitter.com/harikondabolu','https://harikondabolu.com/','New York'),
+('Matteo','Lane','images/Icons/IconsMatteo.jpg','LGBTQ','https://www.instagram.com/matteolane/','link','link','link','New York'),
+('Becky','Lucas','images/Icons/IconsBecky.jpg','Silly','https://www.instagram.com/beckylucas__/','link','link','link','Sydney, Australia'),
+('Carmen','Lynch','images/Icons/IconsCarmen.jpg','Goofy & Spanish','https://www.instagram.com/carmencomedian/?hl=en','link','link','link','New York'),
+('Liz','Miele','images/comedians/liz_miele_icon.jpg','Mental Health','https://www.instagram.com/lizmiele/','https://www.youtube.com/user/LizMiele','https://twitter.com/lizmiele','https://lizmiele.com/','New York'),
+('Hasan','Minhaj','images/Icons/IconsHassan.jpg','Political','https://www.instagram.com/hasanminhaj/?hl=en','link','link','link','New York'),
+('Sam','Morril','images/Icons/icons_0011_sam.jpg','Short Jokes','https://www.instagram.com/lizmiele/','https://www.youtube.com/user/LizMiele','https://twitter.com/lizmiele','https://lizmiele.com/','New York'),
+('Monica','Nevi','images/comedians/monica_nevi_icon.jpg','Positive','https://www.instagram.com/monicanevi/','https://www.youtube.com/channel/UCQB3H0dKK-U0T0nueFX7mjg/joinFull','https://twitter.com/monicanevi?lang=en','https://monicanevi.com/','Seatle'),
+('Trevor','Noah','images/Icons/IconsTrevor.jpg','Political','https://www.instagram.com/trevornoah/?hl=en','link','link','link','New York'),
+('Mark','Normand','images/Icons/icons_0013_MarkNormand_800x800.jpg','Short Jokes','https://www.instagram.com/monicanevi/','https://www.youtube.com/user/MonicaNevi','https://twitter.com/monicanevi?lang=en','https://monicanevi.com/','New York'),
+('Christina','P','images/Icons/iconsChristina.jpg','Mom Stories','https://www.instagram.com/seguratom/?hl=en','https://www.youtube.com/user/tomsegura','https://twitter.com/tomsegura?','https://tomsegura.com/','Austin'),
+('Mrs','Pats','images/Icons/iconpats.jpg','NSFW','https://www.instagram.com/lizmiele/','https://www.youtube.com/user/LizMiele','https://twitter.com/lizmiele','https://lizmiele.com/','Los Angeles'),
+('Joe','Rogan','images/Icons/IconJoeRogan.jpg','Basic','https://www.instagram.com/lizmiele/','https://www.youtube.com/user/LizMiele','https://twitter.com/lizmiele','https://lizmiele.com/','Austin'),
+('Amy','Schumer','images/Icons/iconsAmy.jpg','Ruanchy','https://www.instagram.com/fan.amy.schumer/','https://www.youtube.com/user/MonicaNevi','https://twitter.com/monicanevi?lang=en','https://monicanevi.com/','Los Angeles'),
+('Tom','Segura','images/comedians/tom_segura_icon.jpg','Dad Stories & Spanish','https://www.instagram.com/seguratom/?hl=en','https://www.youtube.com/user/tomsegura','https://twitter.com/tomsegura?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor','https://tomsegura.com/','Austin'),
+('Maria','Shehata','images/Icons/IconsMaria.jpg','Fun','https://www.instagram.com/mariashehata/','https://www.youtube.com/c/MariaShehata','https://twitter.com/mariashehata','https://www.mariashehata.com/','London'),
+('Ali','Sultan','images/Icons/IconsAliSultan.jpg','Cats','https://www.instagram.com/alisultancomedy/','https://www.youtube.com/channel/UCrV9G1mNWJysDssVGGlX07A','https://twitter.com/Ali_Sultan','https://alisultancomedy.com/','Minneapolis'),
+('Wanda','Sykes','images/Icons/icons_0007_wanda.jpg','Ruanchy','https://www.instagram.com/iamwandasykes/','https://www.youtube.com/user/tomsegura','https://twitter.com/tomsegura?','https://tomsegura.com/','Los Angeles'),
+('Sarah','Tollemache','images/Icons/icons_0004_sarah.jpg','Dry','https://www.instagram.com/stollemache/','https://www.youtube.com/user/tomsegura','https://twitter.com/tomsegura?','https://tomsegura.com/','New York'),
+('Taylor','Tomlinson','images/Icons/icons_0009_taylor.jpg','Mental Health','https://www.instagram.com/taylortomlinson/','https://www.youtube.com/watch?v=oagNYHB3Kzk&ab_channel=NetflixIsAJoke','https://twitter.com/monicanevi?lang=en','https://ttomcomedy.com/','Los Angeles'),
+('Irene','Tu','images/Icons/IconsIrene.jpg','LGBTQ','link','link','link','link','Los Angeles'),
+('Michelle','Wolf','images/Icons/icons_0005_michelle.jpg','Political','https://www.instagram.com/michelleisawolf/','https://www.youtube.com/watch?v=F9m1jPu7afw&ab_channel=NetflixIsAJoke','https://twitter.com/michelleisawolf','https://www.michelleisawolf.com/about','New York'),
+('Ali','Wong','images/Icons/icons_0001_ali_wong.jpg','Mom Stories','https://www.instagram.com/aliwong/','https://www.youtube.com/user/LizMiele','https://twitter.com/lizmiele','https://lizmiele.com/','Los Angeles'),
+('Ramy','Youssef','images/Icons/IconsRamy.jpg','Millennial','https://www.instagram.com/ramy/','link','link','link','New York')
+;
+
 ```
 
-
+If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
 
 ## Development Setup Instructions
 
@@ -132,30 +167,8 @@ Nate Notermann - all work -x
 <br> 
 
 
-## Debugging
 
-To debug, you will need to run the client-side separately from the server. Start the client by running the command `npm run client`. Start the debugging server by selecting the Debug button.
 
-![VSCode Toolbar](documentation/images/vscode-toolbar.png)
-
-Then make sure `Launch Program` is selected from the dropdown, then click the green play arrow.
-
-![VSCode Debug Bar](documentation/images/vscode-debug-bar.png)
-
-## Testing Routes with Postman
-
-To use Postman with this repo, you will need to set up requests in Postman to register a user and login a user at a minimum.
-
-Keep in mind that once you using the login route, Postman will manage your session cookie for you just like a browser, ensuring it is sent with each subsequent request. If you delete the `localhost` cookie in Postman, it will effectively log you out.
-
-1. Start the server - `npm run server`
-2. Import the sample routes JSON file [v2](./PostmanPrimeSoloRoutesv2.json) by clicking `Import` in Postman. Select the file.
-3. Click `Collections` and `Send` the following three calls in order:
-   1. `POST /api/user/register` registers a new user, see body to change username/password
-   2. `POST /api/user/login` will login a user, see body to change username/password
-   3. `GET /api/user` will get user information, by default it's not very much
-
-After running the login route above, you can try any other route you've created that requires a logged in user!
 
 ## Production Build
 
@@ -164,14 +177,6 @@ Before pushing to Heroku, run `npm run build` in terminal. This will create a bu
 - Start postgres if not running already by using `brew services start postgresql`
 - Run `npm start`
 - Navigate to `localhost:5000`
-
-## Lay of the Land
-
-There are a few videos linked below that show a walkthrough the client and sever setup to help acclimatize to the boilerplate. Please take some time to watch the videos in order to get a better understanding of what the boilerplate is like.
-
-- [Initial Set](https://vimeo.com/453297271)
-- [Server Walkthrough](https://vimeo.com/453297212)
-- [Client Walkthrough](https://vimeo.com/453297124)
 
 Directory Structure:
 `package.json`)
@@ -184,15 +189,24 @@ This code is also heavily commented. We recommend reading through the comments, 
 
 - src/components
   - App/App
-  - Footer/Footer
-  - Nav/Nav
+  - LandingPage/LandingPage
+  - Nav/Nav (Navigation bar)
+  - UserPage/UserPage (Browse all comedians)
+  - LoginPage/LoginPage
+  - LoginForm/LoginForm
+  - LoginOutButton/LoginOutButton
   - AboutPage/AboutPage
-  - InfoPage/InfoPage
   - UserPage/UserPage
   - LoginPage/LoginPage
-  - RegisterPage/RegisterPage
   - LogOutButton/LogOutButton
+  - RegisterPage/RegisterPage
+  - RegisterForm/RegisterForm
   - ProtectedRoute/ProtectedRoute
+  - SearchPage/SearchPage
+  - Settings/Settings 
+  - ComedianDetails/ComedianDetails 
+  - ComedianItem/ComedianItem 
+  - BackButton/BackButton 
 
 ## Deployment
 
@@ -208,21 +222,4 @@ This code is also heavily commented. We recommend reading through the comments, 
 
 Customize this ReadMe and the code comments in this project to read less like a starter repo and more like a project. Here is an example: https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 
-
-
-
-
-## Nate Notermann
-
-
-Hello and welcome to my Github! My name is **Nate Notermann**. I am a **Full-Stack Software Engineer**. I've worked in many languages starting with a foundation in **Html**, **CSS** and **Javascript**, **jQuery** all the way to **React**, **Redux**. Then building on those with **express**, **Node**, **Ajax**, **Axios**, **SQL** and more. 
-<br/>
-
- ### Trivia
-I love all things tech. Whether it be playing around with AI image generators like 
-  [Midjourney](https://www.midjourney.com/home/) or  
-  [DALL-E-2](https://openai.com/dall-e-2/), or creating [deepfakes](https://vimeo.com/742504379) of old movies like [Singin' in the Rain](https://www.rottentomatoes.com/m/singin_in_the_rain). Or catching up on gaming news & podcasts like [GameScoop!](https://www.youtube.com/watch?v=E-HuWmdVVng&list=PL99PCYdTX-vc_2yb9cnTYyqgiO5ujqp2R&ab_channel=IGNGames). I'm a casual PC gamer that enjoys building their own custom PC's. I also remotely  assist with video production for a weekly comedy podcast called [2 Non-Doctors](https://www.instagram.com/2nondrs/?hl=en).
-  <br>
-  <br>
-  As far as non-tech related stats go, I love running around the lakes in my free time. I also enjoy catching up on comedy podcasts. Mild movie buff. Cat Dad of 1. 
 

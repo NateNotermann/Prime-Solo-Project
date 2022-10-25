@@ -1,3 +1,6 @@
+--All you need to do it copy & Paste all of the SQL queries below into Postico, and click execute. --
+-- The SQL query to add all comedian information is at the very bottom to save space.--
+
 
 ---------- START -- COPY --- AND -- PASTE -- HERE ----------
 
@@ -32,6 +35,12 @@ CREATE TABLE "favorites" (
 "user_id" INT REFERENCES "user" ON DELETE CASCADE NOT NULL,
 "comedian_id" INT REFERENCES "comedians" ON DELETE CASCADE NOT NULL
 );
+
+
+-- ADD Admin and USER 1 -- 
+INSERT INTO "user" ( "username", "password", "name", "access_level" ) VALUES 
+( 'admin', '$2a$10$OsPuAKcp4ip.sb2zZUM9vuJwhoRdGdJVcbIlWobbX4XbFPcg8Zjey', 'Admin', 1),  --Admin 1, password prime
+( 'person1', '$2a$10$OsPuAKcp4ip.sb2zZUM9vuJwhoRdGdJVcbIlWobbX4XbFPcg8Zjey', 'person1', 3); -- user 1, password prime
 
 ------ COMEDIAN DATA ------
 INSERT INTO "comedians" ("first_name", "last_name", "icon", "genre", "instagram_link", "twitter_link","youtube_link", "website_link", "city" )
@@ -69,10 +78,6 @@ VALUES
 ('Ramy','Youssef','images/Icons/IconsRamy.jpg','Millennial','https://www.instagram.com/ramy/','link','link','link','New York')
 ;
 
--- ADD Admin and USER 1 -- 
-INSERT INTO "user" ( "username", "password", "name", "access_level" ) VALUES 
-( 'admin', '$2a$10$OsPuAKcp4ip.sb2zZUM9vuJwhoRdGdJVcbIlWobbX4XbFPcg8Zjey', 'Admin', 1),  --Admin 1, password prime
-( 'person1', '$2a$10$OsPuAKcp4ip.sb2zZUM9vuJwhoRdGdJVcbIlWobbX4XbFPcg8Zjey', 'person1', 3); -- user 1, password prime
 
 ---------- STOP -- COPY --- AND -- PASTE -- HERE ----------
 
