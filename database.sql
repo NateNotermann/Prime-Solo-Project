@@ -1,5 +1,5 @@
---All you need to do it copy & Paste all of the SQL queries below into Postico, and click execute. --
--- The SQL query to add all comedian information is at the very bottom to save space.--
+-- The below SQL queries will set up the entire database, including 3 tables and all comedians data.  
+-- All you need to do is copy & paste all of the code below into Postico, and click execute. -- 
 
 
 ---------- START -- COPY --- AND -- PASTE -- HERE ----------

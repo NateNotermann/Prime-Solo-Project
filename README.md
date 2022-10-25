@@ -28,7 +28,8 @@ Before you get started, make sure you have the following software installed on y
 
 ## Create database and table
 
- All  you need to do it copy & paste all of the SQL query below into Postico, and click execute. The SQL query to add all comedian information is at the very bottom of the ReadMe to save space.
+The below SQL queries will set up the **entire database**, including 3 tables and **all comedians data**.  
+All you need to do is copy & paste all of the code below into Postico, and click execute. The database.sql file included is identical for easy importing directly from postico.
 
 ```SQL
 --------- START -- COPY --- AND -- PASTE -- HERE ----------
@@ -217,9 +218,4 @@ This code is also heavily commented. We recommend reading through the comments, 
 1. Create the necessary tables
 1. Add an environment variable for `SERVER_SESSION_SECRET` with a nice random string for security
 1. In the deploy section, select manual deploy
-
-## Update Documentation
-
-Customize this ReadMe and the code comments in this project to read less like a starter repo and more like a project. Here is an example: https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
-
 
