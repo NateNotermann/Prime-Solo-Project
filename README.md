@@ -10,6 +10,34 @@ The goal was to build an application which utilizes the full stack C.R.U.D.(Crea
 
 To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-hehe-pedia.herokuapp.com/#/home)
 
+### Languages and Programs:
+<!-- HTML -->
+<a href="https://html.com/about/" target="_blank"> <img align="left" alt="HTML" height ="42px"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png"> </a>
+<!-- javascript -->
+<a href="https://www.javascript.com/" target="_blank"> <img align="left" alt="JavaScript" height ="42px"  src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"> </a>
+<!-- react.js -->
+<a href="https://reactjs.org/" target="_blank"> <img align="left" alt="React" height ="42px" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"></a>
+<!-- redux -->
+<a href="https://react-redux.js.org/" target="_blank"> <img align="left" alt="React-Redux" height ="42px" src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg"></a>
+<!-- saga -->
+<a href="https://redux-saga.js.org/" target="_blank"> <img align="left" alt="React-Redux-Saga" height ="42px" src="https://redux-saga.js.org//img/Redux-Saga-Logo-Portrait.png"></a>
+<!-- Material UI -->
+<a href="https://mui.com/" target="_blank"> <img src="https://img.icons8.com/color/480/material-ui.png" align="left" alt="MUI" height='42px'/> </a>
+<!-- VSCode -->
+<a href="https://code.visualstudio.com/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" align="left" alt="Vscode" height='42px'/> </a>
+<!-- node.js -->
+<a href="https://nodejs.org" target="_blank"><img align="left" alt="Node.js" height ="42px" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"></a>
+<!-- postman -->
+<a href="https://www.postman.com/" target="_blank"><img align="left" alt="Postman" height ="42px" src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg"></a>
+<!-- postico -->
+<a href="https://eggerapps.at/postico/" target="_blank"> <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_9527e481fa86aee7aef5c962698d78ee/postico.png" align="left" alt="Postico" height='42px'/> </a>
+<!-- postreSQL -->
+<a href="https://www.postgresql.org/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1080px-Postgresql_elephant.svg.png?20080116191800" align="left" alt="postreSQL" height='42px'/> </a>
+
+
+<br>
+
+
 
 ## Screen Shot
 
@@ -29,7 +57,7 @@ Before you get started, make sure you have the following software installed on y
 ## Create database and table
 
 The below SQL queries will set up the **entire database**, including 3 tables and **all comedians data**.  
-All you need to do is copy & paste all of the code below into Postico, and click execute. The database.sql file included is identical for easy importing directly from postico.
+All you need to do is copy & paste all of the code below into Postico, and click execute. The included database.sql file is identical for easy importing directly from postico.
 
 ```SQL
 --------- START -- COPY --- AND -- PASTE -- HERE ----------
@@ -124,33 +152,6 @@ If you would like to name your database something else, you will need to change 
 
 <br>
 
-
-### Languages and Programs:
-<!-- HTML -->
-<a href="https://html.com/about/" target="_blank"> <img align="left" alt="HTML" height ="42px"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png"> </a>
-<!-- javascript -->
-<a href="https://www.javascript.com/" target="_blank"> <img align="left" alt="JavaScript" height ="42px"  src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"> </a>
-<!-- react.js -->
-<a href="https://reactjs.org/" target="_blank"> <img align="left" alt="React" height ="42px" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"></a>
-<!-- redux -->
-<a href="https://react-redux.js.org/" target="_blank"> <img align="left" alt="React-Redux" height ="42px" src="https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg"></a>
-<!-- saga -->
-<a href="https://redux-saga.js.org/" target="_blank"> <img align="left" alt="React-Redux-Saga" height ="42px" src="https://redux-saga.js.org//img/Redux-Saga-Logo-Portrait.png"></a>
-<!-- Material UI -->
-<a href="https://mui.com/" target="_blank"> <img src="https://img.icons8.com/color/480/material-ui.png" align="left" alt="MUI" height='42px'/> </a>
-<!-- VSCode -->
-<a href="https://code.visualstudio.com/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" align="left" alt="Vscode" height='42px'/> </a>
-<!-- node.js -->
-<a href="https://nodejs.org" target="_blank"><img align="left" alt="Node.js" height ="42px" src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"></a>
-<!-- postman -->
-<a href="https://www.postman.com/" target="_blank"><img align="left" alt="Postman" height ="42px" src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg"></a>
-<!-- postico -->
-<a href="https://eggerapps.at/postico/" target="_blank"> <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_9527e481fa86aee7aef5c962698d78ee/postico.png" align="left" alt="Postico" height='42px'/> </a>
-<!-- postreSQL -->
-<a href="https://www.postgresql.org/" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1080px-Postgresql_elephant.svg.png?20080116191800" align="left" alt="postreSQL" height='42px'/> </a>
-
-
-<br>
 
 
 
