@@ -152,22 +152,6 @@ If you would like to name your database something else, you will need to change 
 
 <br>
 
-## Developer
-
-Nate Notermann - all work -x
-
-<!-- heroku app App link-->
-<a href='https://wiki-hehe-pedia.herokuapp.com/#/home'><img alt="heroku" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/2560px-Heroku_logo.svg.png" height='18px'/></a> - Fully Deployed App - [Wiki-HeHe-pedia](https://wiki-hehe-pedia.herokuapp.com/#/home)
-<!-- Linkdin Link -->
-<a href='https://www.linkedin.com/in/nate-notermann/'><img alt="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" height='18px'/></a> - Linkedin profile - [Linkedin Profile](https://www.linkedin.com/in/nate-notermann/)
-<!-- Resume Link -->
-<a href='https://docs.google.com/document/d/1AFwkaIAh_q_hZW1El2RY0tds35-Sx-Gi3TkMtMaZYnc/edit?usp=sharing'><img alt="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Google_Docs_2020_Logo.svg/800px-Google_Docs_2020_Logo.svg.png" height='18px'/></a> - Resume - [Node.js](https://nodejs.org/en/)
-<!-- Email Link -->
-<a href = "mailto: nate.notermann@gmail.com"><img alt="linkedin" src="https://1000logos.net/wp-content/uploads/2018/05/Gmail-Logo-2013.png" height='18px'/></a> - Don't hesitate to reach out via -  <a href = "mailto: nate.notermann@gmail.com">email!</a>
-
-<br> 
-
-
 
 
 
@@ -218,4 +202,21 @@ This code is also heavily commented. We recommend reading through the comments, 
 1. Create the necessary tables
 1. Add an environment variable for `SERVER_SESSION_SECRET` with a nice random string for security
 1. In the deploy section, select manual deploy
+
+
+## Developer
+
+Nate Notermann - all work -x
+
+<!-- heroku app App link-->
+<a href='https://wiki-hehe-pedia.herokuapp.com/#/home'><img alt="heroku" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Heroku_logo.svg/2560px-Heroku_logo.svg.png" height='18px'/></a> - Fully Deployed App - [Wiki-HeHe-pedia](https://wiki-hehe-pedia.herokuapp.com/#/home)
+<!-- Linkdin Link -->
+<a href='https://www.linkedin.com/in/nate-notermann/'><img alt="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" height='18px'/></a> - Linkedin profile - [Linkedin Profile](https://www.linkedin.com/in/nate-notermann/)
+<!-- Resume Link -->
+<a href='https://docs.google.com/document/d/1AFwkaIAh_q_hZW1El2RY0tds35-Sx-Gi3TkMtMaZYnc/edit?usp=sharing'><img alt="linkedin" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Google_Docs_2020_Logo.svg/800px-Google_Docs_2020_Logo.svg.png" height='18px'/></a> - Resume - [Node.js](https://nodejs.org/en/)
+<!-- Email Link -->
+<a href = "mailto: nate.notermann@gmail.com"><img alt="linkedin" src="https://1000logos.net/wp-content/uploads/2018/05/Gmail-Logo-2013.png" height='18px'/></a> - Don't hesitate to reach out via -  <a href = "mailto: nate.notermann@gmail.com">email!</a>
+
+<br> 
+
 
