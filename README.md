@@ -44,7 +44,7 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 **Browse All Comedians Page** and **Favorites Page**
 
 <span>
-<img src="public/images/Screenshots/browse.png" style="width: 49%;">
+<img src="public/images/Screenshots/browse1.png" style="width: 49%;">
 <img src="public/images/Screenshots/favorites.png" style="width: 49%;">
 </span>
 
