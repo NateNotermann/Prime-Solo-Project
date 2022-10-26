@@ -41,12 +41,15 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 
 
 ## Screen Shots
-<img src="public/images/Screenshots/screenshot.png" style="width: 50%;">
-<img src="public/images/Screenshots/screenshot.png" style="width: 50%;">
+<span>
+<img src="public/images/Screenshots/browse.png" style="width: 49%;">
+<img src="public/images/Screenshots/favorites.png" style="width: 49%;">
+</span>
+<span>
+<img src="public/images/Screenshots/search.png" style="width: 49%;">
+<img src="public/images/Screenshots/details.png" style="width: 49%;">
+</span>
 
-![image description](public/images/Screenshots/screenshot.png)
-
-<img alt="browseallscreenshot" src="/Users/nate/Dropbox/Prime-Digital-Academy/Solo-Project/Prime-Solo-Project/public/images/Screenshots/screenshot.png" height='100px'/>
 
 
 <br>
