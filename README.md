@@ -42,17 +42,12 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 
 ## Screen Shots
 **Browse All Comedians Page** and **Favorites Page**
-
+<img src="public/images/Screenshots/browse.gif" style="width: 100%;">
 <span>
-<img src="public/images/Screenshots/landing.gif" style="width: 100%;">
-
-
-<img src="public/images/Screenshots/browse.gif" style="width: 49%;">
+<img src="public/images/Screenshots/landing.gif" style="width: 49%;">
 <img src="public/images/Screenshots/favorite.gif" style="width: 49%;">
 </span>
-
 **Search Page** and **Comedian Details**
-
 <span>
 <img src="public/images/Screenshots/search.gif" style="width: 49%;">
 <img src="public/images/Screenshots/details.gif" style="width: 49%;">
