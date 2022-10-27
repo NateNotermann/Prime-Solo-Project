@@ -45,17 +45,14 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 
 ## Screen Shots
 **Browse All Comedians Page** 
-<img src="public/images/Screenshots/browse.gif" style="width: 100%;">
+<img src="public/images/Screenshots/browsenew.gif" style="width: 100%;">
 
 **Landing Page** and **Favorites Page**
-<p>
-<span style="width: 100%;"><img src="public/images/Screenshots/landing.gif" style="width: 49%;"><img src="public/images/Screenshots/favorite.gif" style="width: 49%;"></span>
-</p>
+<img src="public/images/Screenshots/landingandfavorites.gif" style="width: 100%;">
 
 **Search Page** and **Comedian Details**
-<div>
-<span style="width: 100%;"><img src="public/images/Screenshots/search.gif" style="width: 49%;"><img src="public/images/Screenshots/details.gif" style="width: 49%;"></span>
-</div>
+<img src="public/images/Screenshots/detailsandsearch.gif" style="width: 100%;">
+
 
 <br>
 
