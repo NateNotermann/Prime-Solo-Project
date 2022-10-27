@@ -47,9 +47,9 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 <img src="public/images/Screenshots/detailsandsearch.gif" style="width: 100%;">
 
 **Browse All Comedians Page** 
-<img src="public/images/Screenshots/browsenew.gif" style="width: 100%; margin-left: auto; margin-right: auto;">
+<img src="public/images/Screenshots/browsenew.gif" style="width: 100%;">
 
-<img src="public/images/Screenshots/logo.gif" style="width: 75%;">
+<img src="public/images/Screenshots/logo.gif" style="width: 100%;">
 
 <br>
 
