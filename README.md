@@ -49,7 +49,7 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 **Browse All Comedians Page** 
 <img src="public/images/Screenshots/browsenew.gif" style="width: 100%;">
 
-<img src="public/images/Screenshots/logo.gif" style="width: 100%;">
+<img src="public/images/Screenshots/logo.gif" style="width: 75%;">
 
 <br>
 
