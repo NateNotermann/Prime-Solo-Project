@@ -3,9 +3,9 @@
 
 <em>Duration: 2 Week Sprint</em>
 
-I wanted to create ful-stack application that allowed users to search an index of comedians by first name, last name, keywords and location. I included links to each comedians social media sites like Instagram, Twitter, Youtube, and more. I also wanted user to be able to save their favorite comedians to a list for future reference.
+I wanted to create full-stack application that allows users to search an index of comedians by first name, last name, keywords and location. I included links to each comedians social media sites like Instagram, Twitter, Youtube, and more. I also wanted users to be able to save their favorite comedians in a list for future reference.
 
-The goal was to build an application which utilizes the full stack C.R.U.D.(Create, Read, Update, Delete) in order to run database requests, render items to the dom, and create a responsive and immersive experience within the app. 
+The goal was to build an application which utilizes the full stack C.R.U.D. functions(Create, Read, Update, Delete) in order to run database requests, render items to the dom, and create a responsive and immersive experience within the app. 
 
 
 To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-hehe-pedia.herokuapp.com/#/home)
@@ -50,7 +50,7 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 <img src="public/images/Screenshots/browsenew.gif" style="width: 100%;">
 
 
-<img src="public/images/Screenshots/logo.gif">
+<img src="public/images/main/logo.gif">
 
 <br>
 
