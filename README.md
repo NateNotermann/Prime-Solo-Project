@@ -37,11 +37,6 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 
 
 <br>
-<br>
-
-
-## Screen Shots
-**Browse All Comedians Page** and **Favorites Page**
 
 ## Screen Shots
 **Browse All Comedians Page** 
