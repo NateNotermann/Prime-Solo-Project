@@ -39,8 +39,6 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 <br>
 
 ## Screen Shots
-**Browse All Comedians Page** 
-<img src="public/images/Screenshots/browsenew.gif" style="width: 100%;">
 
 **Landing Page** and **Favorites Page**
 <img src="public/images/Screenshots/landingandfavorites.gif" style="width: 100%;">
@@ -48,6 +46,8 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 **Search Page** and **Comedian Details**
 <img src="public/images/Screenshots/detailsandsearch.gif" style="width: 100%;">
 
+**Browse All Comedians Page** 
+<img src="public/images/Screenshots/browsenew.gif" style="width: 100%;">
 
 <br>
 
