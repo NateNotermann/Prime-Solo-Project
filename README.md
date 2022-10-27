@@ -50,7 +50,7 @@ To see the fully functional site, please visit: [Wiki-hehe-pedia](https://wiki-h
 <img src="public/images/Screenshots/browsenew.gif" style="width: 100%;">
 
 
-<img src="public/images/main/logo.gif">
+<img src="public/images/Main/logo.gif">
 
 <br>
 
