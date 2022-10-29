@@ -16,6 +16,10 @@ function Nav() {
       </Link>
       <div>
         {/* If no user is logged in, show these links */}
+
+        <Link className="navLink" to="/DrumKit">
+          Bonus DRUMKIT!
+        </Link>
         {!user.id && (
           // If there's no user, show login/registration links
           <Link className="navLink" to="/login">
@@ -23,15 +27,16 @@ function Nav() {
           </Link>
         )}
 
-<Link className="navLink" to="/user">
-  Browse
-</Link>
-<Link className="navLink" to="/SearchPage">
-  Search
-</Link>
-<Link className="navLink" to="/about">
-  About
-</Link>
+
+        <Link className="navLink" to="/user">
+          Browse
+        </Link>
+        <Link className="navLink" to="/SearchPage">
+          Search
+        </Link>
+        <Link className="navLink" to="/about">
+          About
+        </Link>
         {/* If a user is logged in, show these links */}
         {user.id && (
           <>

@@ -32,6 +32,7 @@ import Favorites from '../Favorites/Favorites';
 import BackButton from '../BackButton/BackButton';
 import Settings from '../Settings/Settings';
 import MUIElements from '../MUIElements/MUIElements';
+import DrumKit from '../DrumKit/DrumKit';
 
 import './App.css';
 
@@ -68,9 +69,6 @@ function App() {
             <MUIElements />
           </Route>
 
-
-
-
           {/* Visiting localhost:3000/about will show the about page. */}
           <Route
             // shows AboutPage at all times (logged in or not)
@@ -78,6 +76,14 @@ function App() {
             path="/about"
           >
             <AboutPage />
+          </Route>
+        
+          <Route
+            // shows DrumKit at all times (logged in or not)
+            exact
+            path="/DrumKit"
+          >
+            <DrumKit />
           </Route>
 
           <Route  // shows user at all times (logged in or not)
