@@ -6,7 +6,7 @@
 
   margin: 0 0 0px;
   /* background-color: black;*/
-   background: hsl(188, 100%, 37%, .5);
+   /* background: hsl(188, 100%, 37%, .5); */
   background-blend-mode: darken;
   /* overflow: visible; */
   /* height: 0vh; */
@@ -17,6 +17,10 @@
   /* padding-bottom: -100px;
   border-bottom: -100px;
   margin-bottom: -5vh; */
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  animation: animate 60s linear infinite;
+  text-shadow: 0 0 .5rem black;
   
 }
 
