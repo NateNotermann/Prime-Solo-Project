@@ -1,0 +1,20 @@
+.card:hover {
+
+    transform: scale(1.15);
+    box-shadow: 0 0 1rem white;
+    /* opacity: .9; */
+    transition: all .17s ease;
+    font-weight: bold;
+    cursor: pointer;
+    animation: animate .17s linear infinite; 
+    animation: shake 3s;
+     /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+    
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px); }
+    50% { transform: translate(1px, -5px); }
+    100% { transform: translate(1px, 1px); }
+  }

@@ -2,6 +2,7 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory, } from 'react-router-dom';
 
+import './ComedianItem.css';
 // --- item to render a single comedian's 
 // id, first name, last name, icon and a favorite or unfavorite button.
 // will be used any time we are .map()ing 
@@ -99,7 +100,7 @@ function ComedianItem({ comedianProp }) {
             {/* <button onClick={() => deleteFavorite(comedianProp.id)}>deleteFavorite</button> */}
 
 
-            <Card >
+            <Card className="card">
                 <CardMedia key={comedianProp.id} onClick={() => clickIcon(comedianProp.id)}
                     component="img"
                     height="194"

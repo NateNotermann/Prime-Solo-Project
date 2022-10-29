@@ -25,6 +25,7 @@ h1 {
   text-align: center;
   align-items: center;
   justify-content: center;
+  text-shadow: 0 0 .5rem black;
   background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
   background-size: 400%;
   animation: animate 20s linear infinite;
