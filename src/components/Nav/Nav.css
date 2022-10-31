@@ -6,7 +6,7 @@
 
   margin: 0 0 0px;
   /* background-color: black;*/
-   background: hsl(188, 100%, 37%, .5);
+   /* background: hsl(188, 100%, 37%, .5); */
   background-blend-mode: darken;
   /* overflow: visible; */
   /* height: 0vh; */
@@ -17,10 +17,17 @@
   /* padding-bottom: -100px;
   border-bottom: -100px;
   margin-bottom: -5vh; */
+  text-shadow: 0 0 .5rem black;
+  background: linear-gradient(90deg, #03a9f4, #f441ee, #3bffff, #03a9f4);
+  background-size: 400%;
+  animation: animate 60s linear infinite;
+  
+  
 }
 
 .nav a {
   text-decoration: none;
+  
 }
 
 .nav-title {
@@ -32,6 +39,7 @@
 }
 
 .navLink {
+  
   display: inline-block;
   color: #f2f2f2; /* TEXT COLOR */
   /* background-color: #00acb0; */
@@ -39,6 +47,7 @@
   padding: 24px 10px;
   text-decoration: none;
   font-size: 15px;
+  
   
 
   /* these last two make the logout button in
