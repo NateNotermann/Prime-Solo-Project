@@ -20,3 +20,20 @@
     50% { transform: translate(1px, -5px); }
     100% { transform: translate(1px, 1px); }
   }
+
+
+
+  .MuiTypography--heading {
+    /* display: flex;  */
+    /* flex-wrap: nowrap; */
+    flex-wrap: nowrap;
+    text-justify: center;
+    text-justify: inter-word;
+  }
+
+  .typo {
+    /* display: flex;  */
+    /* text-align: justify;
+    flex-wrap: wrap; */
+  
+  }
