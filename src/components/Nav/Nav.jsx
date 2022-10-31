@@ -17,9 +17,9 @@ function Nav() {
       <div>
         {/* If no user is logged in, show these links */}
 
-        <Link className="navLink" to="/DrumKit">
+        {/* <Link className="navLink" to="/DrumKit">
           Bonus DRUMKIT!
-        </Link>
+        </Link> */}
         {!user.id && (
           // If there's no user, show login/registration links
           <Link className="navLink" to="/login">

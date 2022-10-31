@@ -78,13 +78,13 @@ function App() {
             <AboutPage />
           </Route>
         
-          <Route
+          {/* <Route
             // shows DrumKit at all times (logged in or not)
             exact
             path="/DrumKit"
           >
             <DrumKit />
-          </Route>
+          </Route> */}
 
           <Route  // shows user at all times (logged in or not)
             exact
