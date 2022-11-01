@@ -16,10 +16,18 @@ function LoginPage() {
   <Box container className="test2">
   <div> 
       <h2 className="heading2">{heading}</h2>
-      
     </div>
+    <Grid container 
+      className="GridContainer"
+        
+        direction="column"
+        justifyContent="center"
+        alignItems="center">
+          
+          <Grid item
+          alignItems="center">
       <LoginForm className="form" />
-
+    </Grid>
       <center>
 
         <Typography
@@ -37,6 +45,8 @@ function LoginPage() {
 
       </center>
       <br></br>
+
+      </Grid>
     </Box>
     </>
   );
