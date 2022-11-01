@@ -27,7 +27,7 @@ function LandingPage() {
       <Grid container 
       className="GridContainer"
         
-        direction="column"
+        direction="column"  
         justifyContent="center"
         alignItems="center">
           

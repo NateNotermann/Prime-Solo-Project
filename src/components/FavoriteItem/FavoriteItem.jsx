@@ -12,6 +12,8 @@ import { positions } from '@mui/system';
 import '../MUIElements/MUIElements.css';
 import { Card, CardHeader, CardMedia, CardContent, CardActions, Collapse } from '@mui/material';
 
+import './FavoriteItem.css';
+
 import Avatar from '@mui/material/Avatar';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 
@@ -75,14 +77,15 @@ function ComedianItem({ favoriteProp }) {
     <Grid container className="mainFavoriteItemBox" key={favoriteProp.id}>
 
 
-      <Card>
+      <Card className="cardFav">
         <CardMedia onClick={() => clickIcon(favoriteProp.comedian_id)}
           component="img"
           height="194"
+listAllComedians
           image={favoriteProp.icon}
           alt={favoriteProp.name}
         />
-        <CardHeader className="cardHeader"
+        {/* <CardHeader className="cardHeader"
           action={
             <Tooltip title="Delete">
             <IconButton aria-label="settings">
@@ -93,12 +96,13 @@ function ComedianItem({ favoriteProp }) {
           title={favoriteProp.first_name + space + favoriteProp.last_name}
           location={favoriteProp.city}
           
-        />
+        /> */}
 
         <Typography container
+          margin=".5rem"
           className={"MuiTypography--heading"}
           variant={"h5"}
-          gutterBottom
+          // gutterBottom
           color='text.secondary'
         >
 
@@ -117,36 +121,73 @@ function ComedianItem({ favoriteProp }) {
             </IconButton>
             </Tooltip> */}
           <Grid container
+            //  justifyContent="center"
+            xs={12}
+            justifyContent="space-around"
+            // alignItems="stretch"
+            alignItems="center"
+          >
+            <Grid item></Grid>
+
+            <Grid item>
+              <Grid item></Grid>
+              <Typography className="typo" xs={{ fontSize: "2vh" }}
+
+                color="text.primary" variant={"h5"} >
+                {favoriteProp.first_name}
+              </Typography>
+
+              <Typography className="typo" xs={{ fontSize: "2vh" }}
+                color="text.primary" variant={"h5"} >
+                {favoriteProp.last_name}
+              </Typography>
+            </Grid>
+
+            <Grid item >
+              <Tooltip title="Delete">
+                <IconButton aria-label="settings">
+                  <DeleteIcon item variant="contained" onClick={() => deleteFavorite(favoriteProp.id)} />
+                </IconButton>
+              </Tooltip>
+            </Grid>
+
+          </Grid>
+
+
+
+
+
+          <Grid container
             justifyContent="space-evenly"
             alignItems="center"
-            >
-          <Tooltip title={favoriteProp.city}>
+          >
+            <Tooltip title={favoriteProp.city}>
 
-            <Link a href={google + favoriteProp.city} >
-              {/* <Button component={Link} to={google + favoriteProp.city}
+              <Link a href={google + favoriteProp.city} >
+                {/* <Button component={Link} to={google + favoriteProp.city}
                 variant="inherit"> */}
 
                 <IconButton aria-label="settings" >
                   <a href={google + favoriteProp.city}
-                    className="link" 
+                    className="link"
                     target="_blank">
                     <LocationOnIcon color="forth">
                     </LocationOnIcon>
                   </a>
                 </IconButton>
-              {/* </Button> */}
-            </Link>
-          </Tooltip>
+                {/* </Button> */}
+              </Link>
+            </Tooltip>
 
-          <Tooltip title="Comedian Details">
-            <IconButton aria-label="settings" onClick={() => clickIcon(favoriteProp.comedian_id)}>
-              <InfoIcon color="primary" />
+            <Tooltip title="Comedian Details">
+              <IconButton aria-label="settings" onClick={() => clickIcon(favoriteProp.comedian_id)}>
+                <InfoIcon color="primary" />
 
-            </IconButton>
-          </Tooltip>
+              </IconButton>
+            </Tooltip>
 
-          {/* City: {favoriteProp.city} */}
-          {/* <Tooltip title="Delete">
+            {/* City: {favoriteProp.city} */}
+            {/* <Tooltip title="Delete">
             <IconButton aria-label="settings">
               <DeleteIcon item variant="contained" onClick={() => deleteFavorite(favoriteProp.id)} />
             </IconButton>

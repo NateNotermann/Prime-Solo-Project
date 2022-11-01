@@ -240,7 +240,7 @@ function SearchPage() {
           {search && search.map(comedian => {
             return (
               // <div key={comedian.id} onClick={() => clickIcon (comedian.id)}> 
-              <Grid item key={comedian.id}>
+              <Grid item key={comedian.id} >
                 <ComedianItem comedianProp={comedian} />
               </Grid>
             );
