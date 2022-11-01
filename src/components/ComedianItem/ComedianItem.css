@@ -1,6 +1,6 @@
 .card:hover {
 
-    transform: scale(1.15);
+    transform: scale(1.1);
     box-shadow: 0 0 1rem white;
     /* opacity: .9; */
     transition: all .17s ease;
@@ -26,9 +26,10 @@
   .MuiTypography--heading {
     /* display: flex;  */
     /* flex-wrap: nowrap; */
-    flex-wrap: nowrap;
+    /* min-height: 5vh; */
+    /* flex-wrap: wrap;
     text-justify: center;
-    text-justify: inter-word;
+    text-justify: inter-word; */
   }
 
   .typo {
@@ -36,3 +37,4 @@
     /* text-align: justify;
     flex-wrap: wrap; */
   }
+  
