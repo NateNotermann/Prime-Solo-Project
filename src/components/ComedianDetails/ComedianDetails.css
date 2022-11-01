@@ -18,12 +18,12 @@
   }
   
   .link {
-
+    margin: 10px;
     color: lightblue;
   }
   
   .comedianItem{
     width: 17vh;
-    /* height: 17vh; */
+
 
   }
