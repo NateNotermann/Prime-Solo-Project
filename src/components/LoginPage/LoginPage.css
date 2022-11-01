@@ -7,19 +7,23 @@
     
     height: 100vh;
     background-size: 100%;
-    
+    position: fixed;
+    width: 100%;
+    margin-top: 5vh;
     }
 
     /* .form {
-
       margin: 20px;
     } */
 
     .heading2{
       margin: 10vh;
+      /* margin-bottom: 15vh; */
     }
 
     .moveDown2{
       height: 5vh;
+      margin: 19vh;
     }
   
+    

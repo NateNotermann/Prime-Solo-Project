@@ -91,13 +91,16 @@ body {
   background-size: 100%;
   background-position: top 65px right 00px;
 }
+
+
 .test{
 background-image: url("/public/images/Landing_Background.gif");
 background-repeat: no-repeat;
 height: 100vh;
 background-size: 100%;
 margin-top: 5vh;
-
+position: fixed;
+width: 100%;
 }
 
 .heading{
