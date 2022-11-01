@@ -96,8 +96,14 @@ background-image: url("/public/images/Landing_Background.gif");
 background-repeat: no-repeat;
 height: 100vh;
 background-size: 100%;
+margin-top: 5vh;
+
 }
 
 .heading{
-  margin-top: 10vh;
+  margin-top: 0vh;
+}
+
+.moveDown{
+  height: 4vh;
 }

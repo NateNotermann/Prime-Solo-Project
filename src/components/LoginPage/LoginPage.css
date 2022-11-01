@@ -1,5 +1,25 @@
 
 
-.moveDown{
-    height: 9vh;
-  }
+
+  .test2{
+    background-image: url("/public/images/Landing_Background.gif");
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+    background-size: 100%;
+    
+    }
+
+    /* .form {
+
+      margin: 20px;
+    } */
+
+    .heading2{
+      margin: 10vh;
+    }
+
+    .moveDown2{
+      height: 5vh;
+    }
+  
