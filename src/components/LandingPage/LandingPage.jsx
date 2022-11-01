@@ -19,6 +19,7 @@ function LandingPage() {
 
   return (
     <Box container className="test">
+       <div className="moveDown"></div>
     <div> 
       <h2 className="heading">{heading}</h2>
       
