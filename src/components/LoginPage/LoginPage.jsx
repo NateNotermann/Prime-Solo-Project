@@ -53,6 +53,7 @@ function LoginPage() {
           }}
         >
           Register
+          
         </Typography> */}
 
 
