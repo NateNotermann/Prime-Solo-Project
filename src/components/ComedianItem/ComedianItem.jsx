@@ -108,26 +108,33 @@ function ComedianItem({ comedianProp }) {
                     alt={comedianProp.name}
 
                 />
-                
-                <CardHeader
-                    action={
-                        <Tooltip title="Favorite">
-                            <IconButton aria-label="add to favorites">
-                                <FavoriteIcon color="primary" onClick={() => addFavorite(comedianProp.id)} />
-                            </IconButton>
-                        </Tooltip>
-                    }
+
+                <CardHeader className="name"
+                  titleTypographyProps={{
+                    fontSize: "1.5rem",
+                  }}
+                    // action={
+                    //     <Tooltip title="Favorite">
+                    //         <IconButton aria-label="add to favorites">
+                    //             <FavoriteIcon color="primary" onClick={() => addFavorite(comedianProp.id)} />
+                    //         </IconButton>
+                    //     </Tooltip>
+                    // }
                     title={comedianProp.first_name + space + comedianProp.last_name}
                     location={comedianProp.city}
                 />
 
                 <Typography
                     className={"MuiTypography--heading"}
-                    variant={"h6"}
+                    // variant={"h6"}
                     // gutterBottom
                     color='text.secondary'
                 >
-                    
+                    {/* <Typography className="typo" sx={{ fontSize: "1.7rem" }}
+                     color="text.primary" gutterBottom>
+                        {comedianProp.first_name + space + comedianProp.last_name}
+
+                    </Typography> */}
                     {/* <Button aria-label="settings"
                         color='fifthBlack'>
                         {comedianProp.first_name} {comedianProp.last_name}
@@ -161,7 +168,12 @@ function ComedianItem({ comedianProp }) {
                                 <InfoIcon color="primary" />
                             </IconButton>
                         </Tooltip>
-
+                        
+                        <Tooltip title="Favorite">
+                            <IconButton aria-label="add to favorites">
+                                <FavoriteIcon color="secondary" onClick={() => addFavorite(comedianProp.id)} />
+                            </IconButton>
+                        </Tooltip>
                         {/* <Tooltip title="Favorite">
                             <IconButton aria-label="add to favorites">
                                 <FavoriteIcon onClick={() => addFavorite(comedianProp.id)} />
